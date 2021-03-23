@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,18 @@
 		E52AAF7E26074EE2004BD0EB /* going.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E52AAF7C26074EE2004BD0EB /* going.xcdatamodeld */; };
 		E52AAF8926074EE2004BD0EB /* goingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52AAF8826074EE2004BD0EB /* goingTests.swift */; };
 		E52AAF9426074EE2004BD0EB /* goingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52AAF9326074EE2004BD0EB /* goingUITests.swift */; };
+		E52AAFA626075269004BD0EB /* PlanListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52AAFA526075269004BD0EB /* PlanListView.swift */; };
+		E52AAFAF26075397004BD0EB /* AFNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = E52AAFAE26075397004BD0EB /* AFNetworking */; };
+		E52AAFB5260753B2004BD0EB /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = E52AAFB4260753B2004BD0EB /* SwiftyJSON */; };
+		E52AAFBB26075536004BD0EB /* BFKit in Frameworks */ = {isa = PBXBuildFile; productRef = E52AAFBA26075536004BD0EB /* BFKit */; };
+		E52AAFC12607561B004BD0EB /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = E52AAFC02607561B004BD0EB /* PopupView */; };
+		E52AAFC7260756DD004BD0EB /* LLCycleScrollView in Frameworks */ = {isa = PBXBuildFile; productRef = E52AAFC6260756DD004BD0EB /* LLCycleScrollView */; };
+		E52AAFCD26075708004BD0EB /* Parchment in Frameworks */ = {isa = PBXBuildFile; productRef = E52AAFCC26075708004BD0EB /* Parchment */; };
+		E52AAFD42607575D004BD0EB /* Badges.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52AAFD32607575D004BD0EB /* Badges.swift */; };
+		E52AAFDA26075795004BD0EB /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52AAFD926075795004BD0EB /* Constant.swift */; };
+		E52AAFE226075F12004BD0EB /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52AAFE126075F12004BD0EB /* ActionView.swift */; };
+		E52AAFE826089D8A004BD0EB /* CommonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52AAFE726089D8A004BD0EB /* CommonUtil.swift */; };
+		E590A2C32608CE8B00EC6260 /* TextPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E590A2C22608CE8B00EC6260 /* TextPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +61,12 @@
 		E52AAF8F26074EE2004BD0EB /* goingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = goingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E52AAF9326074EE2004BD0EB /* goingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goingUITests.swift; sourceTree = "<group>"; };
 		E52AAF9526074EE2004BD0EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E52AAFA526075269004BD0EB /* PlanListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanListView.swift; sourceTree = "<group>"; };
+		E52AAFD32607575D004BD0EB /* Badges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badges.swift; sourceTree = "<group>"; };
+		E52AAFD926075795004BD0EB /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		E52AAFE126075F12004BD0EB /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
+		E52AAFE726089D8A004BD0EB /* CommonUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtil.swift; sourceTree = "<group>"; };
+		E590A2C22608CE8B00EC6260 /* TextPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E52AAFC12607561B004BD0EB /* PopupView in Frameworks */,
+				E52AAFBB26075536004BD0EB /* BFKit in Frameworks */,
+				E52AAFB5260753B2004BD0EB /* SwiftyJSON in Frameworks */,
+				E52AAFCD26075708004BD0EB /* Parchment in Frameworks */,
+				E52AAFAF26075397004BD0EB /* AFNetworking in Frameworks */,
+				E52AAFC7260756DD004BD0EB /* LLCycleScrollView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +123,8 @@
 		E52AAF7026074EDF004BD0EB /* going */ = {
 			isa = PBXGroup;
 			children = (
+				E52AAFE626089D65004BD0EB /* library */,
+				E52AAFA4260751FB004BD0EB /* view */,
 				E52AAF7126074EDF004BD0EB /* goingApp.swift */,
 				E52AAF7326074EDF004BD0EB /* ContentView.swift */,
 				E52AAF7526074EE2004BD0EB /* Assets.xcassets */,
@@ -136,6 +162,34 @@
 			path = goingUITests;
 			sourceTree = "<group>";
 		};
+		E52AAFA4260751FB004BD0EB /* view */ = {
+			isa = PBXGroup;
+			children = (
+				E52AAFD22607573E004BD0EB /* component */,
+				E52AAFA526075269004BD0EB /* PlanListView.swift */,
+				E52AAFE126075F12004BD0EB /* ActionView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		E52AAFD22607573E004BD0EB /* component */ = {
+			isa = PBXGroup;
+			children = (
+				E52AAFD32607575D004BD0EB /* Badges.swift */,
+				E52AAFD926075795004BD0EB /* Constant.swift */,
+			);
+			path = component;
+			sourceTree = "<group>";
+		};
+		E52AAFE626089D65004BD0EB /* library */ = {
+			isa = PBXGroup;
+			children = (
+				E52AAFE726089D8A004BD0EB /* CommonUtil.swift */,
+				E590A2C22608CE8B00EC6260 /* TextPlayer.swift */,
+			);
+			path = library;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,6 +206,14 @@
 			dependencies = (
 			);
 			name = going;
+			packageProductDependencies = (
+				E52AAFAE26075397004BD0EB /* AFNetworking */,
+				E52AAFB4260753B2004BD0EB /* SwiftyJSON */,
+				E52AAFBA26075536004BD0EB /* BFKit */,
+				E52AAFC02607561B004BD0EB /* PopupView */,
+				E52AAFC6260756DD004BD0EB /* LLCycleScrollView */,
+				E52AAFCC26075708004BD0EB /* Parchment */,
+			);
 			productName = going;
 			productReference = E52AAF6E26074EDF004BD0EB /* going.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +285,14 @@
 				Base,
 			);
 			mainGroup = E52AAF6526074EDF004BD0EB;
+			packageReferences = (
+				E52AAFAD26075397004BD0EB /* XCRemoteSwiftPackageReference "AFNetworking" */,
+				E52AAFB3260753B2004BD0EB /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				E52AAFB926075536004BD0EB /* XCRemoteSwiftPackageReference "BFKit-Swift" */,
+				E52AAFBF2607561B004BD0EB /* XCRemoteSwiftPackageReference "PopupView" */,
+				E52AAFC5260756DD004BD0EB /* XCRemoteSwiftPackageReference "LLCycleScrollView" */,
+				E52AAFCB26075708004BD0EB /* XCRemoteSwiftPackageReference "Parchment" */,
+			);
 			productRefGroup = E52AAF6F26074EDF004BD0EB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -265,8 +335,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E52AAFDA26075795004BD0EB /* Constant.swift in Sources */,
 				E52AAF7B26074EE2004BD0EB /* Persistence.swift in Sources */,
 				E52AAF7426074EDF004BD0EB /* ContentView.swift in Sources */,
+				E52AAFA626075269004BD0EB /* PlanListView.swift in Sources */,
+				E52AAFE226075F12004BD0EB /* ActionView.swift in Sources */,
+				E590A2C32608CE8B00EC6260 /* TextPlayer.swift in Sources */,
+				E52AAFE826089D8A004BD0EB /* CommonUtil.swift in Sources */,
+				E52AAFD42607575D004BD0EB /* Badges.swift in Sources */,
 				E52AAF7E26074EE2004BD0EB /* going.xcdatamodeld in Sources */,
 				E52AAF7226074EDF004BD0EB /* goingApp.swift in Sources */,
 			);
@@ -582,6 +658,90 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E52AAFAD26075397004BD0EB /* XCRemoteSwiftPackageReference "AFNetworking" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://gitee.com/wemu/AFNetworking.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
+		E52AAFB3260753B2004BD0EB /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://gitee.com/wemu/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		E52AAFB926075536004BD0EB /* XCRemoteSwiftPackageReference "BFKit-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://gitee.com/wemu/BFKit-Swift.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 6.0.1;
+			};
+		};
+		E52AAFBF2607561B004BD0EB /* XCRemoteSwiftPackageReference "PopupView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://gitee.com/wemu/PopupView.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.0.11;
+			};
+		};
+		E52AAFC5260756DD004BD0EB /* XCRemoteSwiftPackageReference "LLCycleScrollView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://gitee.com/wemu/LLCycleScrollView.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		E52AAFCB26075708004BD0EB /* XCRemoteSwiftPackageReference "Parchment" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://gitee.com/wemu/Parchment.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 3.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E52AAFAE26075397004BD0EB /* AFNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E52AAFAD26075397004BD0EB /* XCRemoteSwiftPackageReference "AFNetworking" */;
+			productName = AFNetworking;
+		};
+		E52AAFB4260753B2004BD0EB /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E52AAFB3260753B2004BD0EB /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		E52AAFBA26075536004BD0EB /* BFKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E52AAFB926075536004BD0EB /* XCRemoteSwiftPackageReference "BFKit-Swift" */;
+			productName = BFKit;
+		};
+		E52AAFC02607561B004BD0EB /* PopupView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E52AAFBF2607561B004BD0EB /* XCRemoteSwiftPackageReference "PopupView" */;
+			productName = PopupView;
+		};
+		E52AAFC6260756DD004BD0EB /* LLCycleScrollView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E52AAFC5260756DD004BD0EB /* XCRemoteSwiftPackageReference "LLCycleScrollView" */;
+			productName = LLCycleScrollView;
+		};
+		E52AAFCC26075708004BD0EB /* Parchment */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E52AAFCB26075708004BD0EB /* XCRemoteSwiftPackageReference "Parchment" */;
+			productName = Parchment;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		E52AAF7C26074EE2004BD0EB /* going.xcdatamodeld */ = {
