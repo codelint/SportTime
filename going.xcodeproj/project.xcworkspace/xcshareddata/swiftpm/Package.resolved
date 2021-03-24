@@ -1,0 +1,70 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "AFNetworking",
+        "repositoryURL": "https://gitee.com/wemu/AFNetworking.git",
+        "state": {
+          "branch": null,
+          "revision": "ffae2391ab0c29dc88eb0a58d2f5b2c2c27cadbf",
+          "version": "4.0.1"
+        }
+      },
+      {
+        "package": "BFKit",
+        "repositoryURL": "https://gitee.com/wemu/BFKit-Swift.git",
+        "state": {
+          "branch": null,
+          "revision": "c8a6f1584a6955387bd236581a127a55e8a4d6c1",
+          "version": "6.0.1"
+        }
+      },
+      {
+        "package": "Kingfisher",
+        "repositoryURL": "https://gitee.com/unotseeme/Kingfisher.git",
+        "state": {
+          "branch": null,
+          "revision": "81dd1ce8401137637663046c7314e7c885bcc56d",
+          "version": "6.1.1"
+        }
+      },
+      {
+        "package": "LLCycleScrollView",
+        "repositoryURL": "https://gitee.com/wemu/LLCycleScrollView.git",
+        "state": {
+          "branch": "master",
+          "revision": "00508320513470a2bc733c939b5854c374db6496",
+          "version": null
+        }
+      },
+      {
+        "package": "Parchment",
+        "repositoryURL": "https://gitee.com/wemu/Parchment.git",
+        "state": {
+          "branch": null,
+          "revision": "689ecaa80b7b0f712887ec87746f8598f2e12907",
+          "version": "3.0.1"
+        }
+      },
+      {
+        "package": "PopupView",
+        "repositoryURL": "https://gitee.com/wemu/PopupView.git",
+        "state": {
+          "branch": null,
+          "revision": "7276f92e123969e5ced9212a5f5049d30954106b",
+          "version": "0.0.11"
+        }
+      },
+      {
+        "package": "SwiftyJSON",
+        "repositoryURL": "https://gitee.com/wemu/SwiftyJSON.git",
+        "state": {
+          "branch": null,
+          "revision": "2b6054efa051565954e1d2b9da831680026cd768",
+          "version": "5.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
