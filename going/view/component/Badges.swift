@@ -209,7 +209,7 @@ struct BadgeSelector: View {
                     .padding(.all, 5)
                     .frame(minWidth: 48)
                     .foregroundColor(self.disabledBadges.contains(item) ? .gray : .white)
-                    .background(selected == item ? Color.orange : (self.disabledBadges.contains(item) ? Color.lightgray : Color.gray))
+                    .background(selected == item ? Color.primary : (self.disabledBadges.contains(item) ? Color.lightgray : Color.gray))
                     .cornerRadius(5)
                 
             }

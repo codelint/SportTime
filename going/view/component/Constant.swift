@@ -24,7 +24,7 @@ extension Color {
         )
     }
     
-    static let primary = Color(hex: 0xff7a00)
+    static let primary: Color = .blue
     static let lightgray = Color(hex: 0xf1f1f1)
     static let lightorange = Color(hex: 0xfed8b1)
     static let lightred = Color(hex: 0xff6961)
