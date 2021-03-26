@@ -20,6 +20,15 @@
         }
       },
       {
+        "package": "SwiftUICharts",
+        "repositoryURL": "https://gitee.com/wemu/ChartView.git",
+        "state": {
+          "branch": null,
+          "revision": "4699847a9ac0c694666cea3acef133498952566e",
+          "version": "1.5.4"
+        }
+      },
+      {
         "package": "Kingfisher",
         "repositoryURL": "https://gitee.com/unotseeme/Kingfisher.git",
         "state": {

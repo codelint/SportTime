@@ -10,6 +10,9 @@ import SwiftUI
 
 struct ActionView: View {
     
+    // @Environment(\.managedObjectContext) private var viewContext
+    
+    var coreData: CoreDataService = .going
     var player = TextPlayer()
     
     @ObservedObject var model = Model()
@@ -17,35 +20,48 @@ struct ActionView: View {
     @State var session:Model.Session?
     @State var beeping_idx: Int?
     
+    @State var isEditBeep = false
+    @State var editIndex: Int? = nil
+    
     var body: some View {
         NavigationView {
             VStack{
                 if let s = session {
-                    HStack(spacing:0){
-                        Text(s.title ?? "")
-                            .bold()
-                            .font(.title3).padding(.top, 16)
-                    }
-                    
-                    Divider()
-                }
-                ScrollView(showsIndicators:false){
-                    VStack(spacing:0){
-                        BadgeSelector(
-                            badges: model.sessions.map({$0.title ?? ""}),
-                            selected: session?.title ?? "",
-                            onSelect: { (text) in
-                                if let s = model.sessions.first(where:{ (session) -> Bool in
-                                    return session.title != nil && session.title! == text
-                                }) {
-                                    session = s
-                                    if model.state != .ready {
-                                        model.state = .stop
-                                    }
-                                }
-                            }
-                        ).padding(.horizontal)
+                    ZStack(){
+                        HStack(spacing:0){
+                            Text(s.title ?? "")
+                                .bold()
+                                .font(.footnote)
+                                .foregroundColor(.gray)
+                                .padding(.top, 16)
+                        }
                         
+                        HStack(alignment: .bottom, spacing: 0){
+                            NavigationLink(
+                                destination: ReportView(),
+                                label: {
+                                    Image(systemName: "waveform.path.ecg")
+                                        .padding(.horizontal, 8)
+                                }).padding(.top, 16)
+                            Spacer()
+                        }
+                        
+                        HStack(alignment: .bottom, spacing: 0){
+                            Spacer()
+                            Button(action: {
+                                
+                            }, label: {
+                                Image(systemName: "square.and.pencil")
+                                    .padding(.horizontal, 8)
+                            }).padding(.top, 16)
+                            
+                        }
+                    }
+//                    Divider()
+                }
+//                ScrollView(showsIndicators:false){
+                    VStack(spacing:0){
+                         Spacer()
                         Button(action: {
                             
                             switch model.state {
@@ -66,11 +82,11 @@ struct ActionView: View {
                         }, label: {
                             ZStack{
                                 Circle()
-                                    .frame(width: (UIScreen.main.bounds.width)/2, height: (UIScreen.main.bounds.width)/2)
+                                    .frame(width: (UIScreen.main.bounds.width)*6/11, height: (UIScreen.main.bounds.width)*2/3)
                                     .foregroundColor(.thinblue)
                                 
                                 Circle()
-                                    .frame(width: (UIScreen.main.bounds.width - 48)/2, height: (UIScreen.main.bounds.width - 48)/2)
+                                    .frame(width: (UIScreen.main.bounds.width - 48)*6/11, height: (UIScreen.main.bounds.width - 48)*2/3)
                                     .foregroundColor(.lightblue)
                                 
                                 VStack {
@@ -92,39 +108,53 @@ struct ActionView: View {
                             }
                         })
                         .padding(.vertical, 32)
+                           Spacer()
+                        HStack {
+                            Button(action: {
+                                isSelectSession = true
+                            }, label: {
+                                Image(systemName: "ant")
+                            })
                             
-                        if let s = session {
-                            
-                            BadgeSelector(
-                                s.beeps.enumerated().map({ (index, beep) in
-                                    return BadgeItem(id: String(index), name: "\(beep.text)(\(beep.time)s)", value: beep.text)
-                                }),
-                                disabledBadges: [],
-                                selected: beeping_idx == nil || session == nil ? nil : BadgeItem(
-                                    id: String(beeping_idx!),
-                                    name: session!.beeps[beeping_idx!].text,
-                                    value: session!.beeps[beeping_idx!].text
-                                )
-                            ) { (item) in
-                                
-                            }.padding(.horizontal)
-                            
-                        }
-                        
-                        //Spacer()
+                        }.padding()
+
                     }
                     .onAppear(){
                         if session == nil && model.sessions.count > 0 {
                             session = model.sessions[0]
                         }
+                        
+                        (ReportGenerator()).generate()
+                        isSelectSession = true
                     }
-                }
+//                }
             }
             .navigationBarHidden(true)
+            .sheet(isPresented: $isEditBeep, content: {
+                // BeepSheet()
+                if let s = session , let ei = editIndex {
+                    BeepSheet(source: s.beeps[ei])
+                }
+            })
+            .sheet(isPresented: $isSelectSession, content: {
+                SessionSelector(
+                    selected: session?.title,
+                    sessions: model.sessions,
+                    isShow: $isSelectSession
+                ){ selected in
+                    if let s = model.sessions.first(where: { $0.title == selected }) {
+                        session = s
+                        if model.state != .ready {
+                            model.state = .stop
+                        }
+
+                    }
+                }
+            })
         }
         
     }
-    
+        
     func learning(session: Model.Session){
         
         let repeats: [Int] = (1...session.repeats).map({$0})
@@ -132,6 +162,8 @@ struct ActionView: View {
         model.forEach(repeats, next: { (v, next) in
             
             model.forEach(session.beeps, next: { (beep, next) in
+                
+                let start_time = Int64(Date().timeIntervalSince1970)
                 
                 player.play(beep.text)
                 model.title = String(beep.time) + "秒"
@@ -144,17 +176,32 @@ struct ActionView: View {
                         }
                         model.title = String(tic)
                     } finish: {
+                        coreData.query(request: BeepLog.fetchRequest()) { (query) in
+                            if let beepLog = query.instance() {
+                                beepLog.uuid = beep.uuid.description
+                                beepLog.name = beep.text
+                                beepLog.start_time = start_time
+                                beepLog.end_time = Int64(Date().timeIntervalSince1970)
+                                query.flush()
+                            }
+                        }
                         helper.wait(for: 1, callback: {
                             next()
                         })
                     }
 
                 })
+                
             }, first: { (beep, start) in
                 if repeats.count > 1 {
-                    player.play("第\(v)次") { _ in
+                    if (repeats.count < 20 || v % 10 == 0) {
+                        player.play("第\(v)次") { _ in
+                            start()
+                        }
+                    }else {
                         start()
                     }
+                    
                 }
             }, last: { beep in
                 // next()
@@ -207,9 +254,6 @@ struct ActionView: View {
         @Published var sub_title:String? = ""
         @Published var beeps: [Beep] = [
             Beep(text: "3秒", time: 3, timeBeep: true),Beep(text: "勾脚", time: 3, timeBeep: true),
-//            Beep(text: "正抬腿", time: 15, timeBeep: true),
-//            Beep(text: "侧抬腿", time: 15, timeBeep: true),
-//            Beep(text: "背抬腿", time: 15, timeBeep: true),
             Beep(text: "放松", time: 5, timeBeep: true)
         ]
         
@@ -263,12 +307,13 @@ struct ActionView: View {
             var interval_beep: Beep? = nil
         }
         
-        struct Beep {
-            var text = ""
-            var time = 1
-            var timeBeep = false
-            
-        }
+//        struct Beep {
+//            var uuid = UUID()
+//            var text = ""
+//            var time = 1
+//            var timeBeep = false
+//
+//        }
         
         func forEach<T>(
             _ arr: [T],
@@ -317,21 +362,6 @@ struct ActionView: View {
         }
         
         
-//        func eachBeeps(from: Int = 0, next: @escaping ((Beep, @escaping () -> Void) -> Void), last: ((Beep) -> Void)?){
-//            if from < beeps.count {
-//                next(beeps[from]) {
-//                    self.eachBeeps(from: from + 1, next: next, last: last)
-//
-//                    if (from + 1) == self.beeps.count {
-//                        if let f = last {
-//                            f(self.beeps[from])
-//                        }
-//                    }
-//                }
-//            }
-//        }
-        
-        
         func beep(_ seconds: Int, next: ((Int) -> Void)? = nil, finish: (() -> Void)? = nil) {
             let arr = (1...seconds).map({$0}).sorted(by: {$0 > $1})
             
@@ -348,27 +378,66 @@ struct ActionView: View {
                     f()
                 }
             })
-//            helper.wait(for: 1) {
-//                if let f = next {
-//                    f(seconds)
-//                }
-//                if seconds > 1 {
-//                    self.beep(seconds - 1, next: next, finish: finish)
-//                }else{
-//                    if let f = finish {
-//                        f()
-//                    }
-//                }
-//            }
             
         }
         
         
     }
+    
+    @State var isSelectSession = false
+    struct SessionSelector: View {
+        
+        @State var selected: String? = nil
+        @State var custom: String = ""
+        
+        var sessions: [Model.Session]
+        @Binding var isShow: Bool
+        var onSelect: ((String) -> Void)?
+        
+        var body: some View {
+            VStack(spacing: 8) {
+                ZStack{
+                    Text("请选择")
+                        .foregroundColor(.gray)
+                }.padding(.top)
+                
+                
+                ScrollView {
+                    BadgeSelector(
+                        badges: sessions.filter({ $0.title != nil }).map({ $0.title! }),
+                        selected: selected,
+                        onSelect: { (text) in
+                            selected = text
+                            if let f = onSelect {
+                                f(text)
+                                isShow = false
+                            }
+                        }
+                    )
+                }
+                
+                Spacer()
+                Divider()
+                VStack(spacing: 0){
+                    Text("以上均没有想要的, 请点击”+“按钮, 创建")
+                        .font(.caption2)
+                        .foregroundColor(.gray)
+                    Button(action: {
+                        isShow = false
+
+                    }, label: {
+                        Image(systemName: "plus")
+                    }).padding()
+                }
+            }.padding(.horizontal)
+        }
+    }
+    
 }
 
 #if DEBUG
 struct ActionView_Previews: PreviewProvider {
+    
     static var previews: some View {
         
         ActionView()
