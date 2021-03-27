@@ -394,7 +394,8 @@ struct BeepSheet: View {
             
          
         }.background(Color.lightgray)
-        .navigationBarTitle(Text("Setting"))
+        .navigationBarTitle(Text("输入计时信息"))
+        .navigationBarTitleDisplayMode(.inline)
         .onAppear{
             if let s = session {
                 

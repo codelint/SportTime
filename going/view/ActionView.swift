@@ -20,7 +20,7 @@ struct ActionView: View {
     @State var session:Model.Session?
     @State var beeping_idx: Int?
     
-    @State var isEditBeep = false
+    @State var isEditBeep = true
     @State var editIndex: Int? = nil
     
     var body: some View {
@@ -48,12 +48,20 @@ struct ActionView: View {
                         
                         HStack(alignment: .bottom, spacing: 0){
                             Spacer()
-                            Button(action: {
-                                
-                            }, label: {
-                                Image(systemName: "square.and.pencil")
-                                    .padding(.horizontal, 8)
-                            }).padding(.top, 16)
+                            NavigationLink(
+                                destination: BeepSheet(title: session?.title ?? "", onSave: { (tit) in
+                                    
+                                }),
+                                label: {
+                                    Image(systemName: "square.and.pencil")
+                                        .padding(.horizontal, 8)
+                                }).padding(.top, 16)
+//                            Button(action: {
+//
+//                            }, label: {
+//                                Image(systemName: "square.and.pencil")
+//                                    .padding(.horizontal, 8)
+//                            }).padding(.top, 16)
                             
                         }
                     }
@@ -154,8 +162,20 @@ struct ActionView: View {
             .navigationBarHidden(true)
             .sheet(isPresented: $isEditBeep, content: {
                 // BeepSheet()
-//                if let s = session , let ei = editIndex {
-//                    BeepSheet(source: s.beeps[ei])
+                VStack{
+                    Spacer()
+                    Text("Heloo").font(.title)
+                    Spacer()
+                }
+//                if let tit = session?.title, let ei = model.sessions.firstIndex(where: { $0.title == session!.title }) {
+//                    BeepSheet(title: tit) { (title) in
+//                        coreData.query(request: BeepSession.fetchRequest()) { (query) in
+//                            if let s = query.findByOne(conds: ["name": title]) {
+//                                model.sessions[ei] = Model.Session(beeps: s.beeps, repeats: s.repeats, title: s.name, interval_beep: s.iterval_beep)
+//                                session = model.sessions[ei]
+//                            }
+//                        }
+//                    }
 //                }
             })
             .sheet(isPresented: $isSelectSession, content: {
