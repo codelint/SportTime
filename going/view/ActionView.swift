@@ -31,7 +31,7 @@ struct ActionView: View {
                         HStack(spacing:0){
                             Text(s.title ?? "")
                                 .bold()
-                                .font(.footnote)
+                                .font(.body)
                                 .foregroundColor(.gray)
                                 .padding(.top, 16)
                         }
@@ -57,11 +57,12 @@ struct ActionView: View {
                             
                         }
                     }
-//                    Divider()
+                    //                    Divider()
                 }
-//                ScrollView(showsIndicators:false){
-                    VStack(spacing:0){
-                         Spacer()
+                
+                VStack(spacing:0){
+                    Spacer()
+                    VStack{
                         Button(action: {
                             
                             switch model.state {
@@ -107,8 +108,20 @@ struct ActionView: View {
                                 }.frame(width: (UIScreen.main.bounds.width - 108)/2, height: (UIScreen.main.bounds.width - 108)/2)
                             }
                         })
-                        .padding(.vertical, 32)
-                           Spacer()
+                        if model.state == .running {
+                            Button(action: {
+                                model.state = .stop
+                            }, label: {
+                                Image(systemName: "stop.circle").font(.title)
+                            })
+                        }else{
+                            Image(systemName: "stop.circle")
+                                .font(.title)
+                                .foregroundColor(.white)
+                        }
+                    }.padding(.vertical, 32)
+                    Spacer()
+                    if model.state == .ready {
                         HStack {
                             Button(action: {
                                 isSelectSession = true
@@ -117,24 +130,27 @@ struct ActionView: View {
                             })
                             
                         }.padding()
-
+                    }else{
+                        Image(systemName: "ant").padding()
                     }
-                    .onAppear(){
-                        if session == nil && model.sessions.count > 0 {
-                            session = model.sessions[0]
-                        }
-                        
-                        (ReportGenerator()).generate()
-                        isSelectSession = true
+                    
+                }
+                .onAppear(){
+                    if session == nil && model.sessions.count > 0 {
+                        session = model.sessions[0]
                     }
-//                }
+                    
+                    (ReportGenerator()).generate()
+                    //isSelectSession = true
+                }
+                
             }
             .navigationBarHidden(true)
             .sheet(isPresented: $isEditBeep, content: {
                 // BeepSheet()
-                if let s = session , let ei = editIndex {
-                    BeepSheet(source: s.beeps[ei])
-                }
+//                if let s = session , let ei = editIndex {
+//                    BeepSheet(source: s.beeps[ei])
+//                }
             })
             .sheet(isPresented: $isSelectSession, content: {
                 SessionSelector(
@@ -147,14 +163,14 @@ struct ActionView: View {
                         if model.state != .ready {
                             model.state = .stop
                         }
-
+                        
                     }
                 }
             })
         }
         
     }
-        
+    
     func learning(session: Model.Session){
         
         let repeats: [Int] = (1...session.repeats).map({$0})
@@ -189,7 +205,7 @@ struct ActionView: View {
                             next()
                         })
                     }
-
+                    
                 })
                 
             }, first: { (beep, start) in
@@ -296,7 +312,7 @@ struct ActionView: View {
                 Beep(text: "背抬腿", time: 15, timeBeep: true),
             ], repeats: 15, title: "背抬腿", interval_beep: Beep(text: "放松", time: 5, timeBeep: true))
             
-        
+            
         ]
         
         struct Session {
@@ -306,15 +322,7 @@ struct ActionView: View {
             
             var interval_beep: Beep? = nil
         }
-        
-//        struct Beep {
-//            var uuid = UUID()
-//            var text = ""
-//            var time = 1
-//            var timeBeep = false
-//
-//        }
-        
+                
         func forEach<T>(
             _ arr: [T],
             from: Int = 0,
@@ -424,7 +432,7 @@ struct ActionView: View {
                         .foregroundColor(.gray)
                     Button(action: {
                         isShow = false
-
+                        
                     }, label: {
                         Image(systemName: "plus")
                     }).padding()

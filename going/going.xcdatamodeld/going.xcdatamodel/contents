@@ -14,7 +14,7 @@
     </entity>
     <entity name="BeepSession" representedClassName="BeepSession" syncable="YES" codeGenerationType="class">
         <attribute name="beep_array" optional="YES" attributeType="String"/>
-        <attribute name="interval_beep" optional="YES" attributeType="String"/>
+        <attribute name="interval_info" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="times" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>

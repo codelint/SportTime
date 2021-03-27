@@ -8,13 +8,17 @@
 import Foundation
 import SwiftyJSON
 
-class Beep {
+class Beep: Identifiable{
     var uuid: String = UUID().description
     var text = ""
     var time = 1
-    var timeBeep = false
+    var timeBeep = true
     
-    init(text: String = "", time: Int = 1, timeBeep: Bool = false, uuid: String = UUID().description){
+    var id: String {
+        return uuid
+    }
+    
+    init(text: String = "", time: Int = 1, timeBeep: Bool = true, uuid: String = UUID().description){
         self.text = text
         self.time = time
         self.timeBeep = timeBeep
