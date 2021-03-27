@@ -22,6 +22,8 @@ class SportTime {
         coreData.query(request: BeepSession.fetchRequest(), query: { query in
             query.truncate()
         })
+        
+        coreData.query(request: BeepLog.fetchRequest(), query: { $0.truncate() })
     
     }
     

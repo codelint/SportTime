@@ -26,7 +26,7 @@ class Beep: Identifiable{
     }
     
     init(description: String){
-        let json = JSON(description)
+        let json = JSON(parseJSON: description)
         
         uuid = json["uuid"].string ?? uuid
         text = json["text"].string ?? text

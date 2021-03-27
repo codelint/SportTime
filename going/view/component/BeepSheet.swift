@@ -13,22 +13,40 @@ import PopupView
 struct BeepSheet: View {
     
     @State var text: String = ""
-    @State var time: String = ""
-    @State var beep = false
+    @State var time: String = "1"
+    @State var beep = true
     
     @State var title: String = ""
     @State var times: String = "1"
-    @State var iterval: Beep?
+    
+    // @State var iterval: Beep?
     @State var beeps: [Beep] = []
     
     @State var presentBeepEditor = false
     @State var editBeep: Beep?
     
     var coreData = CoreDataService.going
-    var session: BeepSession?
-    var source: Beep?
-    var onSave: ((Beep?, String, Int, Bool) -> Void)?
     
+    var session: BeepSession?
+    var onSave: ((String) -> Void)?
+    
+    init (onSave: ((String) -> Void)? = nil) {
+        self.onSave = onSave
+    }
+    
+    init(session: BeepSession, onSave: ((String) -> Void)?){
+        self.session = session
+        self.onSave = onSave
+    }
+    
+    init(title: String, onSave: ((String) -> Void)?){
+        
+        self.onSave = onSave
+        if let s = coreData.findByOne(request: BeepSession.fetchRequest(), conds: ["name": title]) {
+            session = s
+        }
+        
+    }
     
     struct LabelText: View {
         var text: String = ""
@@ -256,7 +274,7 @@ struct BeepSheet: View {
                     VStack {
                         HStack{
                             LabelText("名称")
-                            TextField("请输入名称", text: $text)
+                            TextField("请输入名称", text: $title)
                         }
                         HStack{
                             LabelText("重复次数")
@@ -316,31 +334,36 @@ struct BeepSheet: View {
                 HStack{
                     Spacer()
                     Button(action: {
-                        if let save = onSave, let t = Int(time) {
                             
-                            coreData.query(request: BeepSession.fetchRequest(), query: { query in
-                                let exist = query.findByOne(conds: ["title": title])
-                                
-                                if exist != nil
-                                    && ((session != nil && exist!.name != session!.name) || session == nil) {
-                                    //error
-                                    return
-                                }
-                                
-                                if let s = exist == nil ? query.instance() : exist {
-                                    s.name = title
-                                    s.times = Int64(times) ?? 1
-                                    s.iterval_beep = iterval
-                                    s.beeps = beeps
-                                    query.flush()
-                                    //onSave
-                                }else{
-                                    //error
-                                }
-                            })
-                            
-                            save(source, text, t, beep)
+                        if title.count < 1 || beeps.count < 1 {
+                            return
                         }
+                        
+                        coreData.query(request: BeepSession.fetchRequest(), query: { query in
+                            let exist = query.findByOne(conds: ["name": title])
+                            
+                            if exist != nil
+                                && ((session != nil && exist!.name != session!.name) || session == nil) {
+                                return
+                            }
+                            
+                            if let s = exist == nil ? query.instance() : exist {
+                                s.name = title
+                                s.times = Int64(times) ?? 1
+                                s.iterval_beep = Beep(text: text, time: Int(time) ?? 1, timeBeep: beep)
+                                s.beeps = beeps
+                                query.flush()
+                                //onSave
+                                if let save = onSave {
+                                    save(title)
+                                }
+                            }else{
+                                //error
+                            }
+                        })
+                            
+                            // save(source, text, t, beep)
+                        // }
                     }, label: {
                         Text("保存").bold().foregroundColor(.white).font(.footnote)
                     })
@@ -373,10 +396,19 @@ struct BeepSheet: View {
         }.background(Color.lightgray)
         .navigationBarTitle(Text("Setting"))
         .onAppear{
-            if let s = source {
-                text = s.text
-                time = String(s.time)
-                beep = s.timeBeep
+            if let s = session {
+                
+                if let b = s.iterval_beep {
+                    text = b.text
+                    time = String(b.time)
+                    beep = b.timeBeep
+                }
+                
+                title = s.name ?? ""
+                times = String(s.times)
+                // iterval = s.iterval_beep
+                beeps = s.beeps
+                
             }
             // presentBeepEditor = true
         }
@@ -393,7 +425,9 @@ struct BeepSheet: View {
 struct BeepSheet_Previews: PreviewProvider {
     
     static var previews: some View {
-        BeepSheet()
+        BeepSheet(title: "Aaa") { (title) in
+            //todo
+        }
     }
 }
 #endif

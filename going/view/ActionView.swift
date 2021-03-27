@@ -136,13 +136,18 @@ struct ActionView: View {
                     
                 }
                 .onAppear(){
+                    SportTime.shared.initAppData()
+                    
+                    model.reloadData()
+                    
                     if session == nil && model.sessions.count > 0 {
                         session = model.sessions[0]
                     }
                     // SportTime.shared.cleanAllData()
-                    // SportTime.shared.initAppData()
-                    // (ReportGenerator()).generate(start: Int(Date().timeIntervalSince1970 - 86400*2))
+                    
+                    (ReportGenerator()).generate(start: Int(Date().timeIntervalSince1970 - 86400*2))
                     //isSelectSession = true
+                    
                 }
                 
             }
@@ -262,6 +267,8 @@ struct ActionView: View {
     
     class Model: ObservableObject {
         
+        var coreData = CoreDataService.going
+        
         enum State: String {
             case stop, hold, ready, running, holding
         }
@@ -319,6 +326,21 @@ struct ActionView: View {
             var title: String?
             
             var interval_beep: Beep? = nil
+        }
+        
+        func reloadData(){
+            coreData.query(request: BeepSession.fetchRequest(), query: { query in
+                let beepSessions = query.findBy()
+                
+                self.sessions = beepSessions.map({ s in
+                    return Session(
+                        beeps: s.beeps,
+                        repeats: s.repeats,
+                        title: s.name,
+                        interval_beep: s.iterval_beep
+                    )
+                })
+            })
         }
                 
         func forEach<T>(
