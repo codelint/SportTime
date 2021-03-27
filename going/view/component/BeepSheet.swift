@@ -21,7 +21,7 @@ struct BeepSheet: View {
     @State var iterval: Beep?
     @State var beeps: [Beep] = []
     
-    @State var presentBeepEditor = true
+    @State var presentBeepEditor = false
     @State var editBeep: Beep?
     
     var coreData = CoreDataService.going
@@ -144,7 +144,10 @@ struct BeepSheet: View {
     struct BeepEditDialog: View {
         
         @State var beep: Beep = Beep(text: "", time: 1, timeBeep: true)
+        
         @State var time: String = ""
+        @State var text: String = ""
+        @State var ring: Bool = false
         
         var history: [Beep] = []
         
@@ -160,7 +163,7 @@ struct BeepSheet: View {
                     Divider().padding(.bottom, 3)
                     HStack{
                         LabelText("播放文字")
-                        TextField("请输入名称", text: $beep.text)
+                        TextField("请输入名称", text: $text)
                     }
 
                     HStack{
@@ -170,14 +173,32 @@ struct BeepSheet: View {
 
                     HStack{
                         LabelText("是否读秒")
-                        Toggle("", isOn: $beep.timeBeep)
+                        Toggle("", isOn: $ring)
                     }
                     
                     Divider()
                     if history.count > 0 {
-                        HStack {
-                            Text("从历史中复制:").font(.caption).foregroundColor(.gray)
-                            Spacer()
+                        VStack{
+                            HStack {
+                                Text("从历史中复制:").font(.caption).foregroundColor(.gray)
+                                Spacer()
+                            }
+                            BadgeSelector(history.map({ beep in
+                                return BadgeItem(id: beep.uuid, name: "\(beep.text)(\(beep.time)秒)", value: beep.text)
+                            }).uniq(key: { (item: BadgeItem) in
+                                return item.name
+                            }), onSelect: { (badge: BadgeItem) in
+                                
+                                if let b = history.first(where: { $0.uuid == badge.id }) {
+                                    beep.text = b.text
+                                    beep.time = b.time
+                                    beep.timeBeep = b.timeBeep
+                                    time = String(b.time)
+                                    text = b.text
+                                    ring = b.timeBeep
+                                }
+                            })
+                            Divider()
                         }
                     }
                     
@@ -197,6 +218,8 @@ struct BeepSheet: View {
                         Button(action: {
                             if let f = onReturn {
                                 beep.time = Int(time) ?? beep.time
+                                beep.text = text
+                                beep.timeBeep = ring
                                 f(beep)
                             }
                         }, label: {
@@ -216,6 +239,8 @@ struct BeepSheet: View {
             .frame(width: UIScreen.main.bounds.width)
             .onAppear(){
                 time = String(beep.time)
+                text = beep.text
+                ring = beep.timeBeep
             }
         }
     }
@@ -223,8 +248,10 @@ struct BeepSheet: View {
     var body: some View {
 
         ZStack{
+            
             VStack(spacing: 0){
                 
+                ScrollView(showsIndicators: false){
                 FieldSection(title: "基本信息") {
                     VStack {
                         HStack{
@@ -284,6 +311,7 @@ struct BeepSheet: View {
                     Text("增加计时单位").font(.footnote)
                 })
                 Spacer()
+                }
                 Divider()
                 HStack{
                     Spacer()
@@ -326,7 +354,10 @@ struct BeepSheet: View {
             }
             
             if presentBeepEditor {
-                BeepEditDialog(beep: editBeep ?? Beep.empty) { result in
+                BeepEditDialog(
+                    beep: editBeep ?? Beep.empty,
+                    history: beeps
+                ) { result in
                     if let beep = result {
                         if !beeps.contains(where: { $0.uuid == beep.uuid }) {
                             beeps.append(beep)
@@ -347,7 +378,7 @@ struct BeepSheet: View {
                 time = String(s.time)
                 beep = s.timeBeep
             }
-            presentBeepEditor = true
+            // presentBeepEditor = true
         }
         
             

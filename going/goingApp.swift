@@ -18,4 +18,7 @@ struct goingApp: App {
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
+    
+    
+
 }

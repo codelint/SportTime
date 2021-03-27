@@ -139,8 +139,9 @@ struct ActionView: View {
                     if session == nil && model.sessions.count > 0 {
                         session = model.sessions[0]
                     }
-                    
-                    (ReportGenerator()).generate()
+                    // SportTime.shared.cleanAllData()
+                    // SportTime.shared.initAppData()
+                    // (ReportGenerator()).generate(start: Int(Date().timeIntervalSince1970 - 86400*2))
                     //isSelectSession = true
                 }
                 
@@ -284,15 +285,12 @@ struct ActionView: View {
             ),
             Session(
                 beeps: [
-                    Beep(text: "俯", time: 1, timeBeep: false),Beep(text: "撑", time: 1, timeBeep: false),
-                    Beep(text: "俯", time: 1, timeBeep: false),Beep(text: "撑", time: 1, timeBeep: false),
-                    Beep(text: "俯", time: 1, timeBeep: false),Beep(text: "撑", time: 1, timeBeep: false),
-                    Beep(text: "俯", time: 1, timeBeep: false),Beep(text: "撑", time: 1, timeBeep: false),
-                    Beep(text: "俯", time: 1, timeBeep: false),Beep(text: "撑", time: 1, timeBeep: false),
+                    Beep(text: "俯", time: 1, timeBeep: false),
+                    Beep(text: "撑", time: 1, timeBeep: false)
                 ],
-                repeats: 2,
+                repeats: 10,
                 title: "俯卧撑训练",
-                interval_beep: Beep(text: "放松", time: 5, timeBeep: true)
+                interval_beep: nil
             ),
             Session(beeps: [
                 Beep(text: "蹦脚", time: 3, timeBeep: true),

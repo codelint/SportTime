@@ -101,6 +101,13 @@ class CoreDataService {
             self.request = request
         }
         
+        func truncate() {
+            let arr = self.findBy()
+            for item in arr {
+                self.delete(item)
+            }
+        }
+        
         func findBy(conds: [String: String?] = [String:String]()) -> [T] {
             
             // let request = NSFetchRequest<T>(entityName: entityName.rawValue)

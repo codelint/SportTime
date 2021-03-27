@@ -25,6 +25,17 @@ extension Array {
         return results
     }
     
+    func uniq(key: (Element) -> String?) -> [Element]{
+        
+        let grouped = self.groupBy(key: key)
+        
+        return grouped.enumerated().map { (e) -> Element in
+            
+            return e.element.value[0]
+        }
+        
+    }
+    
     func asyncEach(
         _ arr: [Element],
         from: Int = 0,

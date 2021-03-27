@@ -15,7 +15,9 @@ extension BeepSession {
         get {
             var results = [Beep]()
             if let arr_str = self.beep_array {
-                if let arr = JSON(arr_str).array {
+                // print(arr_str)
+                if let arr = JSON(parseJSON: arr_str).array {
+                    
                     for item in arr {
                         if let text = item["text"].string, let time = item["time"].int, let timeBeep = item["timeBeep"].bool, let uuid = item["uuid"].string {
                             

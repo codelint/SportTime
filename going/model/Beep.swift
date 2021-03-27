@@ -36,7 +36,7 @@ class Beep: Identifiable{
     }
     
     var description: String {
-        return "{\"uuid\":\"\(uuid)\",\"text\":\"\(text)\"},\"time\":\(time), \"timeBeep\":\(timeBeep)}}"
+        return "{\"uuid\":\"\(uuid)\",\"text\":\"\(text)\",\"time\":\(time), \"timeBeep\":\(timeBeep)}"
     }
     
     static let empty = Beep()

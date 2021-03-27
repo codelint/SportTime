@@ -36,6 +36,7 @@
 		E590A2CE260B6ABD00EC6260 /* BeepSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E590A2CD260B6ABD00EC6260 /* BeepSheet.swift */; };
 		E590A2D4260C5FDD00EC6260 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = E590A2D3260C5FDD00EC6260 /* SwiftUICharts */; };
 		E590A2D9260C633F00EC6260 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E590A2D8260C633F00EC6260 /* CoreDataService.swift */; };
+		E5930B7E260F1B7400C3D887 /* SportTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5930B7D260F1B7400C3D887 /* SportTimeApp.swift */; };
 		E5C7E8F8260C6EA5007742BA /* ReportGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C7E8F7260C6EA5007742BA /* ReportGenerator.swift */; };
 		E5C7E901260C76AC007742BA /* BeepLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C7E900260C76AC007742BA /* BeepLog.swift */; };
 		E5C7E909260C814B007742BA /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C7E908260C814B007742BA /* ReportView.swift */; };
@@ -87,6 +88,7 @@
 		E590A2C22608CE8B00EC6260 /* TextPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPlayer.swift; sourceTree = "<group>"; };
 		E590A2CD260B6ABD00EC6260 /* BeepSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeepSheet.swift; sourceTree = "<group>"; };
 		E590A2D8260C633F00EC6260 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		E5930B7D260F1B7400C3D887 /* SportTimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTimeApp.swift; sourceTree = "<group>"; };
 		E5C7E8F7260C6EA5007742BA /* ReportGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportGenerator.swift; sourceTree = "<group>"; };
 		E5C7E900260C76AC007742BA /* BeepLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeepLog.swift; sourceTree = "<group>"; };
 		E5C7E908260C814B007742BA /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				E5C7E8F7260C6EA5007742BA /* ReportGenerator.swift */,
+				E5930B7D260F1B7400C3D887 /* SportTimeApp.swift */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				E590A2C32608CE8B00EC6260 /* TextPlayer.swift in Sources */,
 				E52AAFE826089D8A004BD0EB /* CommonUtil.swift in Sources */,
 				E52AAFD42607575D004BD0EB /* Badges.swift in Sources */,
+				E5930B7E260F1B7400C3D887 /* SportTimeApp.swift in Sources */,
 				E5482EB2260CC5F2006C0755 /* BeepSession.swift in Sources */,
 				E5482ECC260D759A006C0755 /* Date.swift in Sources */,
 				E52AAF7E26074EE2004BD0EB /* going.xcdatamodeld in Sources */,

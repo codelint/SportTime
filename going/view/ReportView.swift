@@ -57,10 +57,6 @@ struct ReportView: View {
         ScrollView{
             VStack {
                 
-                //            if let r = report {
-                //                DateReport(report: r)
-                //            }
-                
                 ForEach(reports, id: \.label) { report in
                     DateReport(report: report)
                 }
