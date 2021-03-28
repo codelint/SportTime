@@ -10,8 +10,6 @@ import SwiftUI
 
 struct ActionView: View {
     
-    // @Environment(\.managedObjectContext) private var viewContext
-    
     var coreData: CoreDataService = .going
     var player = TextPlayer()
     
@@ -22,6 +20,8 @@ struct ActionView: View {
     
     @State var isEditBeep = true
     @State var editIndex: Int? = nil
+    
+    @State var isEditSessoin = false
     
     var body: some View {
         NavigationView {
@@ -48,25 +48,23 @@ struct ActionView: View {
                         
                         HStack(alignment: .bottom, spacing: 0){
                             Spacer()
-                            NavigationLink(
-                                destination: BeepSheet(title: session?.title ?? "", onSave: { (tit) in
-                                    
-                                }),
-                                label: {
-                                    Image(systemName: "square.and.pencil")
-                                        .padding(.horizontal, 8)
-                                }
-                            ).padding(.top, 16)
-//                            Button(action: {
-//
-//                            }, label: {
-//                                Image(systemName: "square.and.pencil")
-//                                    .padding(.horizontal, 8)
-//                            }).padding(.top, 16)
-                            
-                        }
+                            if model.state == .ready {
+                                NavigationLink(
+                                    destination: BeepSheet(title: session?.title ?? "", onSave: { (tit) in
+                                        isEditSessoin = false
+                                        selectSession(tit)
+                                    }),
+                                    isActive: $isEditSessoin,
+                                    label: {
+                                        Image(systemName: "square.and.pencil")
+                                            .padding(.horizontal, 8)
+                                    }
+                                )
+                            }else{
+                                Image(systemName: "square.and.pencil").foregroundColor(.gray).padding(.horizontal, 8)
+                            }
+                        }.padding(.top, 16)
                     }
-                    //                    Divider()
                 }
                 
                 VStack(spacing:0){
@@ -130,6 +128,7 @@ struct ActionView: View {
                         }
                     }.padding(.vertical, 32)
                     Spacer()
+                    Group{
                     if model.state == .ready {
                         HStack {
                             Button(action: {
@@ -142,6 +141,7 @@ struct ActionView: View {
                     }else{
                         Image(systemName: "ant").padding()
                     }
+                    }.font(.title)
                     
                 }
                 .onAppear(){
@@ -161,41 +161,40 @@ struct ActionView: View {
                 
             }
             .navigationBarHidden(true)
-            .sheet(isPresented: $isEditBeep, content: {
-                // BeepSheet()
-                VStack{
-                    Spacer()
-                    Text("Heloo").font(.title)
-                    Spacer()
-                }
-//                if let tit = session?.title, let ei = model.sessions.firstIndex(where: { $0.title == session!.title }) {
-//                    BeepSheet(title: tit) { (title) in
-//                        coreData.query(request: BeepSession.fetchRequest()) { (query) in
-//                            if let s = query.findByOne(conds: ["name": title]) {
-//                                model.sessions[ei] = Model.Session(beeps: s.beeps, repeats: s.repeats, title: s.name, interval_beep: s.iterval_beep)
-//                                session = model.sessions[ei]
-//                            }
-//                        }
-//                    }
-//                }
-            })
             .sheet(isPresented: $isSelectSession, content: {
                 SessionSelector(
                     selected: session?.title,
                     sessions: model.sessions,
                     isShow: $isSelectSession
                 ){ selected in
-                    if let s = model.sessions.first(where: { $0.title == selected }) {
-                        session = s
-                        if model.state != .ready {
-                            model.state = .stop
+                    coreData.query(request: BeepSession.fetchRequest(), query: { query in
+                        if let s = query.findByOne(conds: ["name": selected]) {
+                            selectSession(selected)
                         }
-                        
-                    }
+                    })
                 }
             })
         }
         
+    }
+    
+    func selectSession(_ title: String){
+        
+        coreData.query(request: BeepSession.fetchRequest(), query: { query in
+            if let s = query.findByOne(conds: ["name": title]) {
+                
+                self.session = Model.Session.from(beepSession: s)
+                helper.wait(for: 1, {
+                    model.reloadSessions()
+                })
+                
+                if model.state != .ready {
+                    model.state = .stop
+                }
+            
+            }
+        })
+       
     }
     
     func learning(session: Model.Session){
@@ -205,20 +204,19 @@ struct ActionView: View {
         model.forEach(repeats, next: { (v, next) in
             print("第\(v)次: beeps.count = \(session.beeps.count)")
             model.forEach(session.beeps, next: { (beep, next) in
-                print("))")
                 let start_time = Int64(Date().timeIntervalSince1970)
                 
-                player.play(beep.text)
-                model.title = String(beep.time) + "秒"
-                model.sub_title = String(beep.text)
-                
-                model.beep(2, finish: {
+                player.play(beep.text){ _ in
+                    model.title = String(beep.time) + "秒"
+                    model.sub_title = String(beep.text)
+                    
                     model.beep(beep.time) { (tic) in
                         if beep.timeBeep {
                             player.play(tic)
                         }
                         model.title = String(tic)
                     } finish: {
+                        model.title = "0"
                         coreData.query(request: BeepLog.fetchRequest()) { (query) in
                             if let beepLog = query.instance() {
                                 beepLog.uuid = beep.uuid.description
@@ -232,8 +230,8 @@ struct ActionView: View {
                             next()
                         })
                     }
-                    
-                })
+                }
+                
                 
             }, first: { (beep, start) in
                 if repeats.count > 1 {
@@ -263,7 +261,8 @@ struct ActionView: View {
                                 }
                                 model.title = String(tic)
                             }, finish: {
-                                helper.wait(for: interval.time, callback:next)
+                                next()
+                                // helper.wait(for: interval.time, callback:next)
                             })
                         }else{
                             next()
@@ -284,7 +283,12 @@ struct ActionView: View {
             model.title = "开始"
             model.sub_title = nil
             player.play("结束")
+            print("结束")
             model.state = .ready
+            helper.wait(for: 1){
+                model.state = .ready
+
+            }
         })
     }
     
@@ -360,6 +364,10 @@ struct ActionView: View {
         }
         
         func reloadData(){
+            reloadSessions()
+        }
+        
+        func reloadSessions(){
             coreData.query(request: BeepSession.fetchRequest(), query: { query in
                 let beepSessions = query.findBy()
                 
@@ -390,8 +398,10 @@ struct ActionView: View {
                 return
             case .stop:
                 // state = .ready
+                print("stop it")
                 if let item = arr.last, let f = last {
                     f(item)
+                    print("call last")
                 }
                 return
             case .ready, .running:
@@ -485,15 +495,6 @@ struct ActionView: View {
                     Text("以上均没有想要的, 请点击”+“按钮, 创建")
                         .font(.caption2)
                         .foregroundColor(.gray)
-                    
-//                    NavigationLink(
-//                        destination: BeepSheet(onSave: { (tit) in
-//                            //todo
-//                        }),
-//                        label: {
-//                            Image(systemName: "plus")
-//                        }
-//                    ).padding()
                     
                     Button(action: {
                         withAnimation{

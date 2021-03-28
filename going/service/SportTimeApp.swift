@@ -30,10 +30,11 @@ class SportTime {
     func initAppData() {
         
         coreData.query(request: BeepSession.fetchRequest(), query: { query in
-            let exists = query.findBy()
-            for exist in exists {
-                query.delete(exist)
-            }
+//            let exists = query.findBy()
+//            for exist in exists {
+//                query.delete(exist)
+//            }
+            
             if let first = query.findByOne() {
                 print("\(first.name ?? "")/\(first.repeats)/\(first.beeps.count)")
                 return

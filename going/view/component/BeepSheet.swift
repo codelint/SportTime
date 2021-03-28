@@ -360,11 +360,17 @@ struct BeepSheet: View {
                         }
                         
                         coreData.query(request: BeepSession.fetchRequest(), query: { query in
-                            let exist = query.findByOne(conds: ["name": title])
+                        
+                           
+                            var exist = query.findByOne(conds: ["name": title])
                             
                             if exist != nil
                                 && ((session != nil && exist!.name != session!.name) || session == nil) {
                                 return
+                            }
+                            
+                            if let edit = session?.name {
+                                exist = query.findByOne(conds: ["name": edit])
                             }
                             
                             if let s = exist == nil ? query.instance() : exist {
