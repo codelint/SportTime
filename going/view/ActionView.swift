@@ -496,7 +496,10 @@ struct ActionView: View {
 //                    ).padding()
                     
                     Button(action: {
-                        isAdd = true
+                        withAnimation{
+                            isAdd = true
+                        }
+                        
                     }, label: {
                         Image(systemName: "plus")
                     }).padding()

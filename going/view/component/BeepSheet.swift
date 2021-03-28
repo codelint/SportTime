@@ -325,7 +325,9 @@ struct BeepSheet: View {
                                 beep: beep,
                                 onEdit: { beep in
                                     editBeep = beep
-                                    presentBeepEditor = true
+                                    withAnimation {
+                                        presentBeepEditor = true
+                                    }
                                 }, onCopy: { beep in
                                     beeps.append(Beep(text: beep.text, time: beep.time, timeBeep: beep.timeBeep))
                                 }, onDelete: { beep in
@@ -340,7 +342,9 @@ struct BeepSheet: View {
                 }
                 Button(action: {
                     editBeep = Beep()
-                    presentBeepEditor = true
+                    withAnimation {
+                        presentBeepEditor = true
+                    }
                 }, label: {
                     Text("增加计时单位").font(.footnote)
                 })
@@ -395,24 +399,28 @@ struct BeepSheet: View {
             if presentBeepEditor {
                 BeepEditDialog(
                     beep: editBeep ?? Beep.empty,
-                    history: beeps
-                ) { (result, title) in
-                    if let beep = result {
-                        if !beeps.contains(where: { $0.uuid == beep.uuid }) {
-                            beeps.append(beep)
-                        }
-                        
-                        if let tit = title {
-                            for b in beeps.filter({ $0.text == tit }) {
-                                b.time = beep.time
-                                b.timeBeep = beep.timeBeep
-                                b.text = beep.text
+                    history: beeps,
+                    onReturn: { (result, title) in
+                        if let beep = result {
+                            if !beeps.contains(where: { $0.uuid == beep.uuid }) {
+                                beeps.append(beep)
+                            }
+                            
+                            if let tit = title {
+                                for b in beeps.filter({ $0.text == tit }) {
+                                    b.time = beep.time
+                                    b.timeBeep = beep.timeBeep
+                                    b.text = beep.text
+                                }
                             }
                         }
+                        withAnimation {
+                            presentBeepEditor = false
+                        }
+                        
                     }
-                    presentBeepEditor = false
-                    
-                }
+                )
+                .transition(.moveAndFade)
             }
             
             

@@ -32,6 +32,7 @@
 		E5482EC2260D756A006C0755 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5482EC1260D756A006C0755 /* Double.swift */; };
 		E5482EC7260D7589006C0755 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5482EC6260D7589006C0755 /* Array.swift */; };
 		E5482ECC260D759A006C0755 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5482ECB260D759A006C0755 /* Date.swift */; };
+		E560FE072610AE5600CF6044 /* AnyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E560FE062610AE5600CF6044 /* AnyTransition.swift */; };
 		E590A2C32608CE8B00EC6260 /* TextPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E590A2C22608CE8B00EC6260 /* TextPlayer.swift */; };
 		E590A2CE260B6ABD00EC6260 /* BeepSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E590A2CD260B6ABD00EC6260 /* BeepSheet.swift */; };
 		E590A2D4260C5FDD00EC6260 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = E590A2D3260C5FDD00EC6260 /* SwiftUICharts */; };
@@ -85,6 +86,7 @@
 		E5482EC1260D756A006C0755 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		E5482EC6260D7589006C0755 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		E5482ECB260D759A006C0755 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		E560FE062610AE5600CF6044 /* AnyTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTransition.swift; sourceTree = "<group>"; };
 		E590A2C22608CE8B00EC6260 /* TextPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPlayer.swift; sourceTree = "<group>"; };
 		E590A2CD260B6ABD00EC6260 /* BeepSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeepSheet.swift; sourceTree = "<group>"; };
 		E590A2D8260C633F00EC6260 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				E5482EC1260D756A006C0755 /* Double.swift */,
 				E5482EC6260D7589006C0755 /* Array.swift */,
 				E5482ECB260D759A006C0755 /* Date.swift */,
+				E560FE062610AE5600CF6044 /* AnyTransition.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5482EB7260CC62E006C0755 /* Beep.swift in Sources */,
+				E560FE072610AE5600CF6044 /* AnyTransition.swift in Sources */,
 				E5482EC7260D7589006C0755 /* Array.swift in Sources */,
 				E5C7E901260C76AC007742BA /* BeepLog.swift in Sources */,
 				E5C7E8F8260C6EA5007742BA /* ReportGenerator.swift in Sources */,
