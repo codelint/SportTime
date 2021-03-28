@@ -12,6 +12,8 @@ import PopupView
 
 struct BeepSheet: View {
     
+    @State var error: String? = nil
+    
     @State var text: String = ""
     @State var time: String = "1"
     @State var beep = true
@@ -112,6 +114,7 @@ struct BeepSheet: View {
         var onEdit: ((Beep) -> Void)?
         var onCopy: ((Beep) -> Void)?
         var onDelete: ((Beep) -> Void)?
+        
         
         var body: some View {
             
@@ -352,10 +355,18 @@ struct BeepSheet: View {
                 }
                 Divider()
                 HStack{
+                    if let m = error {
+                        Text(m)
+                            .bold()
+                            .font(.footnote)
+                            .foregroundColor(.red)
+                            .padding(.leading, 16)
+                    }
                     Spacer()
                     Button(action: {
                             
                         if title.count < 1 || beeps.count < 1 {
+                            self.error = "缺少名称/计时单位信息"
                             return
                         }
                         
@@ -366,6 +377,7 @@ struct BeepSheet: View {
                             
                             if exist != nil
                                 && ((session != nil && exist!.name != session!.name) || session == nil) {
+                                self.error = "当前修改/新增名称与现有重名"
                                 return
                             }
                             
@@ -384,7 +396,7 @@ struct BeepSheet: View {
                                     save(title)
                                 }
                             }else{
-                                //error
+                                self.error = "无法保存, 请稍后重试"
                             }
                         })
                             
