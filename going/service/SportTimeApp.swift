@@ -42,7 +42,7 @@ class SportTime {
             // 俯卧撑
             if let session = query.instance() {
                 session.name = "俯卧撑训练"
-                session.times = 2
+                session.times = 1
                 session.iterval_beep = Beep(text: "放松", time: 5, timeBeep: true)
                 session.beeps = [
                     Beep(text: "俯", time: 1, timeBeep: false),Beep(text: "撑", time: 1, timeBeep: false),
@@ -50,6 +50,11 @@ class SportTime {
                     Beep(text: "俯", time: 1, timeBeep: false),Beep(text: "撑", time: 1, timeBeep: false),
                     Beep(text: "俯", time: 1, timeBeep: false),Beep(text: "撑", time: 1, timeBeep: false),
                     Beep(text: "俯", time: 1, timeBeep: false),Beep(text: "撑", time: 1, timeBeep: false),
+                    Beep(text: "俯", time: 1, timeBeep: false),Beep(text: "撑", time: 1, timeBeep: false),
+                    Beep(text: "俯", time: 1, timeBeep: false),Beep(text: "撑", time: 1, timeBeep: false),
+                    Beep(text: "俯", time: 1, timeBeep: false),Beep(text: "撑", time: 1, timeBeep: false),
+                    Beep(text: "俯", time: 1, timeBeep: false),Beep(text: "撑", time: 1, timeBeep: false),
+                    Beep(text: "俯", time: 1, timeBeep: false),Beep(text: "撑", time: 1, timeBeep: false)
                 ]
                 query.flush()
             }

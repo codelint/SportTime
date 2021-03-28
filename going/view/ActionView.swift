@@ -55,7 +55,8 @@ struct ActionView: View {
                                 label: {
                                     Image(systemName: "square.and.pencil")
                                         .padding(.horizontal, 8)
-                                }).padding(.top, 16)
+                                }
+                            ).padding(.top, 16)
 //                            Button(action: {
 //
 //                            }, label: {
@@ -198,13 +199,13 @@ struct ActionView: View {
     }
     
     func learning(session: Model.Session){
-        
-        let repeats: [Int] = (1...session.repeats).map({$0})
+        print("start to learning for session[\(session.title ?? "")]")
+        let repeats: [Int] = session.repeats == 1 ? [1] : (1...session.repeats).map({$0})
         model.state = .running
         model.forEach(repeats, next: { (v, next) in
-            
+            print("第\(v)次: beeps.count = \(session.beeps.count)")
             model.forEach(session.beeps, next: { (beep, next) in
-                
+                print("))")
                 let start_time = Int64(Date().timeIntervalSince1970)
                 
                 player.play(beep.text)
@@ -244,6 +245,8 @@ struct ActionView: View {
                         start()
                     }
                     
+                }else{
+                    start()
                 }
             }, last: { beep in
                 // next()
@@ -346,6 +349,14 @@ struct ActionView: View {
             var title: String?
             
             var interval_beep: Beep? = nil
+            
+            static func from(beepSession: BeepSession) -> Session {
+                return Session(
+                    beeps: beepSession.beeps,
+                    repeats: beepSession.repeats,
+                    title: beepSession.name,
+                    interval_beep: beepSession.iterval_beep)
+            }
         }
         
         func reloadData(){
@@ -396,6 +407,7 @@ struct ActionView: View {
                     return
                 }
             }
+
             if from < arr.count {
                 next(arr[from]) {
                     self.forEach(arr, from: from + 1, next: next, first: first, last: last)
@@ -438,11 +450,14 @@ struct ActionView: View {
         @State var selected: String? = nil
         @State var custom: String = ""
         
-        var sessions: [Model.Session]
+        @State var sessions: [Model.Session]
         @Binding var isShow: Bool
         var onSelect: ((String) -> Void)?
         
+        @State var isAdd = false
+        
         var body: some View {
+            if !isAdd {
             VStack(spacing: 8) {
                 ZStack{
                     Text("请选择")
@@ -470,14 +485,35 @@ struct ActionView: View {
                     Text("以上均没有想要的, 请点击”+“按钮, 创建")
                         .font(.caption2)
                         .foregroundColor(.gray)
+                    
+//                    NavigationLink(
+//                        destination: BeepSheet(onSave: { (tit) in
+//                            //todo
+//                        }),
+//                        label: {
+//                            Image(systemName: "plus")
+//                        }
+//                    ).padding()
+                    
                     Button(action: {
-                        isShow = false
-                        
+                        isAdd = true
                     }, label: {
                         Image(systemName: "plus")
                     }).padding()
                 }
             }.padding(.horizontal)
+            }else{
+                BeepSheet { (tit) in
+                    isAdd = false
+                    let coreData = CoreDataService.going
+                    coreData.query(request: BeepSession.fetchRequest()) { (query) in
+                        if let s = query.findByOne(conds: ["name": tit]) {
+                            sessions.append(Model.Session.from(beepSession: s))
+                        }
+                        
+                    }
+                }
+            }
         }
     }
     

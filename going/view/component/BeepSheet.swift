@@ -169,7 +169,7 @@ struct BeepSheet: View {
         
         var history: [Beep] = []
         
-        var onReturn: ((Beep?) -> Void)?
+        var onReturn: ((Beep?, String?) -> Void)?
         
         var body: some View {
             VStack(spacing: 0){
@@ -223,7 +223,7 @@ struct BeepSheet: View {
                     HStack{
                         Button(action: {
                             if let f = onReturn {
-                                f(nil)
+                                f(nil, nil)
                             }
                         }, label: {
                             Text("取消").foregroundColor(.white)
@@ -233,12 +233,28 @@ struct BeepSheet: View {
                         .background(Color.gray)
                         .cornerRadius(5.0)
                         Spacer()
+                        if beep.text.count > 0 {
+                            Button(action: {
+                                if let f = onReturn {
+                                    let old = beep.text
+                                    beep.time = Int(time) ?? beep.time
+                                    beep.text = text
+                                    beep.timeBeep = ring
+                                    f(beep, old)
+                                }
+                            }, label: {
+                                Text("同名批量修改").foregroundColor(.lightgray)
+                            }).padding(.horizontal, 16)
+                            .padding(.vertical, 8)
+                            .background(Color.red)
+                            .cornerRadius(5.0)
+                        }
                         Button(action: {
                             if let f = onReturn {
                                 beep.time = Int(time) ?? beep.time
                                 beep.text = text
                                 beep.timeBeep = ring
-                                f(beep)
+                                f(beep, nil)
                             }
                         }, label: {
                             Text("确定").foregroundColor(.white)
@@ -380,10 +396,18 @@ struct BeepSheet: View {
                 BeepEditDialog(
                     beep: editBeep ?? Beep.empty,
                     history: beeps
-                ) { result in
+                ) { (result, title) in
                     if let beep = result {
                         if !beeps.contains(where: { $0.uuid == beep.uuid }) {
                             beeps.append(beep)
+                        }
+                        
+                        if let tit = title {
+                            for b in beeps.filter({ $0.text == tit }) {
+                                b.time = beep.time
+                                b.timeBeep = beep.timeBeep
+                                b.text = beep.text
+                            }
                         }
                     }
                     presentBeepEditor = false
@@ -426,7 +450,7 @@ struct BeepSheet: View {
 struct BeepSheet_Previews: PreviewProvider {
     
     static var previews: some View {
-        BeepSheet(title: "Aaa") { (title) in
+        BeepSheet(title: "俯卧撑训练") { (title) in
             //todo
         }
     }
