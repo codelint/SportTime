@@ -20,9 +20,14 @@ class CommonUtil {
     }
     
     func wait(for sec: Double, _ callback: @escaping () -> Void){
-        DispatchQueue.main.asyncAfter(deadline: .now() + sec) {
-           callback()
+        if sec > 0.001 {
+            DispatchQueue.main.asyncAfter(deadline: .now() + sec) {
+               callback()
+            }
+        }else{
+            callback()
         }
+        
     }
     
     func t(_ src: String) -> String{

@@ -29,7 +29,10 @@ class TextPlayer {
     func play(_ text: String, next: ((String) -> Void)?){
         //stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())
         let t = text.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? text
-        print(t)
+        if t.count < 1 {
+            next?(text)
+            return
+        }
         if let url = URL(string: "https://tts.baidu.com/text2audio?cuid=baike&lan=ZH&ctp=1&pdt=301&vol=32&rate=8&per=4&tex=\(t)") {
             do {
                 let fm = FileManager()

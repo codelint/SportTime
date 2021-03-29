@@ -163,6 +163,10 @@ class CoreDataService {
             return findByOne(conds: ["id": id])
         }
         
+        func refresh(_ t: T){
+            container.viewContext.refresh(t, mergeChanges: true)
+        }
+        
         func flush(){
             // 1
             let context = container.viewContext

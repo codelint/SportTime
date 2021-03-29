@@ -14,12 +14,23 @@ struct BeepSheet: View {
     
     @State var error: String? = nil
     
-    @State var text: String = ""
-    @State var time: String = "1"
-    @State var beep = true
+    @State var isIterval = false
+    @State var itervalBeep = Beep()
+//    @State var text: String = ""
+//    @State var time: String = "1"
+//    @State var beep = false
+    
+    @State var delay:String = "0"
     
     @State var title: String = ""
     @State var times: String = "1"
+    
+    @State var isStartIterval = false
+    @State var startBeep: Beep = Beep()
+    
+    @State var hasEndIterval = false
+    @State var endBeep: Beep = Beep()
+    
     
     // @State var iterval: Beep?
     @State var beeps: [Beep] = []
@@ -28,24 +39,34 @@ struct BeepSheet: View {
     @State var editBeep: Beep?
     
     var coreData = CoreDataService.going
+    var query: CoreDataService.Query<BeepSession>
     
     var session: BeepSession?
     var onSave: ((String) -> Void)?
     
     init (onSave: ((String) -> Void)? = nil) {
         self.onSave = onSave
+        self.query = coreData.getQuery(request: BeepSession.fetchRequest())
     }
     
     init(session: BeepSession, onSave: ((String) -> Void)?){
         self.session = session
         self.onSave = onSave
+        self.query = coreData.getQuery(request: BeepSession.fetchRequest())
     }
     
     init(title: String, onSave: ((String) -> Void)?){
         
+        self.query = coreData.getQuery(request: BeepSession.fetchRequest())
         self.onSave = onSave
-        if let s = coreData.findByOne(request: BeepSession.fetchRequest(), conds: ["name": title]) {
+        self.title = title
+        
+        print("BeepSheet.init(\(title))")
+        if let s = query.findByOne(conds: ["name": title]) {
+            // query.refresh(s)
             session = s
+            print(s.times)
+            self.initialize()
         }
         
     }
@@ -139,21 +160,24 @@ struct BeepSheet: View {
                             .lineLimit(1)
                     }.foregroundColor(.gray)
                     Spacer()
-                    Button(action: {
-                        if let f = onCopy {
+                    if let f = onCopy {
+                        Button(action: {
+                            
                             f(beep)
-                        }
-                    }, label: {
-                        Image(systemName: "doc.on.doc")
-                    }).padding(.horizontal, 8)
-                    Button(action: {
-                        if let f = onEdit {
+                            
+                        }, label: {
+                            Image(systemName: "doc.on.doc")
+                        }).padding(.horizontal, 8)
+                    }
+                    if let f = onEdit {
+                        Button(action: {
+                            
                             f(beep)
-                        }
-                    }, label: {
-                        Image(systemName: "square.and.pencil")
-                    }).padding(.horizontal, 8)
-                    
+                            
+                        }, label: {
+                            Image(systemName: "square.and.pencil")
+                        }).padding(.horizontal, 8)
+                    }
                 }
                 .padding(12)
                 Divider()
@@ -289,37 +313,56 @@ struct BeepSheet: View {
             VStack(spacing: 0){
                 
                 ScrollView(showsIndicators: false){
-                FieldSection(title: "基本信息") {
-                    VStack {
-                        HStack{
-                            LabelText("名称")
-                            TextField("请输入名称", text: $title)
-                        }
-                        HStack{
-                            LabelText("重复次数")
-                            NumberField(tip:"1", value: $times)
-                        }
-                    }
-                }
-                
-                FieldSection(title: "重复间隔设置") {
-                    VStack{
-                        HStack{
-                            LabelText("播放文字")
-                            TextField("请输入名称", text: $text)
-                        }
-                        
-                        HStack{
-                            LabelText("时长(秒)")
-                            NumberField(tip: "输入延时秒数, 例如: 3", value: $time)
-                        }
-                        
-                        HStack{
-                            LabelText("是否读秒")
-                            Toggle("", isOn: $beep)
+                    FieldSection(title: "基本信息") {
+                        VStack {
+                            HStack{
+                                LabelText("名称")
+                                TextField("请输入名称", text: $title)
+                            }
+                            HStack{
+                                LabelText("重复次数")
+                                NumberField(tip:"1", value: $times)
+                            }
+                            HStack{
+                                LabelText("重复间歇")
+                                Toggle("", isOn: $isIterval)
+                            }
+                            HStack{
+                                LabelText("启动间歇")
+                                Toggle("", isOn: $isStartIterval)
+                            }
                         }
                     }
-                }
+                    
+                    if isStartIterval {
+                        FieldSection(title: "启动间歇设置", padding: 0) {
+                            BeepRow(
+                                beep: startBeep,
+                                onEdit: { beep in
+                                    editBeep = beep
+                                    withAnimation {
+                                        presentBeepEditor = true
+                                    }
+                                },
+                                onCopy: nil, onDelete: nil
+                            )
+                        }
+                    }
+                    
+                    if isIterval {
+                        FieldSection(title: "重复间歇设置", padding: 0) {
+                            BeepRow(
+                                beep: itervalBeep,
+                                onEdit: { beep in
+                                    editBeep = beep
+                                    withAnimation {
+                                        presentBeepEditor = true
+                                    }
+                                },
+                                onCopy: nil, onDelete: nil
+                            )
+                        }
+                    }
                 
                 if beeps.count > 0 {
                     FieldSection(title: "计时序列", padding: 0){
@@ -388,9 +431,12 @@ struct BeepSheet: View {
                             if let s = exist == nil ? query.instance() : exist {
                                 s.name = title
                                 s.times = Int64(times) ?? 1
-                                s.iterval_beep = Beep(text: text, time: Int(time) ?? 1, timeBeep: beep)
+                                s.iterval_beep = isIterval ? itervalBeep : nil
+                                s.start_beep = isStartIterval ? startBeep : nil
                                 s.beeps = beeps
+                                s.delay = Int64(delay) ?? 0
                                 query.flush()
+                                
                                 //onSave
                                 if let save = onSave {
                                     save(title)
@@ -447,26 +493,34 @@ struct BeepSheet: View {
         .navigationBarTitle(Text("输入计时信息"))
         .navigationBarTitleDisplayMode(.inline)
         .onAppear{
-            if let s = session {
-                
-                if let b = s.iterval_beep {
-                    text = b.text
-                    time = String(b.time)
-                    beep = b.timeBeep
-                }
-                
-                title = s.name ?? ""
-                times = String(s.times)
-                // iterval = s.iterval_beep
-                beeps = s.beeps
-                
-            }
+            initialize()
             // presentBeepEditor = true
         }
         
             
         
       
+    }
+    
+    func initialize(){
+        
+        print("initialize BeepSheet...")
+        
+        if let s = session {
+            
+            title = s.name ?? ""
+            times = String(s.times)
+            delay = String(s.delay)
+            // iterval = s.iterval_beep
+            beeps = s.beeps
+            
+            itervalBeep = s.iterval_beep == nil ? Beep() : s.iterval_beep!
+            isIterval = s.iterval_beep != nil
+            
+            startBeep = s.start_beep == nil ? Beep() : s.start_beep!
+            isStartIterval = s.start_beep != nil
+            
+        }
     }
     
 }
@@ -476,7 +530,7 @@ struct BeepSheet: View {
 struct BeepSheet_Previews: PreviewProvider {
     
     static var previews: some View {
-        BeepSheet(title: "俯卧撑训练") { (title) in
+        BeepSheet(title: "踝泵训练") { (title) in
             //todo
         }
     }

@@ -46,11 +46,11 @@ class ReportGenerator {
             
         }
         
-        let reports = coreData.findBy(request: BeepReport.fetchRequest())
-        
-        for report in reports {
-            print("\(report.label!), \(report.timeline!), \(report.number), \(report.elapsed)")
-        }
+//        let reports = coreData.findBy(request: BeepReport.fetchRequest())
+//        
+//        for report in reports {
+//            print("\(report.label!), \(report.timeline!), \(report.number), \(report.elapsed)")
+//        }
         
     }
     

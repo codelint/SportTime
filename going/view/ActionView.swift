@@ -16,6 +16,7 @@ struct ActionView: View {
     @ObservedObject var model = Model()
     
     @State var session:Model.Session?
+    
     @State var beeping_idx: Int?
     
     @State var isEditBeep = true
@@ -23,13 +24,17 @@ struct ActionView: View {
     
     @State var isEditSessoin = false
     
+    var sessionTitle: String {
+        return self.session?.title ?? ""
+    }
+    
     var body: some View {
         NavigationView {
             VStack{
                 if let s = session {
                     ZStack(){
                         HStack(spacing:0){
-                            Text(s.title ?? "")
+                            Text("\(s.title ?? "")")
                                 .bold()
                                 .font(.body)
                                 .foregroundColor(.gray)
@@ -50,7 +55,7 @@ struct ActionView: View {
                             Spacer()
                             if model.state == .ready {
                                 NavigationLink(
-                                    destination: BeepSheet(title: session?.title ?? "", onSave: { (tit) in
+                                    destination: BeepSheet(title: sessionTitle, onSave: { (tit) in
                                         isEditSessoin = false
                                         selectSession(tit)
                                     }),
@@ -75,6 +80,7 @@ struct ActionView: View {
                             switch model.state {
                             case .ready:
                                 if let s = session {
+                                    model.title = s.title == nil ? model.title : s.title!
                                     self.learning(session: s)
                                 }
                             case .running :
@@ -102,7 +108,7 @@ struct ActionView: View {
                                         .font(.title)
                                         .bold()
                                         .foregroundColor(.white)
-                                        .lineLimit(2)
+                                        .lineLimit(1)
                                     
                                     
                                     if let t = model.sub_title {
@@ -167,11 +173,7 @@ struct ActionView: View {
                     sessions: model.sessions,
                     isShow: $isSelectSession
                 ){ selected in
-                    coreData.query(request: BeepSession.fetchRequest(), query: { query in
-                        if let s = query.findByOne(conds: ["name": selected]) {
-                            selectSession(selected)
-                        }
-                    })
+                    selectSession(selected)
                 }
             })
         }
@@ -184,6 +186,7 @@ struct ActionView: View {
             if let s = query.findByOne(conds: ["name": title]) {
                 
                 self.session = Model.Session.from(beepSession: s)
+                // self.title = self.session?.title
                 helper.wait(for: 1, {
                     model.reloadSessions()
                 })
@@ -197,6 +200,36 @@ struct ActionView: View {
        
     }
     
+    func doBeep(beep: Beep, next: @escaping () -> Void){
+        let start_time = Int64(Date().timeIntervalSince1970)
+        
+        player.play(beep.text){ _ in
+            model.title = String(beep.time) + "秒"
+            model.sub_title = String(beep.text)
+            
+            model.beep(beep.time) { (tic) in
+                if beep.timeBeep {
+                    player.play(tic)
+                }
+                model.title = String(tic)
+            } finish: {
+                model.title = "0"
+                coreData.query(request: BeepLog.fetchRequest()) { (query) in
+                    if let beepLog = query.instance() {
+                        beepLog.uuid = beep.uuid.description
+                        beepLog.name = beep.text
+                        beepLog.start_time = start_time
+                        beepLog.end_time = Int64(Date().timeIntervalSince1970)
+                        query.flush()
+                    }
+                }
+                helper.wait(for: 1, callback: {
+                    next()
+                })
+            }
+        }
+    }
+    
     func learning(session: Model.Session){
         print("start to learning for session[\(session.title ?? "")]")
         let repeats: [Int] = session.repeats == 1 ? [1] : (1...session.repeats).map({$0})
@@ -204,48 +237,24 @@ struct ActionView: View {
         model.forEach(repeats, next: { (v, next) in
             print("第\(v)次: beeps.count = \(session.beeps.count)")
             model.forEach(session.beeps, next: { (beep, next) in
-                let start_time = Int64(Date().timeIntervalSince1970)
-                
-                player.play(beep.text){ _ in
-                    model.title = String(beep.time) + "秒"
-                    model.sub_title = String(beep.text)
-                    
-                    model.beep(beep.time) { (tic) in
-                        if beep.timeBeep {
-                            player.play(tic)
-                        }
-                        model.title = String(tic)
-                    } finish: {
-                        model.title = "0"
-                        coreData.query(request: BeepLog.fetchRequest()) { (query) in
-                            if let beepLog = query.instance() {
-                                beepLog.uuid = beep.uuid.description
-                                beepLog.name = beep.text
-                                beepLog.start_time = start_time
-                                beepLog.end_time = Int64(Date().timeIntervalSince1970)
-                                query.flush()
-                            }
-                        }
-                        helper.wait(for: 1, callback: {
-                            next()
-                        })
-                    }
-                }
-                
-                
+                self.doBeep(beep: beep, next: next)
             }, first: { (beep, start) in
-                if repeats.count > 1 {
-                    if (repeats.count < 20 || v % 10 == 0) {
-                        player.play("第\(v)次") { _ in
+                print("")
+                helper.wait(for: session.delay){
+                    if repeats.count > 1 {
+                        if (repeats.count < 20 || v % 10 == 0) {
+                            player.play("第\(v)次") { _ in
+                                start()
+                            }
+                        }else {
                             start()
                         }
-                    }else {
+                        
+                    }else{
                         start()
                     }
-                    
-                }else{
-                    start()
                 }
+                
             }, last: { beep in
                 // next()
                 
@@ -278,13 +287,19 @@ struct ActionView: View {
                 }
             })
         },
-        first: nil,
+        first: { (v, start) in
+            if let beep = session.start_beep {
+                doBeep(beep: beep, next: start)
+            }else{
+                start()
+            }
+        },
         last: { v in
             model.title = "开始"
             model.sub_title = nil
             player.play("结束")
             print("结束")
-            model.state = .ready
+            // model.state = .ready
             helper.wait(for: 1){
                 model.state = .ready
 
@@ -351,15 +366,22 @@ struct ActionView: View {
             var beeps = [Beep]()
             var repeats = 1
             var title: String?
+            var delay = 0
             
             var interval_beep: Beep? = nil
+            var start_beep: Beep? = nil
+            var end_beep: Beep? = nil
             
             static func from(beepSession: BeepSession) -> Session {
                 return Session(
                     beeps: beepSession.beeps,
                     repeats: beepSession.repeats,
                     title: beepSession.name,
-                    interval_beep: beepSession.iterval_beep)
+                    delay: Int(beepSession.delay),
+                    interval_beep: beepSession.iterval_beep,
+                    start_beep: beepSession.start_beep,
+                    end_beep: beepSession.end_beep
+                )
             }
         }
         
@@ -371,14 +393,7 @@ struct ActionView: View {
             coreData.query(request: BeepSession.fetchRequest(), query: { query in
                 let beepSessions = query.findBy()
                 
-                self.sessions = beepSessions.map({ s in
-                    return Session(
-                        beeps: s.beeps,
-                        repeats: s.repeats,
-                        title: s.name,
-                        interval_beep: s.iterval_beep
-                    )
-                })
+                self.sessions = beepSessions.map({ Session.from(beepSession: $0) })
             })
         }
                 

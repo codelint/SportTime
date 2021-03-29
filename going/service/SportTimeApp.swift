@@ -30,6 +30,8 @@ class SportTime {
     func initAppData() {
         
         coreData.query(request: BeepSession.fetchRequest(), query: { query in
+            
+//            print("clear history data...")
 //            let exists = query.findBy()
 //            for exist in exists {
 //                query.delete(exist)
@@ -46,6 +48,7 @@ class SportTime {
                 session.times = 1
                 session.iterval_beep = Beep(text: "放松", time: 5, timeBeep: true)
                 session.beeps = [
+                    Beep(text: "准备开始", time: 3, timeBeep: true),
                     Beep(text: "俯", time: 1, timeBeep: false),Beep(text: "撑", time: 1, timeBeep: false),
                     Beep(text: "俯", time: 1, timeBeep: false),Beep(text: "撑", time: 1, timeBeep: false),
                     Beep(text: "俯", time: 1, timeBeep: false),Beep(text: "撑", time: 1, timeBeep: false),

@@ -38,12 +38,31 @@ extension BeepSession {
     
     var iterval_beep: Beep? {
         get {
-            return self.interval_info == nil ? nil : Beep(description: self.interval_info!)
+            return self.iterval_info == nil ? nil : Beep(description: self.iterval_info!)
         }
         set {
-            self.interval_info = newValue == nil ? nil : newValue!.description
+            self.iterval_info = newValue == nil ? nil : newValue!.description
         }
         
+    }
+    
+    var start_beep: Beep? {
+        get {
+            return self.start_iterval == nil ? nil : Beep(description: self.start_iterval!)
+        }
+        set {
+            self.start_iterval = newValue == nil ? nil : newValue!.description
+        }
+        
+    }
+    
+    var end_beep: Beep? {
+        get {
+            return self.end_iterval == nil ? nil : Beep(description: self.end_iterval!)
+        }
+        set {
+            self.end_iterval = newValue == nil ? nil : newValue!.description
+        }
     }
     
     var repeats: Int {

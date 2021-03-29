@@ -14,8 +14,11 @@
     </entity>
     <entity name="BeepSession" representedClassName="BeepSession" syncable="YES" codeGenerationType="class">
         <attribute name="beep_array" optional="YES" attributeType="String"/>
-        <attribute name="interval_info" optional="YES" attributeType="String"/>
+        <attribute name="delay" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="end_iterval" optional="YES" attributeType="String"/>
+        <attribute name="iterval_info" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="start_iterval" optional="YES" attributeType="String"/>
         <attribute name="times" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
@@ -24,7 +27,7 @@
     <elements>
         <element name="BeepLog" positionX="-36" positionY="81" width="128" height="89"/>
         <element name="BeepReport" positionX="-18" positionY="108" width="128" height="89"/>
-        <element name="BeepSession" positionX="-18" positionY="126" width="128" height="89"/>
+        <element name="BeepSession" positionX="-18" positionY="126" width="128" height="134"/>
         <element name="Item" positionX="0" positionY="108" width="128" height="44"/>
     </elements>
 </model>

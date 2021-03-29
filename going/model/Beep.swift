@@ -9,10 +9,13 @@ import Foundation
 import SwiftyJSON
 
 class Beep: Identifiable{
+    
     var uuid: String = UUID().description
     var text = ""
     var time = 1
     var timeBeep = true
+    
+    var times: Int = 1
     
     var id: String {
         return uuid
@@ -31,12 +34,13 @@ class Beep: Identifiable{
         uuid = json["uuid"].string ?? uuid
         text = json["text"].string ?? text
         time = json["time"].int ?? time
+        times = json["times"].int ?? times
         timeBeep = json["timeBeep"].bool ?? timeBeep
         
     }
     
     var description: String {
-        return "{\"uuid\":\"\(uuid)\",\"text\":\"\(text)\",\"time\":\(time), \"timeBeep\":\(timeBeep)}"
+        return "{\"uuid\":\"\(uuid)\",\"text\":\"\(text)\",\"time\":\(time), \"timeBeep\":\(timeBeep), \"times\":\(times)}"
     }
     
     static let empty = Beep()
