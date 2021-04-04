@@ -29,112 +29,118 @@ struct ActionView: View {
     }
     
     var body: some View {
-        NavigationView {
-            VStack{
-                if let s = session {
-                    ZStack(){
-                        HStack(spacing:0){
-                            Text("\(s.title ?? "")")
-                                .bold()
-                                .font(.body)
-                                .foregroundColor(.gray)
-                                .padding(.top, 16)
-                        }
-                        
-                        HStack(alignment: .bottom, spacing: 0){
+        // NavigationView {
+        VStack{
+            if let s = session {
+                ZStack(){
+                    HStack(spacing:0){
+                        Text("\(s.title ?? "")\(UIDevice.current.name.lowercased())")
+                            .bold()
+                            .font(.body).lineLimit(1)
+                            .frame(maxWidth: UIScreen.main.bounds.width*0.6)
+                            .foregroundColor(.gray)
+                            .padding(.top, 16)
+                    }
+                    
+                    HStack(alignment: .bottom, spacing: 0){
+                        if model.state == .ready {
                             NavigationLink(
                                 destination: ReportView(),
                                 label: {
                                     Image(systemName: "waveform.path.ecg")
                                         .padding(.horizontal, 8)
-                                }).padding(.top, 16)
-                            Spacer()
+                                })
+                        }else{
+                            Image(systemName: "waveform.path.ecg").foregroundColor(.gray)
+                                .padding(.horizontal, 8)
+                        }
+                        Spacer()
+                    }.padding(.top, 16)
+                    
+                    HStack(alignment: .bottom, spacing: 0){
+                        Spacer()
+                        if model.state == .ready {
+                            NavigationLink(
+                                destination: BeepSheet(title: sessionTitle, onSave: { (tit) in
+                                    isEditSessoin = false
+                                    selectSession(tit)
+                                }),
+                                isActive: $isEditSessoin,
+                                label: {
+                                    Image(systemName: "square.and.pencil")
+                                        .padding(.horizontal, 8)
+                                }
+                            )
+                        }else{
+                            Image(systemName: "square.and.pencil").foregroundColor(.gray).padding(.horizontal, 8)
+                        }
+                    }.padding(.top, 16)
+                }
+            }
+            
+            VStack(spacing:0){
+                Spacer()
+                VStack{
+                    Button(action: {
+                        
+                        switch model.state {
+                        case .ready:
+                            if let s = session {
+                                model.title = s.title == nil ? model.title : s.title!
+                                self.learning(session: s)
+                            }
+                        case .running :
+                            model.state = .hold
+                        case .holding:
+                            fallthrough
+                        case .hold:
+                            model.state = .running
+                        case .stop:
+                            break
                         }
                         
-                        HStack(alignment: .bottom, spacing: 0){
-                            Spacer()
-                            if model.state == .ready {
-                                NavigationLink(
-                                    destination: BeepSheet(title: sessionTitle, onSave: { (tit) in
-                                        isEditSessoin = false
-                                        selectSession(tit)
-                                    }),
-                                    isActive: $isEditSessoin,
-                                    label: {
-                                        Image(systemName: "square.and.pencil")
-                                            .padding(.horizontal, 8)
-                                    }
-                                )
-                            }else{
-                                Image(systemName: "square.and.pencil").foregroundColor(.gray).padding(.horizontal, 8)
-                            }
-                        }.padding(.top, 16)
-                    }
-                }
-                
-                VStack(spacing:0){
-                    Spacer()
-                    VStack{
-                        Button(action: {
+                    }, label: {
+                        ZStack{
+                            Circle()
+                                .frame(width: (UIScreen.main.bounds.width)*6/11, height: (UIScreen.main.bounds.width)*2/3)
+                                .foregroundColor(.thinblue)
                             
-                            switch model.state {
-                            case .ready:
-                                if let s = session {
-                                    model.title = s.title == nil ? model.title : s.title!
-                                    self.learning(session: s)
-                                }
-                            case .running :
-                                model.state = .hold
-                            case .holding:
-                                fallthrough
-                            case .hold:
-                                model.state = .running
-                            case .stop:
-                                break
-                            }
+                            Circle()
+                                .frame(width: (UIScreen.main.bounds.width - 48)*6/11, height: (UIScreen.main.bounds.width - 48)*2/3)
+                                .foregroundColor(.lightblue)
                             
-                        }, label: {
-                            ZStack{
-                                Circle()
-                                    .frame(width: (UIScreen.main.bounds.width)*6/11, height: (UIScreen.main.bounds.width)*2/3)
-                                    .foregroundColor(.thinblue)
+                            VStack {
+                                Text(model.title)
+                                    .font(.title)
+                                    .bold()
+                                    .foregroundColor(.white)
+                                    .lineLimit(1)
                                 
-                                Circle()
-                                    .frame(width: (UIScreen.main.bounds.width - 48)*6/11, height: (UIScreen.main.bounds.width - 48)*2/3)
-                                    .foregroundColor(.lightblue)
                                 
-                                VStack {
-                                    Text(model.title)
-                                        .font(.title)
+                                if let t = model.sub_title {
+                                    Text(t)
+                                        .font(.footnote)
                                         .bold()
                                         .foregroundColor(.white)
-                                        .lineLimit(1)
-                                    
-                                    
-                                    if let t = model.sub_title {
-                                        Text(t)
-                                            .font(.footnote)
-                                            .bold()
-                                            .foregroundColor(.white)
-                                            .lineLimit(2)
-                                    }
-                                }.frame(width: (UIScreen.main.bounds.width - 108)/2, height: (UIScreen.main.bounds.width - 108)/2)
-                            }
-                        })
-                        if model.state == .running {
-                            Button(action: {
-                                model.state = .stop
-                            }, label: {
-                                Image(systemName: "stop.circle").font(.title)
-                            })
-                        }else{
-                            Image(systemName: "stop.circle")
-                                .font(.title)
-                                .foregroundColor(.white)
+                                        .lineLimit(2)
+                                }
+                            }.frame(width: (UIScreen.main.bounds.width - 108)/2, height: (UIScreen.main.bounds.width - 108)/2)
                         }
-                    }.padding(.vertical, 32)
-                    Spacer()
-                    Group{
+                    })
+                    if model.state == .running {
+                        Button(action: {
+                            model.state = .stop
+                        }, label: {
+                            Image(systemName: "stop.circle").font(.title)
+                        })
+                    }else{
+                        Image(systemName: "stop.circle")
+                            .font(.title)
+                            .foregroundColor(.white)
+                    }
+                }.padding(.vertical, 32)
+                Spacer()
+                Group{
                     if model.state == .ready {
                         HStack {
                             Button(action: {
@@ -147,36 +153,40 @@ struct ActionView: View {
                     }else{
                         Image(systemName: "ant").padding()
                     }
-                    }.font(.title)
-                    
-                }
-                .onAppear(){
-                    SportTime.shared.initAppData()
-                    
-                    model.reloadData()
-                    
-                    if session == nil && model.sessions.count > 0 {
-                        session = model.sessions[0]
-                    }
-                    // SportTime.shared.cleanAllData()
-                    
-                    (ReportGenerator()).generate(start: Int(Date().timeIntervalSince1970 - 86400*2))
-                    //isSelectSession = true
-                    
-                }
+                }.font(.title)
                 
             }
-            .navigationBarHidden(true)
-            .sheet(isPresented: $isSelectSession, content: {
-                SessionSelector(
-                    selected: session?.title,
-                    sessions: model.sessions,
-                    isShow: $isSelectSession
-                ){ selected in
-                    selectSession(selected)
+            .onAppear(){
+                UIApplication.shared.isIdleTimerDisabled = true
+                SportTime.shared.initAppData()
+                
+                model.reloadData()
+                
+                if session == nil && model.sessions.count > 0 {
+                    session = model.sessions[0]
                 }
-            })
+                // SportTime.shared.cleanAllData()
+                
+                (ReportGenerator()).generate(start: Int(Date().timeIntervalSince1970 - 86400*2))
+                //isSelectSession = true
+                
+            }
+            .onDisappear {
+                UIApplication.shared.isIdleTimerDisabled = false
+            }
+            
         }
+        .navigationBarHidden(true)
+        .sheet(isPresented: $isSelectSession, content: {
+            SessionSelector(
+                selected: session?.title,
+                sessions: model.sessions,
+                isShow: $isSelectSession
+            ){ selected in
+                selectSession(selected)
+            }
+        })
+        //}
         
     }
     
@@ -194,10 +204,10 @@ struct ActionView: View {
                 if model.state != .ready {
                     model.state = .stop
                 }
-            
+                
             }
         })
-       
+        
     }
     
     func doBeep(beep: Beep, next: @escaping () -> Void){
@@ -234,6 +244,7 @@ struct ActionView: View {
         print("start to learning for session[\(session.title ?? "")]")
         let repeats: [Int] = session.repeats == 1 ? [1] : (1...session.repeats).map({$0})
         model.state = .running
+        
         model.forEach(repeats, next: { (v, next) in
             print("第\(v)次: beeps.count = \(session.beeps.count)")
             model.forEach(session.beeps, next: { (beep, next) in
@@ -302,7 +313,7 @@ struct ActionView: View {
             // model.state = .ready
             helper.wait(for: 1){
                 model.state = .ready
-
+                
             }
         })
     }
@@ -396,7 +407,7 @@ struct ActionView: View {
                 self.sessions = beepSessions.map({ Session.from(beepSession: $0) })
             })
         }
-                
+        
         func forEach<T>(
             _ arr: [T],
             from: Int = 0,
@@ -432,7 +443,7 @@ struct ActionView: View {
                     return
                 }
             }
-
+            
             if from < arr.count {
                 next(arr[from]) {
                     self.forEach(arr, from: from + 1, next: next, first: first, last: last)
@@ -483,44 +494,44 @@ struct ActionView: View {
         
         var body: some View {
             if !isAdd {
-            VStack(spacing: 8) {
-                ZStack{
-                    Text("请选择")
-                        .foregroundColor(.gray)
-                }.padding(.top)
-                
-                
-                ScrollView {
-                    BadgeSelector(
-                        badges: sessions.filter({ $0.title != nil }).map({ $0.title! }),
-                        selected: selected,
-                        onSelect: { (text) in
-                            selected = text
-                            if let f = onSelect {
-                                f(text)
-                                isShow = false
-                            }
-                        }
-                    )
-                }
-                
-                Spacer()
-                Divider()
-                VStack(spacing: 0){
-                    Text("以上均没有想要的, 请点击”+“按钮, 创建")
-                        .font(.caption2)
-                        .foregroundColor(.gray)
+                VStack(spacing: 8) {
+                    ZStack{
+                        Text("请选择")
+                            .foregroundColor(.gray)
+                    }.padding(.top)
                     
-                    Button(action: {
-                        withAnimation{
-                            isAdd = true
-                        }
+                    
+                    ScrollView {
+                        BadgeSelector(
+                            badges: sessions.filter({ $0.title != nil }).map({ $0.title! }),
+                            selected: selected,
+                            onSelect: { (text) in
+                                selected = text
+                                if let f = onSelect {
+                                    f(text)
+                                    isShow = false
+                                }
+                            }
+                        )
+                    }
+                    
+                    Spacer()
+                    Divider()
+                    VStack(spacing: 0){
+                        Text("以上均没有想要的, 请点击”+“按钮, 创建")
+                            .font(.caption2)
+                            .foregroundColor(.gray)
                         
-                    }, label: {
-                        Image(systemName: "plus")
-                    }).padding()
-                }
-            }.padding(.horizontal)
+                        Button(action: {
+                            withAnimation{
+                                isAdd = true
+                            }
+                            
+                        }, label: {
+                            Image(systemName: "plus")
+                        }).padding()
+                    }
+                }.padding(.horizontal)
             }else{
                 BeepSheet { (tit) in
                     isAdd = false
@@ -542,9 +553,9 @@ struct ActionView: View {
 struct ActionView_Previews: PreviewProvider {
     
     static var previews: some View {
-        
-        ActionView()
-        
+        NavigationView {
+            ActionView()
+        }
     }
 }
 #endif

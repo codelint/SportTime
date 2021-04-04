@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E508C5CE26195D4700A8C47D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E508C5CD26195D4700A8C47D /* HomeView.swift */; };
 		E52AAF7226074EDF004BD0EB /* goingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52AAF7126074EDF004BD0EB /* goingApp.swift */; };
 		E52AAF7426074EDF004BD0EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52AAF7326074EDF004BD0EB /* ContentView.swift */; };
 		E52AAF7626074EE2004BD0EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E52AAF7526074EE2004BD0EB /* Assets.xcassets */; };
@@ -19,7 +20,6 @@
 		E52AAFAF26075397004BD0EB /* AFNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = E52AAFAE26075397004BD0EB /* AFNetworking */; };
 		E52AAFB5260753B2004BD0EB /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = E52AAFB4260753B2004BD0EB /* SwiftyJSON */; };
 		E52AAFBB26075536004BD0EB /* BFKit in Frameworks */ = {isa = PBXBuildFile; productRef = E52AAFBA26075536004BD0EB /* BFKit */; };
-		E52AAFC12607561B004BD0EB /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = E52AAFC02607561B004BD0EB /* PopupView */; };
 		E52AAFC7260756DD004BD0EB /* LLCycleScrollView in Frameworks */ = {isa = PBXBuildFile; productRef = E52AAFC6260756DD004BD0EB /* LLCycleScrollView */; };
 		E52AAFCD26075708004BD0EB /* Parchment in Frameworks */ = {isa = PBXBuildFile; productRef = E52AAFCC26075708004BD0EB /* Parchment */; };
 		E52AAFD42607575D004BD0EB /* Badges.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52AAFD32607575D004BD0EB /* Badges.swift */; };
@@ -61,7 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E52AAF6E26074EDF004BD0EB /* going.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = going.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E508C5CD26195D4700A8C47D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E52AAF6E26074EDF004BD0EB /* SportTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E52AAF7126074EDF004BD0EB /* goingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goingApp.swift; sourceTree = "<group>"; };
 		E52AAF7326074EDF004BD0EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E52AAF7526074EE2004BD0EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,7 +102,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E52AAFC12607561B004BD0EB /* PopupView in Frameworks */,
 				E590A2D4260C5FDD00EC6260 /* SwiftUICharts in Frameworks */,
 				E52AAFBB26075536004BD0EB /* BFKit in Frameworks */,
 				E52AAFB5260753B2004BD0EB /* SwiftyJSON in Frameworks */,
@@ -141,7 +141,7 @@
 		E52AAF6F26074EDF004BD0EB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E52AAF6E26074EDF004BD0EB /* going.app */,
+				E52AAF6E26074EDF004BD0EB /* SportTime.app */,
 				E52AAF8426074EE2004BD0EB /* goingTests.xctest */,
 				E52AAF8F26074EE2004BD0EB /* goingUITests.xctest */,
 			);
@@ -200,6 +200,7 @@
 				E52AAFA526075269004BD0EB /* PlanListView.swift */,
 				E52AAFE126075F12004BD0EB /* ActionView.swift */,
 				E5C7E908260C814B007742BA /* ReportView.swift */,
+				E508C5CD26195D4700A8C47D /* HomeView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -275,13 +276,12 @@
 				E52AAFAE26075397004BD0EB /* AFNetworking */,
 				E52AAFB4260753B2004BD0EB /* SwiftyJSON */,
 				E52AAFBA26075536004BD0EB /* BFKit */,
-				E52AAFC02607561B004BD0EB /* PopupView */,
 				E52AAFC6260756DD004BD0EB /* LLCycleScrollView */,
 				E52AAFCC26075708004BD0EB /* Parchment */,
 				E590A2D3260C5FDD00EC6260 /* SwiftUICharts */,
 			);
 			productName = going;
-			productReference = E52AAF6E26074EDF004BD0EB /* going.app */;
+			productReference = E52AAF6E26074EDF004BD0EB /* SportTime.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E52AAF8326074EE2004BD0EB /* goingTests */ = {
@@ -355,7 +355,6 @@
 				E52AAFAD26075397004BD0EB /* XCRemoteSwiftPackageReference "AFNetworking" */,
 				E52AAFB3260753B2004BD0EB /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				E52AAFB926075536004BD0EB /* XCRemoteSwiftPackageReference "BFKit-Swift" */,
-				E52AAFBF2607561B004BD0EB /* XCRemoteSwiftPackageReference "PopupView" */,
 				E52AAFC5260756DD004BD0EB /* XCRemoteSwiftPackageReference "LLCycleScrollView" */,
 				E52AAFCB26075708004BD0EB /* XCRemoteSwiftPackageReference "Parchment" */,
 				E590A2D2260C5FDD00EC6260 /* XCRemoteSwiftPackageReference "ChartView" */,
@@ -423,6 +422,7 @@
 				E5482ECC260D759A006C0755 /* Date.swift in Sources */,
 				E52AAF7E26074EE2004BD0EB /* going.xcdatamodeld in Sources */,
 				E590A2D9260C633F00EC6260 /* CoreDataService.swift in Sources */,
+				E508C5CE26195D4700A8C47D /* HomeView.swift in Sources */,
 				E52AAF7226074EDF004BD0EB /* goingApp.swift in Sources */,
 				E5482EBD260D74BE006C0755 /* Color.swift in Sources */,
 			);
@@ -493,8 +493,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Distribution: Guanghui Zhang (36QDB37QK5)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 36QDB37QK5;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -511,7 +513,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -554,8 +556,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Distribution: Guanghui Zhang (36QDB37QK5)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 36QDB37QK5;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -566,9 +570,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -581,17 +586,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"going/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = going/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.triplint.going;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SportTime;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -602,17 +610,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"going/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = going/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.triplint.going;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SportTime;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -764,14 +775,6 @@
 				minimumVersion = 6.0.1;
 			};
 		};
-		E52AAFBF2607561B004BD0EB /* XCRemoteSwiftPackageReference "PopupView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://gitee.com/wemu/PopupView.git";
-			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 0.0.11;
-			};
-		};
 		E52AAFC5260756DD004BD0EB /* XCRemoteSwiftPackageReference "LLCycleScrollView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://gitee.com/wemu/LLCycleScrollView.git";
@@ -813,11 +816,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E52AAFB926075536004BD0EB /* XCRemoteSwiftPackageReference "BFKit-Swift" */;
 			productName = BFKit;
-		};
-		E52AAFC02607561B004BD0EB /* PopupView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E52AAFBF2607561B004BD0EB /* XCRemoteSwiftPackageReference "PopupView" */;
-			productName = PopupView;
 		};
 		E52AAFC6260756DD004BD0EB /* LLCycleScrollView */ = {
 			isa = XCSwiftPackageProductDependency;

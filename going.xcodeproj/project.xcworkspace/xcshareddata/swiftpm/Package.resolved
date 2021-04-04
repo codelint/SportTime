@@ -56,15 +56,6 @@
         }
       },
       {
-        "package": "PopupView",
-        "repositoryURL": "https://gitee.com/wemu/PopupView.git",
-        "state": {
-          "branch": null,
-          "revision": "7276f92e123969e5ced9212a5f5049d30954106b",
-          "version": "0.0.11"
-        }
-      },
-      {
         "package": "SwiftyJSON",
         "repositoryURL": "https://gitee.com/wemu/SwiftyJSON.git",
         "state": {
