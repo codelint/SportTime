@@ -10,10 +10,9 @@ import SwiftUI
 @main
 struct goingApp: App {
     // let persistenceController = PersistenceController.shared
-
     var body: some Scene {
         WindowGroup {
-            ActionView()
+            HomeView()
             // BeepSheet()
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)

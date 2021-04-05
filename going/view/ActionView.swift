@@ -34,7 +34,7 @@ struct ActionView: View {
             if let s = session {
                 ZStack(){
                     HStack(spacing:0){
-                        Text("\(s.title ?? "")\(UIDevice.current.name.lowercased())")
+                        Text("\(s.title ?? "")")
                             .bold()
                             .font(.body).lineLimit(1)
                             .frame(maxWidth: UIScreen.main.bounds.width*0.6)
@@ -170,6 +170,8 @@ struct ActionView: View {
                 (ReportGenerator()).generate(start: Int(Date().timeIntervalSince1970 - 86400*2))
                 //isSelectSession = true
                 
+                print("path.appear:")
+                print(NSSearchPathForDirectoriesInDomains(.applicationDirectory, .userDomainMask, true))
             }
             .onDisappear {
                 UIApplication.shared.isIdleTimerDisabled = false

@@ -33,6 +33,7 @@ class TextPlayer {
             next?(text)
             return
         }
+        
         if let url = URL(string: "https://tts.baidu.com/text2audio?cuid=baike&lan=ZH&ctp=1&pdt=301&vol=32&rate=8&per=4&tex=\(t)") {
             do {
                 let fm = FileManager()
