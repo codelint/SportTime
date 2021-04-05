@@ -141,14 +141,15 @@ struct BeepSheet: View {
             
             VStack(spacing: 0){
                 HStack(spacing: 0) {
-                    Button(action: {
-                        if let f = onDelete {
+                    if let f = onDelete {
+                        Button(action: {
                             f(beep)
-                        }
-                    }, label: {
-                        Image(systemName: "minus.circle")
-                    }).foregroundColor(.red)
-                    .padding(.trailing, 8)
+                        }, label: {
+                            Image(systemName: "minus.circle")
+                        }).foregroundColor(.red)
+                        .padding(.trailing, 8)
+                    }
+                    
                     
                     HStack(spacing: 0){
                         Image(systemName: beep.timeBeep ? "speaker.2" : "speaker.slash")
@@ -466,7 +467,7 @@ struct BeepSheet: View {
                     history: beeps,
                     onReturn: { (result, title) in
                         if let beep = result {
-                            if !beeps.contains(where: { $0.uuid == beep.uuid }) {
+                            if !beeps.contains(where: { $0.uuid == beep.uuid }) && startBeep.uuid != beep.uuid && endBeep.uuid != beep.uuid {
                                 beeps.append(beep)
                             }
                             
