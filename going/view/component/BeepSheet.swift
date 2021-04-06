@@ -467,7 +467,10 @@ struct BeepSheet: View {
                     history: beeps,
                     onReturn: { (result, title) in
                         if let beep = result {
-                            if !beeps.contains(where: { $0.uuid == beep.uuid }) && startBeep.uuid != beep.uuid && endBeep.uuid != beep.uuid {
+                            if !beeps.contains(where: { $0.uuid == beep.uuid })
+                                && startBeep.uuid != beep.uuid
+                                && endBeep.uuid != beep.uuid
+                                && itervalBeep.uuid != beep.uuid {
                                 beeps.append(beep)
                             }
                             
