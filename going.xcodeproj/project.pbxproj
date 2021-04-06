@@ -588,7 +588,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"going/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = going/Info.plist;
@@ -597,6 +597,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.01;
 				PRODUCT_BUNDLE_IDENTIFIER = com.triplint.going;
 				PRODUCT_NAME = SportTime;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -612,7 +613,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"going/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = going/Info.plist;
@@ -621,6 +622,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.01;
 				PRODUCT_BUNDLE_IDENTIFIER = com.triplint.going;
 				PRODUCT_NAME = SportTime;
 				PROVISIONING_PROFILE_SPECIFIER = "";
