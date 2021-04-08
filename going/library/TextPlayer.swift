@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 import AVFoundation
 
 class TextPlayer {
@@ -34,16 +35,37 @@ class TextPlayer {
             return
         }
         
-        if let url = URL(string: "https://tts.baidu.com/text2audio?cuid=baike&lan=ZH&ctp=1&pdt=301&vol=32&rate=8&per=4&tex=\(t)") {
+        let fm = FileManager()
+        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        let filepath = "\(path)/\(text).mp3"
+        
+        if !fm.isReadableFile(atPath: filepath) {
             do {
-                let fm = FileManager()
-                let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-                let filepath = "\(path)/\(text).mp3"
                 
-                if !fm.isReadableFile(atPath: filepath) {
-                    let data = NSData(contentsOf: url)
-                    data?.write(toFile: filepath, atomically: true)
+                if let sound = NSDataAsset(name: "Sound/\(text)") {
+                    //todo
+                    try sound.data.write(to: URL(fileURLWithPath: filepath))
+                    print("load audio[\(text)] data from asset")
                 }
+            }catch let err {
+                print(err.localizedDescription)
+            }
+        }else{
+            print("load audio[\(text)] data from local")
+        }
+        
+        if !fm.isReadableFile(atPath: filepath) {
+            if let url = URL(string: "https://tts.baidu.com/text2audio?cuid=baike&lan=ZH&ctp=1&pdt=301&vol=32&rate=8&per=4&tex=\(t)") {
+                let data = NSData(contentsOf: url)
+                data?.write(toFile: filepath, atomically: true)
+                print("load audio[\(text)] data from web")
+            }else{
+                print("url invalid")
+            }
+        }
+        
+        do {
+            if fm.isReadableFile(atPath: filepath) {
                 
                 player = try AVAudioPlayer(contentsOf:  URL(fileURLWithPath: filepath))
                 if let p = player {
@@ -57,14 +79,17 @@ class TextPlayer {
                         })
                     }
                 }
-                // player.delegate = self
                 
-            }catch let err {
-                print(err.localizedDescription)
+            }else{
+                if let f = next {
+                    f(text)
+                }
             }
             
-        }else{
-            print("url invalid")
+            
+            
+        }catch let err {
+            print(err.localizedDescription)
         }
     }
     

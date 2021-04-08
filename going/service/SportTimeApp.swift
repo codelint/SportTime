@@ -107,4 +107,39 @@ class SportTime {
             
         })
     }
+    
+    enum OptionName: String {
+        case lastSessionTitle
+    }
+    
+    func option(name: OptionName, def: String = "") -> String {
+        if let option = coreData.findByOne(request: BeepGlobal.fetchRequest(), conds: ["name": name.rawValue]) {
+            return option.string ?? def
+        }else{
+            return def
+        }
+    }
+    
+    func setOption(name: OptionName, v: String){
+        coreData.query(request: BeepGlobal.fetchRequest()) { (query) in
+            if let option = query.findByOne(conds: ["name": name.rawValue]) {
+                option.string = v
+                query.flush()
+            }else{
+                if let instance = query.instance() {
+                    instance.name = name.rawValue
+                    instance.string = v
+                    query.flush()
+                }
+            }
+        }
+    }
+    
+    func setLastSession(session: String){
+        self.setOption(name: .lastSessionTitle, v: session)
+    }
+    
+    func getLastSession() -> String? {
+        return option(name: .lastSessionTitle)
+    }
 }

@@ -170,8 +170,7 @@ struct ActionView: View {
                 (ReportGenerator()).generate(start: Int(Date().timeIntervalSince1970 - 86400*2))
                 //isSelectSession = true
                 
-                print("path.appear:")
-                print(NSSearchPathForDirectoriesInDomains(.applicationDirectory, .userDomainMask, true))
+                selectSession(SportTime.shared.option(name: .lastSessionTitle, def: session?.title ?? ""))
             }
             .onDisappear {
                 UIApplication.shared.isIdleTimerDisabled = false
@@ -226,15 +225,18 @@ struct ActionView: View {
                 model.title = String(tic)
             } finish: {
                 model.title = "0"
-                coreData.query(request: BeepLog.fetchRequest()) { (query) in
-                    if let beepLog = query.instance() {
-                        beepLog.uuid = beep.uuid.description
-                        beepLog.name = beep.text
-                        beepLog.start_time = start_time
-                        beepLog.end_time = Int64(Date().timeIntervalSince1970)
-                        query.flush()
+                helper.wait(for: 0.1){
+                    coreData.query(request: BeepLog.fetchRequest()) { (query) in
+                        if let beepLog = query.instance() {
+                            beepLog.uuid = beep.uuid.description
+                            beepLog.name = beep.text
+                            beepLog.start_time = start_time
+                            beepLog.end_time = Int64(Date().timeIntervalSince1970)
+                            query.flush()
+                        }
                     }
                 }
+                
                 helper.wait(for: 1, callback: {
                     next()
                 })
@@ -246,6 +248,12 @@ struct ActionView: View {
         print("start to learning for session[\(session.title ?? "")]")
         let repeats: [Int] = session.repeats == 1 ? [1] : (1...session.repeats).map({$0})
         model.state = .running
+        helper.wait(for: 1) {
+            if let t = session.title {
+                SportTime.shared.setOption(name: .lastSessionTitle, v: t)
+                // print(SportTime.shared.option(name: .lastSessionTitle))
+            }
+        }
         
         model.forEach(repeats, next: { (v, next) in
             print("第\(v)次: beeps.count = \(session.beeps.count)")

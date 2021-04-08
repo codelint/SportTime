@@ -33,6 +33,7 @@
 		E5482EC7260D7589006C0755 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5482EC6260D7589006C0755 /* Array.swift */; };
 		E5482ECC260D759A006C0755 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5482ECB260D759A006C0755 /* Date.swift */; };
 		E560FE072610AE5600CF6044 /* AnyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E560FE062610AE5600CF6044 /* AnyTransition.swift */; };
+		E57A2C26261EECBA00CF3017 /* BeepGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57A2C25261EECBA00CF3017 /* BeepGlobal.swift */; };
 		E590A2C32608CE8B00EC6260 /* TextPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E590A2C22608CE8B00EC6260 /* TextPlayer.swift */; };
 		E590A2CE260B6ABD00EC6260 /* BeepSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E590A2CD260B6ABD00EC6260 /* BeepSheet.swift */; };
 		E590A2D4260C5FDD00EC6260 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = E590A2D3260C5FDD00EC6260 /* SwiftUICharts */; };
@@ -88,6 +89,7 @@
 		E5482EC6260D7589006C0755 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		E5482ECB260D759A006C0755 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		E560FE062610AE5600CF6044 /* AnyTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTransition.swift; sourceTree = "<group>"; };
+		E57A2C25261EECBA00CF3017 /* BeepGlobal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeepGlobal.swift; sourceTree = "<group>"; };
 		E590A2C22608CE8B00EC6260 /* TextPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPlayer.swift; sourceTree = "<group>"; };
 		E590A2CD260B6ABD00EC6260 /* BeepSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeepSheet.swift; sourceTree = "<group>"; };
 		E590A2D8260C633F00EC6260 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 				E5C7E900260C76AC007742BA /* BeepLog.swift */,
 				E5482EB1260CC5F2006C0755 /* BeepSession.swift */,
 				E5482EB6260CC62E006C0755 /* Beep.swift */,
+				E57A2C25261EECBA00CF3017 /* BeepGlobal.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				E52AAFE826089D8A004BD0EB /* CommonUtil.swift in Sources */,
 				E52AAFD42607575D004BD0EB /* Badges.swift in Sources */,
 				E5930B7E260F1B7400C3D887 /* SportTimeApp.swift in Sources */,
+				E57A2C26261EECBA00CF3017 /* BeepGlobal.swift in Sources */,
 				E5482EB2260CC5F2006C0755 /* BeepSession.swift in Sources */,
 				E5482ECC260D759A006C0755 /* Date.swift in Sources */,
 				E52AAF7E26074EE2004BD0EB /* going.xcdatamodeld in Sources */,
