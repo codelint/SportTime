@@ -27,6 +27,17 @@ class TextPlayer {
         play(String(t), next: next)
     }
     
+    func cachePath(_ text: String) -> String? {
+        let fm = FileManager()
+        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        
+        return fm.isReadableFile(atPath: "\(path)/\(text).mp3") ? "\(path)/\(text).mp3" : nil
+    }
+    
+    func isCache(_ text: String) -> Bool {
+        return cachePath(text) != nil
+    }
+    
     func play(_ text: String, next: ((String) -> Void)?){
         //stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())
         let t = text.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? text

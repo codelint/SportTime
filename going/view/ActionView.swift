@@ -455,12 +455,14 @@ struct ActionView: View {
             }
             
             if from < arr.count {
-                next(arr[from]) {
-                    self.forEach(arr, from: from + 1, next: next, first: first, last: last)
-                    
-                    if (from + 1) == arr.count {
-                        if let f = last {
-                            f(arr[from])
+                helper.wait(for: 0.01) {
+                    next(arr[from]) {
+                        self.forEach(arr, from: from + 1, next: next, first: first, last: last)
+                        
+                        if (from + 1) == arr.count {
+                            if let f = last {
+                                f(arr[from])
+                            }
                         }
                     }
                 }
