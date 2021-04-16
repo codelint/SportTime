@@ -77,8 +77,9 @@ class TextPlayer {
         
         do {
             if fm.isReadableFile(atPath: filepath) {
-                
+                try AVAudioSession.sharedInstance().setCategory(.playback, options: .mixWithOthers)
                 player = try AVAudioPlayer(contentsOf:  URL(fileURLWithPath: filepath))
+                
                 if let p = player {
                     // print("歌曲长度：\(p.duration)")
                     p.prepareToPlay()
