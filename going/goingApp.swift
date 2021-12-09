@@ -53,7 +53,10 @@ struct goingApp: App {
     // let persistenceController = PersistenceController.shared
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            BootstrapView {
+                HomeView()
+            }
+            
             // BeepSheet()
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)

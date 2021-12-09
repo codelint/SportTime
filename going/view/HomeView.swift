@@ -16,7 +16,6 @@ struct HomeView : View {
                 VStack{}
                 ActionView()
             }
-            
         }else{
             NavigationView {
                 ActionView()

@@ -34,6 +34,7 @@
 		E5482ECC260D759A006C0755 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5482ECB260D759A006C0755 /* Date.swift */; };
 		E560FE072610AE5600CF6044 /* AnyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E560FE062610AE5600CF6044 /* AnyTransition.swift */; };
 		E57A2C26261EECBA00CF3017 /* BeepGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57A2C25261EECBA00CF3017 /* BeepGlobal.swift */; };
+		E57DBFD32654CABF00F548D6 /* BootstrapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57DBFD22654CABF00F548D6 /* BootstrapView.swift */; };
 		E590A2C32608CE8B00EC6260 /* TextPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E590A2C22608CE8B00EC6260 /* TextPlayer.swift */; };
 		E590A2CE260B6ABD00EC6260 /* BeepSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E590A2CD260B6ABD00EC6260 /* BeepSheet.swift */; };
 		E590A2D4260C5FDD00EC6260 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = E590A2D3260C5FDD00EC6260 /* SwiftUICharts */; };
@@ -90,6 +91,7 @@
 		E5482ECB260D759A006C0755 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		E560FE062610AE5600CF6044 /* AnyTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTransition.swift; sourceTree = "<group>"; };
 		E57A2C25261EECBA00CF3017 /* BeepGlobal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeepGlobal.swift; sourceTree = "<group>"; };
+		E57DBFD22654CABF00F548D6 /* BootstrapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootstrapView.swift; sourceTree = "<group>"; };
 		E590A2C22608CE8B00EC6260 /* TextPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPlayer.swift; sourceTree = "<group>"; };
 		E590A2CD260B6ABD00EC6260 /* BeepSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeepSheet.swift; sourceTree = "<group>"; };
 		E590A2D8260C633F00EC6260 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				E52AAFE126075F12004BD0EB /* ActionView.swift */,
 				E5C7E908260C814B007742BA /* ReportView.swift */,
 				E508C5CD26195D4700A8C47D /* HomeView.swift */,
+				E57DBFD22654CABF00F548D6 /* BootstrapView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5482EB7260CC62E006C0755 /* Beep.swift in Sources */,
+				E57DBFD32654CABF00F548D6 /* BootstrapView.swift in Sources */,
 				E560FE072610AE5600CF6044 /* AnyTransition.swift in Sources */,
 				E5482EC7260D7589006C0755 /* Array.swift in Sources */,
 				E5C7E901260C76AC007742BA /* BeepLog.swift in Sources */,
@@ -592,7 +596,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"going/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = going/Info.plist;
@@ -601,7 +605,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.01;
+				MARKETING_VERSION = 1.02;
 				PRODUCT_BUNDLE_IDENTIFIER = com.triplint.going;
 				PRODUCT_NAME = SportTimer;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -617,7 +621,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"going/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = going/Info.plist;
@@ -626,7 +630,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.01;
+				MARKETING_VERSION = 1.02;
 				PRODUCT_BUNDLE_IDENTIFIER = com.triplint.going;
 				PRODUCT_NAME = SportTimer;
 				PROVISIONING_PROFILE_SPECIFIER = "";

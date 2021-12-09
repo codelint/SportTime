@@ -42,20 +42,20 @@ struct ActionView: View {
                             .padding(.top, 16)
                     }
                     
-                    HStack(alignment: .bottom, spacing: 0){
-                        if model.state == .ready {
-                            NavigationLink(
-                                destination: ReportView(),
-                                label: {
-                                    Image(systemName: "waveform.path.ecg")
-                                        .padding(.horizontal, 8)
-                                })
-                        }else{
-                            Image(systemName: "waveform.path.ecg").foregroundColor(.gray)
-                                .padding(.horizontal, 8)
-                        }
-                        Spacer()
-                    }.padding(.top, 16)
+//                    HStack(alignment: .bottom, spacing: 0){
+//                        if model.state == .ready {
+//                            NavigationLink(
+//                                destination: ReportView(),
+//                                label: {
+//                                    Image(systemName: "waveform.path.ecg")
+//                                        .padding(.horizontal, 8)
+//                                })
+//                        }else{
+//                            Image(systemName: "waveform.path.ecg").foregroundColor(.gray)
+//                                .padding(.horizontal, 8)
+//                        }
+//                        Spacer()
+//                    }.padding(.top, 16)
                     
                     HStack(alignment: .bottom, spacing: 0){
                         Spacer()
@@ -110,13 +110,13 @@ struct ActionView: View {
                                 .foregroundColor(.lightblue)
                             
                             VStack {
+                                Text(model.tip).font(.caption)
+                                    .foregroundColor(.white)
                                 Text(model.title)
                                     .font(.title)
                                     .bold()
                                     .foregroundColor(.white)
                                     .lineLimit(1)
-                                
-                                
                                 if let t = model.sub_title {
                                     Text(t)
                                         .font(.footnote)
@@ -260,12 +260,13 @@ struct ActionView: View {
             model.forEach(session.beeps, next: { (beep, next) in
                 self.doBeep(beep: beep, next: next)
             }, first: { (beep, start) in
-                print("")
                 helper.wait(for: session.delay){
                     if repeats.count > 1 {
+                        model.tip = "第\(v)次"
                         if (repeats.count < 20 || v % 10 == 0) {
                             player.play("第\(v)次") { _ in
                                 start()
+                                // model.sub_title = "第\(v)次"
                             }
                         }else {
                             start()
@@ -278,7 +279,6 @@ struct ActionView: View {
                 
             }, last: { beep in
                 // next()
-                
                 if repeats.count > 1 {
                     if let interval = session.interval_beep {
                         print("repeat: \(v) / \(model.state) / \(interval.time)")
@@ -292,7 +292,6 @@ struct ActionView: View {
                                 model.title = String(tic)
                             }, finish: {
                                 next()
-                                // helper.wait(for: interval.time, callback:next)
                             })
                         }else{
                             next()
@@ -301,8 +300,6 @@ struct ActionView: View {
                     }else{
                         next()
                     }
-                    
-                    
                 }else{
                     next()
                 }
@@ -318,6 +315,7 @@ struct ActionView: View {
         last: { v in
             model.title = "开始"
             model.sub_title = nil
+            model.tip = ""
             player.play("结束")
             print("结束")
             // model.state = .ready
@@ -337,7 +335,12 @@ struct ActionView: View {
         }
         
         @Published var state: State = .ready
-        @Published var title = "开始"
+        @Published var title = "开始" {
+            didSet {
+                print(self.title)
+            }
+        }
+        @Published var tip: String = ""
         @Published var sub_title:String? = ""
         @Published var beeps: [Beep] = [
             Beep(text: "3秒", time: 3, timeBeep: true),Beep(text: "勾脚", time: 3, timeBeep: true),
