@@ -3,126 +3,556 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E508C5CE26195D4700A8C47D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E508C5CD26195D4700A8C47D /* HomeView.swift */; };
-		E52AAF7226074EDF004BD0EB /* goingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52AAF7126074EDF004BD0EB /* goingApp.swift */; };
-		E52AAF7426074EDF004BD0EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52AAF7326074EDF004BD0EB /* ContentView.swift */; };
-		E52AAF7626074EE2004BD0EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E52AAF7526074EE2004BD0EB /* Assets.xcassets */; };
-		E52AAF7926074EE2004BD0EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E52AAF7826074EE2004BD0EB /* Preview Assets.xcassets */; };
-		E52AAF7B26074EE2004BD0EB /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52AAF7A26074EE2004BD0EB /* Persistence.swift */; };
-		E52AAF7E26074EE2004BD0EB /* going.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E52AAF7C26074EE2004BD0EB /* going.xcdatamodeld */; };
-		E52AAF8926074EE2004BD0EB /* goingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52AAF8826074EE2004BD0EB /* goingTests.swift */; };
-		E52AAF9426074EE2004BD0EB /* goingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52AAF9326074EE2004BD0EB /* goingUITests.swift */; };
-		E52AAFA626075269004BD0EB /* PlanListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52AAFA526075269004BD0EB /* PlanListView.swift */; };
-		E52AAFAF26075397004BD0EB /* AFNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = E52AAFAE26075397004BD0EB /* AFNetworking */; };
-		E52AAFB5260753B2004BD0EB /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = E52AAFB4260753B2004BD0EB /* SwiftyJSON */; };
-		E52AAFBB26075536004BD0EB /* BFKit in Frameworks */ = {isa = PBXBuildFile; productRef = E52AAFBA26075536004BD0EB /* BFKit */; };
-		E52AAFC7260756DD004BD0EB /* LLCycleScrollView in Frameworks */ = {isa = PBXBuildFile; productRef = E52AAFC6260756DD004BD0EB /* LLCycleScrollView */; };
-		E52AAFCD26075708004BD0EB /* Parchment in Frameworks */ = {isa = PBXBuildFile; productRef = E52AAFCC26075708004BD0EB /* Parchment */; };
-		E52AAFD42607575D004BD0EB /* Badges.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52AAFD32607575D004BD0EB /* Badges.swift */; };
-		E52AAFDA26075795004BD0EB /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52AAFD926075795004BD0EB /* Constant.swift */; };
-		E52AAFE226075F12004BD0EB /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52AAFE126075F12004BD0EB /* ActionView.swift */; };
-		E52AAFE826089D8A004BD0EB /* CommonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52AAFE726089D8A004BD0EB /* CommonUtil.swift */; };
-		E5482EB2260CC5F2006C0755 /* BeepSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5482EB1260CC5F2006C0755 /* BeepSession.swift */; };
-		E5482EB7260CC62E006C0755 /* Beep.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5482EB6260CC62E006C0755 /* Beep.swift */; };
-		E5482EBD260D74BE006C0755 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5482EBC260D74BE006C0755 /* Color.swift */; };
-		E5482EC2260D756A006C0755 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5482EC1260D756A006C0755 /* Double.swift */; };
-		E5482EC7260D7589006C0755 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5482EC6260D7589006C0755 /* Array.swift */; };
-		E5482ECC260D759A006C0755 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5482ECB260D759A006C0755 /* Date.swift */; };
-		E560FE072610AE5600CF6044 /* AnyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E560FE062610AE5600CF6044 /* AnyTransition.swift */; };
-		E57A2C26261EECBA00CF3017 /* BeepGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57A2C25261EECBA00CF3017 /* BeepGlobal.swift */; };
-		E57DBFD32654CABF00F548D6 /* BootstrapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57DBFD22654CABF00F548D6 /* BootstrapView.swift */; };
-		E590A2C32608CE8B00EC6260 /* TextPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E590A2C22608CE8B00EC6260 /* TextPlayer.swift */; };
-		E590A2CE260B6ABD00EC6260 /* BeepSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E590A2CD260B6ABD00EC6260 /* BeepSheet.swift */; };
-		E590A2D4260C5FDD00EC6260 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = E590A2D3260C5FDD00EC6260 /* SwiftUICharts */; };
-		E590A2D9260C633F00EC6260 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E590A2D8260C633F00EC6260 /* CoreDataService.swift */; };
-		E5930B7E260F1B7400C3D887 /* SportTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5930B7D260F1B7400C3D887 /* SportTimeApp.swift */; };
-		E5C7E8F8260C6EA5007742BA /* ReportGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C7E8F7260C6EA5007742BA /* ReportGenerator.swift */; };
-		E5C7E901260C76AC007742BA /* BeepLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C7E900260C76AC007742BA /* BeepLog.swift */; };
-		E5C7E909260C814B007742BA /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C7E908260C814B007742BA /* ReportView.swift */; };
+		E523B37C276254CA00D3012A /* goingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523B37B276254CA00D3012A /* goingApp.swift */; };
+		E523B37E276254CA00D3012A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523B37D276254CA00D3012A /* ContentView.swift */; };
+		E523B380276254CD00D3012A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E523B37F276254CD00D3012A /* Assets.xcassets */; };
+		E523B383276254CD00D3012A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E523B382276254CD00D3012A /* Preview Assets.xcassets */; };
+		E523B385276254CD00D3012A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523B384276254CD00D3012A /* Persistence.swift */; };
+		E523B388276254CD00D3012A /* going.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E523B386276254CD00D3012A /* going.xcdatamodeld */; };
+		E523B392276254CD00D3012A /* goingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523B391276254CD00D3012A /* goingTests.swift */; };
+		E523B39C276254CD00D3012A /* goingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523B39B276254CD00D3012A /* goingUITests.swift */; };
+		E523B39E276254CD00D3012A /* goingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523B39D276254CD00D3012A /* goingUITestsLaunchTests.swift */; };
+		E523B3AC276256EC00D3012A /* AFNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = E523B3AB276256EC00D3012A /* AFNetworking */; };
+		E523B3AF276257B100D3012A /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = E523B3AE276257B100D3012A /* SwiftyJSON */; };
+		E523B3B2276257D100D3012A /* BFKit in Frameworks */ = {isa = PBXBuildFile; productRef = E523B3B1276257D100D3012A /* BFKit */; };
+		E523B3B82762619100D3012A /* LLCycleScrollView in Frameworks */ = {isa = PBXBuildFile; productRef = E523B3B72762619100D3012A /* LLCycleScrollView */; };
+		E523B3BB276261BC00D3012A /* Parchment in Frameworks */ = {isa = PBXBuildFile; productRef = E523B3BA276261BC00D3012A /* Parchment */; };
+		E523B3BE276261F100D3012A /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = E523B3BD276261F100D3012A /* SwiftUICharts */; };
+		E523B6BD2762668D00D3012A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E523B5C62762668B00D3012A /* Assets.xcassets */; };
+		E523B6BE2762668D00D3012A /* BootstrapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523B5C82762668B00D3012A /* BootstrapView.swift */; };
+		E523B6BF2762668D00D3012A /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523B5C92762668B00D3012A /* ActionView.swift */; };
+		E523B6C02762668D00D3012A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523B5CA2762668B00D3012A /* HomeView.swift */; };
+		E523B6C12762668D00D3012A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523B5CC2762668B00D3012A /* Constant.swift */; };
+		E523B6C22762668D00D3012A /* Badges.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523B5CD2762668B00D3012A /* Badges.swift */; };
+		E523B6C32762668D00D3012A /* BeepSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523B5CE2762668B00D3012A /* BeepSheet.swift */; };
+		E523B6C42762668D00D3012A /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523B5CF2762668B00D3012A /* ReportView.swift */; };
+		E523B6C52762668D00D3012A /* PlanListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523B5D02762668B00D3012A /* PlanListView.swift */; };
+		E523B6C62762668D00D3012A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E523B5D22762668C00D3012A /* Preview Assets.xcassets */; };
+		E523B6C72762668D00D3012A /* ReportGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523B5D42762668C00D3012A /* ReportGenerator.swift */; };
+		E523B6C82762668D00D3012A /* SportTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523B5D52762668C00D3012A /* SportTimeApp.swift */; };
+		E523B6C92762668D00D3012A /* 第48次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5D72762668C00D3012A /* 第48次.mp3 */; };
+		E523B6CA2762668D00D3012A /* 82.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5D82762668C00D3012A /* 82.mp3 */; };
+		E523B6CB2762668D00D3012A /* 96.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5D92762668C00D3012A /* 96.mp3 */; };
+		E523B6CC2762668D00D3012A /* 69.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5DA2762668C00D3012A /* 69.mp3 */; };
+		E523B6CD2762668D00D3012A /* 41.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5DB2762668C00D3012A /* 41.mp3 */; };
+		E523B6CE2762668D00D3012A /* 55.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5DC2762668C00D3012A /* 55.mp3 */; };
+		E523B6CF2762668D00D3012A /* 7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5DD2762668C00D3012A /* 7.mp3 */; };
+		E523B6D02762668D00D3012A /* 54.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5DE2762668C00D3012A /* 54.mp3 */; };
+		E523B6D12762668D00D3012A /* 6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5DF2762668C00D3012A /* 6.mp3 */; };
+		E523B6D22762668D00D3012A /* 40.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5E02762668C00D3012A /* 40.mp3 */; };
+		E523B6D32762668D00D3012A /* 68.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5E12762668C00D3012A /* 68.mp3 */; };
+		E523B6D42762668D00D3012A /* 97.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5E22762668C00D3012A /* 97.mp3 */; };
+		E523B6D52762668D00D3012A /* 第25次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5E32762668C00D3012A /* 第25次.mp3 */; };
+		E523B6D62762668D00D3012A /* 83.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5E42762668C00D3012A /* 83.mp3 */; };
+		E523B6D72762668D00D3012A /* 第72次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5E52762668C00D3012A /* 第72次.mp3 */; };
+		E523B6D82762668D00D3012A /* 第64次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5E62762668C00D3012A /* 第64次.mp3 */; };
+		E523B6D92762668D00D3012A /* 放松.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5E72762668C00D3012A /* 放松.mp3 */; };
+		E523B6DA2762668D00D3012A /* 第33次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5E82762668C00D3012A /* 第33次.mp3 */; };
+		E523B6DB2762668D00D3012A /* 第44次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5E92762668C00D3012A /* 第44次.mp3 */; };
+		E523B6DC2762668D00D3012A /* 第13次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5EA2762668C00D3012A /* 第13次.mp3 */; };
+		E523B6DD2762668D00D3012A /* 95.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5EB2762668C00D3012A /* 95.mp3 */; };
+		E523B6DE2762668D00D3012A /* 81.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5EC2762668C00D3012A /* 81.mp3 */; };
+		E523B6DF2762668D00D3012A /* 第52次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5ED2762668C00D3012A /* 第52次.mp3 */; };
+		E523B6E02762668D00D3012A /* 4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5EE2762668C00D3012A /* 4.mp3 */; };
+		E523B6E12762668D00D3012A /* 56.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5EF2762668C00D3012A /* 56.mp3 */; };
+		E523B6E22762668D00D3012A /* 42.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5F02762668C00D3012A /* 42.mp3 */; };
+		E523B6E32762668D00D3012A /* 43.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5F12762668C00D3012A /* 43.mp3 */; };
+		E523B6E42762668D00D3012A /* 5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5F22762668C00D3012A /* 5.mp3 */; };
+		E523B6E52762668D00D3012A /* 第29次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5F32762668C00D3012A /* 第29次.mp3 */; };
+		E523B6E62762668D00D3012A /* 57.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5F42762668C00D3012A /* 57.mp3 */; };
+		E523B6E72762668D00D3012A /* 80.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5F52762668C00D3012A /* 80.mp3 */; };
+		E523B6E82762668D00D3012A /* 94.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5F62762668C00D3012A /* 94.mp3 */; };
+		E523B6E92762668D00D3012A /* 第91次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5F72762668C00D3012A /* 第91次.mp3 */; };
+		E523B6EA2762668D00D3012A /* 第68次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5F82762668C00D3012A /* 第68次.mp3 */; };
+		E523B6EB2762668D00D3012A /* 第87次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5F92762668C00D3012A /* 第87次.mp3 */; };
+		E523B6EC2762668D00D3012A /* 第69次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5FA2762668C00D3012A /* 第69次.mp3 */; };
+		E523B6ED2762668D00D3012A /* 第86次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5FB2762668C00D3012A /* 第86次.mp3 */; };
+		E523B6EE2762668D00D3012A /* 第90次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5FC2762668C00D3012A /* 第90次.mp3 */; };
+		E523B6EF2762668D00D3012A /* 90.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5FD2762668C00D3012A /* 90.mp3 */; };
+		E523B6F02762668D00D3012A /* 84.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5FE2762668C00D3012A /* 84.mp3 */; };
+		E523B6F12762668D00D3012A /* 53.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B5FF2762668C00D3012A /* 53.mp3 */; };
+		E523B6F22762668D00D3012A /* 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6002762668C00D3012A /* 1.mp3 */; };
+		E523B6F32762668D00D3012A /* 第28次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6012762668C00D3012A /* 第28次.mp3 */; };
+		E523B6F42762668D00D3012A /* 47.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6022762668C00D3012A /* 47.mp3 */; };
+		E523B6F52762668D00D3012A /* 46.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6032762668C00D3012A /* 46.mp3 */; };
+		E523B6F62762668D00D3012A /* 52.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6042762668C00D3012A /* 52.mp3 */; };
+		E523B6F72762668D00D3012A /* 85.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6052762668C00D3012A /* 85.mp3 */; };
+		E523B6F82762668D00D3012A /* 91.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6062762668C00D3012A /* 91.mp3 */; };
+		E523B6F92762668D00D3012A /* 第53次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6072762668C00D3012A /* 第53次.mp3 */; };
+		E523B6FA2762668D00D3012A /* 第1次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6082762668C00D3012A /* 第1次.mp3 */; };
+		E523B6FB2762668D00D3012A /* 第12次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6092762668C00D3012A /* 第12次.mp3 */; };
+		E523B6FC2762668D00D3012A /* 背抬腿.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B60A2762668C00D3012A /* 背抬腿.mp3 */; };
+		E523B6FD2762668D00D3012A /* 第45次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B60B2762668C00D3012A /* 第45次.mp3 */; };
+		E523B6FE2762668D00D3012A /* 第32次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B60C2762668C00D3012A /* 第32次.mp3 */; };
+		E523B6FF2762668D00D3012A /* 第65次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B60D2762668C00D3012A /* 第65次.mp3 */; };
+		E523B7002762668D00D3012A /* 第73次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B60E2762668C00D3012A /* 第73次.mp3 */; };
+		E523B7012762668D00D3012A /* 87.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B60F2762668C00D3012A /* 87.mp3 */; };
+		E523B7022762668D00D3012A /* 第24次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6102762668C00D3012A /* 第24次.mp3 */; };
+		E523B7032762668D00D3012A /* 93.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6112762668C00D3012A /* 93.mp3 */; };
+		E523B7042762668D00D3012A /* 勾脚.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6122762668C00D3012A /* 勾脚.mp3 */; };
+		E523B7052762668D00D3012A /* 44.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6132762668C00D3012A /* 44.mp3 */; };
+		E523B7062762668D00D3012A /* 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6142762668C00D3012A /* 2.mp3 */; };
+		E523B7072762668D00D3012A /* 50.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6152762668C00D3012A /* 50.mp3 */; };
+		E523B7082762668D00D3012A /* 78.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6162762668C00D3012A /* 78.mp3 */; };
+		E523B7092762668D00D3012A /* 79.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6172762668C00D3012A /* 79.mp3 */; };
+		E523B70A2762668D00D3012A /* 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6182762668C00D3012A /* 3.mp3 */; };
+		E523B70B2762668D00D3012A /* 51.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6192762668C00D3012A /* 51.mp3 */; };
+		E523B70C2762668D00D3012A /* 45.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B61A2762668C00D3012A /* 45.mp3 */; };
+		E523B70D2762668D00D3012A /* 92.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B61B2762668C00D3012A /* 92.mp3 */; };
+		E523B70E2762668D00D3012A /* 86.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B61C2762668C00D3012A /* 86.mp3 */; };
+		E523B70F2762668D00D3012A /* 第49次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B61D2762668C00D3012A /* 第49次.mp3 */; };
+		E523B7102762668D00D3012A /* 第42次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B61E2762668C00D3012A /* 第42次.mp3 */; };
+		E523B7112762668D00D3012A /* 第15次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B61F2762668C00D3012A /* 第15次.mp3 */; };
+		E523B7122762668D00D3012A /* 第6次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6202762668C00D3012A /* 第6次.mp3 */; };
+		E523B7132762668D00D3012A /* 第54次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6212762668C00D3012A /* 第54次.mp3 */; };
+		E523B7142762668D00D3012A /* 蹦脚.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6222762668C00D3012A /* 蹦脚.mp3 */; };
+		E523B7152762668D00D3012A /* 22.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6232762668C00D3012A /* 22.mp3 */; };
+		E523B7162762668D00D3012A /* 36.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6242762668C00D3012A /* 36.mp3 */; };
+		E523B7172762668D00D3012A /* 37.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6252762668C00D3012A /* 37.mp3 */; };
+		E523B7182762668D00D3012A /* 23.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6262762668C00D3012A /* 23.mp3 */; };
+		E523B7192762668D00D3012A /* 第78次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6272762668C00D3012A /* 第78次.mp3 */; };
+		E523B71A2762668D00D3012A /* 第97次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6282762668C00D3012A /* 第97次.mp3 */; };
+		E523B71B2762668D00D3012A /* 第81次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6292762668C00D3012A /* 第81次.mp3 */; };
+		E523B71C2762668D00D3012A /* 第39次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B62A2762668C00D3012A /* 第39次.mp3 */; };
+		E523B71D2762668D00D3012A /* 正抬腿.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B62B2762668C00D3012A /* 正抬腿.mp3 */; };
+		E523B71E2762668D00D3012A /* 第19次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B62C2762668C00D3012A /* 第19次.mp3 */; };
+		E523B71F2762668D00D3012A /* 俯.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B62D2762668C00D3012A /* 俯.mp3 */; };
+		E523B7202762668D00D3012A /* 35.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B62E2762668C00D3012A /* 35.mp3 */; };
+		E523B7212762668D00D3012A /* 第58次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B62F2762668C00D3012A /* 第58次.mp3 */; };
+		E523B7222762668D00D3012A /* 21.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6302762668C00D3012A /* 21.mp3 */; };
+		E523B7232762668D00D3012A /* 20.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6312762668C00D3012A /* 20.mp3 */; };
+		E523B7242762668D00D3012A /* 34.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6322762668C00D3012A /* 34.mp3 */; };
+		E523B7252762668D00D3012A /* 第23次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6332762668C00D3012A /* 第23次.mp3 */; };
+		E523B7262762668D00D3012A /* 第74次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6342762668C00D3012A /* 第74次.mp3 */; };
+		E523B7272762668D00D3012A /* 第62次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6352762668C00D3012A /* 第62次.mp3 */; };
+		E523B7282762668D00D3012A /* 第35次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6362762668C00D3012A /* 第35次.mp3 */; };
+		E523B7292762668D00D3012A /* 第34次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6372762668C00D3012A /* 第34次.mp3 */; };
+		E523B72A2762668D00D3012A /* 第63次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6382762668C00D3012A /* 第63次.mp3 */; };
+		E523B72B2762668D00D3012A /* 第75次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6392762668C00D3012A /* 第75次.mp3 */; };
+		E523B72C2762668D00D3012A /* 第22次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B63A2762668C00D3012A /* 第22次.mp3 */; };
+		E523B72D2762668D00D3012A /* 30.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B63B2762668C00D3012A /* 30.mp3 */; };
+		E523B72E2762668D00D3012A /* 24.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B63C2762668C00D3012A /* 24.mp3 */; };
+		E523B72F2762668D00D3012A /* 18.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B63D2762668C00D3012A /* 18.mp3 */; };
+		E523B7302762668D00D3012A /* 19.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B63E2762668C00D3012A /* 19.mp3 */; };
+		E523B7312762668D00D3012A /* 25.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B63F2762668C00D3012A /* 25.mp3 */; };
+		E523B7322762668D00D3012A /* 第59次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6402762668C00D3012A /* 第59次.mp3 */; };
+		E523B7332762668D00D3012A /* 31.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6412762668C00D3012A /* 31.mp3 */; };
+		E523B7342762668D00D3012A /* 第18次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6422762668C00D3012A /* 第18次.mp3 */; };
+		E523B7352762668D00D3012A /* 第38次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6432762668C00D3012A /* 第38次.mp3 */; };
+		E523B7362762668D00D3012A /* 卧.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6442762668C00D3012A /* 卧.mp3 */; };
+		E523B7372762668D00D3012A /* 第80次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6452762668C00D3012A /* 第80次.mp3 */; };
+		E523B7382762668D00D3012A /* 第79次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6462762668C00D3012A /* 第79次.mp3 */; };
+		E523B7392762668D00D3012A /* 第96次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6472762668C00D3012A /* 第96次.mp3 */; };
+		E523B73A2762668D00D3012A /* 27.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6482762668C00D3012A /* 27.mp3 */; };
+		E523B73B2762668D00D3012A /* 33.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6492762668C00D3012A /* 33.mp3 */; };
+		E523B73C2762668D00D3012A /* 32.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B64A2762668C00D3012A /* 32.mp3 */; };
+		E523B73D2762668D00D3012A /* 26.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B64B2762668C00D3012A /* 26.mp3 */; };
+		E523B73E2762668D00D3012A /* 第55次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B64C2762668C00D3012A /* 第55次.mp3 */; };
+		E523B73F2762668D00D3012A /* 侧抬腿.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B64D2762668C00D3012A /* 侧抬腿.mp3 */; };
+		E523B7402762668D00D3012A /* 结束.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B64E2762668C00D3012A /* 结束.mp3 */; };
+		E523B7412762668D00D3012A /* 第7次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B64F2762668C00D3012A /* 第7次.mp3 */; };
+		E523B7422762668D00D3012A /* 第14次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6502762668C00D3012A /* 第14次.mp3 */; };
+		E523B7432762668D00D3012A /* 第43次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6512762668C00D3012A /* 第43次.mp3 */; };
+		E523B7442762668D00D3012A /* 第83次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6522762668C00D3012A /* 第83次.mp3 */; };
+		E523B7452762668D00D3012A /* 第95次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6532762668C00D3012A /* 第95次.mp3 */; };
+		E523B7462762668D00D3012A /* 17.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6542762668C00D3012A /* 17.mp3 */; };
+		E523B7472762668D00D3012A /* 16.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6552762668C00D3012A /* 16.mp3 */; };
+		E523B7482762668D00D3012A /* 第56次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6562762668C00D3012A /* 第56次.mp3 */; };
+		E523B7492762668D00D3012A /* 第4次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6572762668C00D3012A /* 第4次.mp3 */; };
+		E523B74A2762668D00D3012A /* 第17次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6582762668C00D3012A /* 第17次.mp3 */; };
+		E523B74B2762668D00D3012A /* 第40次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6592762668C00D3012A /* 第40次.mp3 */; };
+		E523B74C2762668D00D3012A /* 第37次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B65A2762668C00D3012A /* 第37次.mp3 */; };
+		E523B74D2762668D00D3012A /* 第60次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B65B2762668C00D3012A /* 第60次.mp3 */; };
+		E523B74E2762668D00D3012A /* 第99次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B65C2762668C00D3012A /* 第99次.mp3 */; };
+		E523B74F2762668D00D3012A /* 第76次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B65D2762668C00D3012A /* 第76次.mp3 */; };
+		E523B7502762668D00D3012A /* 第21次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B65E2762668C00D3012A /* 第21次.mp3 */; };
+		E523B7512762668D00D3012A /* 28.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B65F2762668C00D3012A /* 28.mp3 */; };
+		E523B7522762668D00D3012A /* 14.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6602762668C00D3012A /* 14.mp3 */; };
+		E523B7532762668D00D3012A /* 15.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6612762668C00D3012A /* 15.mp3 */; };
+		E523B7542762668D00D3012A /* 29.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6622762668C00D3012A /* 29.mp3 */; };
+		E523B7552762668D00D3012A /* 100.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6632762668C00D3012A /* 100.mp3 */; };
+		E523B7562762668D00D3012A /* 第8次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6642762668C00D3012A /* 第8次.mp3 */; };
+		E523B7572762668D00D3012A /* 第9次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6652762668C00D3012A /* 第9次.mp3 */; };
+		E523B7582762668D00D3012A /* 11.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6662762668C00D3012A /* 11.mp3 */; };
+		E523B7592762668D00D3012A /* 39.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6672762668C00D3012A /* 39.mp3 */; };
+		E523B75A2762668D00D3012A /* 38.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6682762668C00D3012A /* 38.mp3 */; };
+		E523B75B2762668D00D3012A /* 10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6692762668C00D3012A /* 10.mp3 */; };
+		E523B75C2762668D00D3012A /* 第20次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B66A2762668C00D3012A /* 第20次.mp3 */; };
+		E523B75D2762668D00D3012A /* 第98次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B66B2762668C00D3012A /* 第98次.mp3 */; };
+		E523B75E2762668D00D3012A /* 准备开始.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B66C2762668C00D3012A /* 准备开始.mp3 */; };
+		E523B75F2762668D00D3012A /* 第77次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B66D2762668C00D3012A /* 第77次.mp3 */; };
+		E523B7602762668D00D3012A /* 第61次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B66E2762668C00D3012A /* 第61次.mp3 */; };
+		E523B7612762668D00D3012A /* 第36次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B66F2762668C00D3012A /* 第36次.mp3 */; };
+		E523B7622762668D00D3012A /* 第41次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6702762668C00D3012A /* 第41次.mp3 */; };
+		E523B7632762668D00D3012A /* 第100次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6712762668C00D3012A /* 第100次.mp3 */; };
+		E523B7642762668D00D3012A /* 第16次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6722762668C00D3012A /* 第16次.mp3 */; };
+		E523B7652762668D00D3012A /* 第5次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6732762668C00D3012A /* 第5次.mp3 */; };
+		E523B7662762668D00D3012A /* 第57次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6742762668C00D3012A /* 第57次.mp3 */; };
+		E523B7672762668D00D3012A /* 12.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6752762668C00D3012A /* 12.mp3 */; };
+		E523B7682762668D00D3012A /* 13.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6762762668C00D3012A /* 13.mp3 */; };
+		E523B7692762668D00D3012A /* 第94次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6772762668C00D3012A /* 第94次.mp3 */; };
+		E523B76A2762668D00D3012A /* 第82次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6782762668C00D3012A /* 第82次.mp3 */; };
+		E523B76B2762668D00D3012A /* 第31次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6792762668C00D3012A /* 第31次.mp3 */; };
+		E523B76C2762668D00D3012A /* 第89次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B67A2762668C00D3012A /* 第89次.mp3 */; };
+		E523B76D2762668D00D3012A /* 第66次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B67B2762668C00D3012A /* 第66次.mp3 */; };
+		E523B76E2762668D00D3012A /* 第70次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B67C2762668C00D3012A /* 第70次.mp3 */; };
+		E523B76F2762668D00D3012A /* 第27次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B67D2762668C00D3012A /* 第27次.mp3 */; };
+		E523B7702762668D00D3012A /* 48.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B67E2762668C00D3012A /* 48.mp3 */; };
+		E523B7712762668D00D3012A /* 60.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B67F2762668C00D3012A /* 60.mp3 */; };
+		E523B7722762668D00D3012A /* 74.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6802762668C00D3012A /* 74.mp3 */; };
+		E523B7732762668D00D3012A /* 75.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6812762668C00D3012A /* 75.mp3 */; };
+		E523B7742762668D00D3012A /* 61.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6822762668C00D3012A /* 61.mp3 */; };
+		E523B7752762668D00D3012A /* 49.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6832762668C00D3012A /* 49.mp3 */; };
+		E523B7762762668D00D3012A /* 第85次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6842762668C00D3012A /* 第85次.mp3 */; };
+		E523B7772762668D00D3012A /* 第93次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6852762668C00D3012A /* 第93次.mp3 */; };
+		E523B7782762668D00D3012A /* 88.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6862762668C00D3012A /* 88.mp3 */; };
+		E523B7792762668D00D3012A /* 77.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6872762668C00D3012A /* 77.mp3 */; };
+		E523B77A2762668D00D3012A /* 63.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6882762668C00D3012A /* 63.mp3 */; };
+		E523B77B2762668D00D3012A /* 62.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6892762668C00D3012A /* 62.mp3 */; };
+		E523B77C2762668D00D3012A /* 76.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B68A2762668C00D3012A /* 76.mp3 */; };
+		E523B77D2762668D00D3012A /* 第50次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B68B2762668C00D3012A /* 第50次.mp3 */; };
+		E523B77E2762668D00D3012A /* 89.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B68C2762668C00D3012A /* 89.mp3 */; };
+		E523B77F2762668D00D3012A /* 第2次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B68D2762668C00D3012A /* 第2次.mp3 */; };
+		E523B7802762668D00D3012A /* 第11次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B68E2762668C00D3012A /* 第11次.mp3 */; };
+		E523B7812762668D00D3012A /* 第46次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B68F2762668C00D3012A /* 第46次.mp3 */; };
+		E523B7822762668D00D3012A /* 第47次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6902762668C00D3012A /* 第47次.mp3 */; };
+		E523B7832762668D00D3012A /* 第10次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6912762668C00D3012A /* 第10次.mp3 */; };
+		E523B7842762668D00D3012A /* 第3次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6922762668C00D3012A /* 第3次.mp3 */; };
+		E523B7852762668D00D3012A /* 第51次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6932762668C00D3012A /* 第51次.mp3 */; };
+		E523B7862762668D00D3012A /* 99.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6942762668C00D3012A /* 99.mp3 */; };
+		E523B7872762668D00D3012A /* 72.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6952762668C00D3012A /* 72.mp3 */; };
+		E523B7882762668D00D3012A /* 66.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6962762668C00D3012A /* 66.mp3 */; };
+		E523B7892762668D00D3012A /* 8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6972762668C00D3012A /* 8.mp3 */; };
+		E523B78A2762668D00D3012A /* 9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6982762668C00D3012A /* 9.mp3 */; };
+		E523B78B2762668D00D3012A /* 67.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6992762668C00D3012A /* 67.mp3 */; };
+		E523B78C2762668D00D3012A /* 73.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B69A2762668C00D3012A /* 73.mp3 */; };
+		E523B78D2762668D00D3012A /* 98.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B69B2762668C00D3012A /* 98.mp3 */; };
+		E523B78E2762668D00D3012A /* 第92次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B69C2762668C00D3012A /* 第92次.mp3 */; };
+		E523B78F2762668D00D3012A /* 第84次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B69D2762668C00D3012A /* 第84次.mp3 */; };
+		E523B7902762668D00D3012A /* 开始.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B69E2762668C00D3012A /* 开始.mp3 */; };
+		E523B7912762668D00D3012A /* 撑.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B69F2762668C00D3012A /* 撑.mp3 */; };
+		E523B7922762668D00D3012A /* 65.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6A02762668C00D3012A /* 65.mp3 */; };
+		E523B7932762668D00D3012A /* 71.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6A12762668C00D3012A /* 71.mp3 */; };
+		E523B7942762668D00D3012A /* 59.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6A22762668C00D3012A /* 59.mp3 */; };
+		E523B7952762668D00D3012A /* 58.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6A32762668C00D3012A /* 58.mp3 */; };
+		E523B7962762668D00D3012A /* 70.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6A42762668C00D3012A /* 70.mp3 */; };
+		E523B7972762668D00D3012A /* 64.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6A52762668C00D3012A /* 64.mp3 */; };
+		E523B7982762668D00D3012A /* 第26次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6A62762668C00D3012A /* 第26次.mp3 */; };
+		E523B7992762668D00D3012A /* 第71次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6A72762668C00D3012A /* 第71次.mp3 */; };
+		E523B79A2762668D00D3012A /* 第88次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6A82762668C00D3012A /* 第88次.mp3 */; };
+		E523B79B2762668D00D3012A /* 第67次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6A92762668C00D3012A /* 第67次.mp3 */; };
+		E523B79C2762668D00D3012A /* 第30次.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E523B6AA2762668C00D3012A /* 第30次.mp3 */; };
+		E523B79D2762668D00D3012A /* BeepSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523B6AC2762668C00D3012A /* BeepSession.swift */; };
+		E523B79E2762668D00D3012A /* Beep.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523B6AD2762668C00D3012A /* Beep.swift */; };
+		E523B79F2762668D00D3012A /* BeepGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523B6AE2762668C00D3012A /* BeepGlobal.swift */; };
+		E523B7A02762668D00D3012A /* BeepLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523B6AF2762668C00D3012A /* BeepLog.swift */; };
+		E523B7A12762668D00D3012A /* going.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E523B6B02762668C00D3012A /* going.xcdatamodeld */; };
+		E523B7A32762668D00D3012A /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523B6B42762668C00D3012A /* CoreDataService.swift */; };
+		E523B7A42762668D00D3012A /* CommonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523B6B52762668C00D3012A /* CommonUtil.swift */; };
+		E523B7A52762668D00D3012A /* TextPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523B6B62762668C00D3012A /* TextPlayer.swift */; };
+		E523B7A62762668D00D3012A /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523B6B82762668C00D3012A /* Date.swift */; };
+		E523B7A72762668D00D3012A /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523B6B92762668C00D3012A /* Array.swift */; };
+		E523B7A82762668D00D3012A /* AnyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523B6BA2762668C00D3012A /* AnyTransition.swift */; };
+		E523B7A92762668D00D3012A /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523B6BB2762668C00D3012A /* Double.swift */; };
+		E523B7AA2762668D00D3012A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E523B6BC2762668C00D3012A /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E52AAF8526074EE2004BD0EB /* PBXContainerItemProxy */ = {
+		E523B38E276254CD00D3012A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = E52AAF6626074EDF004BD0EB /* Project object */;
+			containerPortal = E523B370276254CA00D3012A /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E52AAF6D26074EDF004BD0EB;
+			remoteGlobalIDString = E523B377276254CA00D3012A;
 			remoteInfo = going;
 		};
-		E52AAF9026074EE2004BD0EB /* PBXContainerItemProxy */ = {
+		E523B398276254CD00D3012A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = E52AAF6626074EDF004BD0EB /* Project object */;
+			containerPortal = E523B370276254CA00D3012A /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E52AAF6D26074EDF004BD0EB;
+			remoteGlobalIDString = E523B377276254CA00D3012A;
 			remoteInfo = going;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E508C5CD26195D4700A8C47D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		E52AAF6E26074EDF004BD0EB /* SportTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E52AAF7126074EDF004BD0EB /* goingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goingApp.swift; sourceTree = "<group>"; };
-		E52AAF7326074EDF004BD0EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		E52AAF7526074EE2004BD0EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E52AAF7826074EE2004BD0EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E52AAF7A26074EE2004BD0EB /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		E52AAF7D26074EE2004BD0EB /* going.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = going.xcdatamodel; sourceTree = "<group>"; };
-		E52AAF7F26074EE2004BD0EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E52AAF8426074EE2004BD0EB /* goingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = goingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E52AAF8826074EE2004BD0EB /* goingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goingTests.swift; sourceTree = "<group>"; };
-		E52AAF8A26074EE2004BD0EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E52AAF8F26074EE2004BD0EB /* goingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = goingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E52AAF9326074EE2004BD0EB /* goingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goingUITests.swift; sourceTree = "<group>"; };
-		E52AAF9526074EE2004BD0EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E52AAFA526075269004BD0EB /* PlanListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanListView.swift; sourceTree = "<group>"; };
-		E52AAFD32607575D004BD0EB /* Badges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badges.swift; sourceTree = "<group>"; };
-		E52AAFD926075795004BD0EB /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		E52AAFE126075F12004BD0EB /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
-		E52AAFE726089D8A004BD0EB /* CommonUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtil.swift; sourceTree = "<group>"; };
-		E5482EB1260CC5F2006C0755 /* BeepSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeepSession.swift; sourceTree = "<group>"; };
-		E5482EB6260CC62E006C0755 /* Beep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beep.swift; sourceTree = "<group>"; };
-		E5482EBC260D74BE006C0755 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		E5482EC1260D756A006C0755 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
-		E5482EC6260D7589006C0755 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
-		E5482ECB260D759A006C0755 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
-		E560FE062610AE5600CF6044 /* AnyTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTransition.swift; sourceTree = "<group>"; };
-		E57A2C25261EECBA00CF3017 /* BeepGlobal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeepGlobal.swift; sourceTree = "<group>"; };
-		E57DBFD22654CABF00F548D6 /* BootstrapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootstrapView.swift; sourceTree = "<group>"; };
-		E590A2C22608CE8B00EC6260 /* TextPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPlayer.swift; sourceTree = "<group>"; };
-		E590A2CD260B6ABD00EC6260 /* BeepSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeepSheet.swift; sourceTree = "<group>"; };
-		E590A2D8260C633F00EC6260 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
-		E5930B7D260F1B7400C3D887 /* SportTimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTimeApp.swift; sourceTree = "<group>"; };
-		E5C7E8F7260C6EA5007742BA /* ReportGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportGenerator.swift; sourceTree = "<group>"; };
-		E5C7E900260C76AC007742BA /* BeepLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeepLog.swift; sourceTree = "<group>"; };
-		E5C7E908260C814B007742BA /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
+		E523B378276254CA00D3012A /* going.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = going.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E523B37B276254CA00D3012A /* goingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goingApp.swift; sourceTree = "<group>"; };
+		E523B37D276254CA00D3012A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E523B37F276254CD00D3012A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E523B382276254CD00D3012A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E523B384276254CD00D3012A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		E523B387276254CD00D3012A /* going.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = going.xcdatamodel; sourceTree = "<group>"; };
+		E523B38D276254CD00D3012A /* goingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = goingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E523B391276254CD00D3012A /* goingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goingTests.swift; sourceTree = "<group>"; };
+		E523B397276254CD00D3012A /* goingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = goingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E523B39B276254CD00D3012A /* goingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goingUITests.swift; sourceTree = "<group>"; };
+		E523B39D276254CD00D3012A /* goingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E523B5C62762668B00D3012A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E523B5C82762668B00D3012A /* BootstrapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootstrapView.swift; sourceTree = "<group>"; };
+		E523B5C92762668B00D3012A /* ActionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
+		E523B5CA2762668B00D3012A /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E523B5CC2762668B00D3012A /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		E523B5CD2762668B00D3012A /* Badges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Badges.swift; sourceTree = "<group>"; };
+		E523B5CE2762668B00D3012A /* BeepSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeepSheet.swift; sourceTree = "<group>"; };
+		E523B5CF2762668B00D3012A /* ReportView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
+		E523B5D02762668B00D3012A /* PlanListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanListView.swift; sourceTree = "<group>"; };
+		E523B5D22762668C00D3012A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E523B5D42762668C00D3012A /* ReportGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportGenerator.swift; sourceTree = "<group>"; };
+		E523B5D52762668C00D3012A /* SportTimeApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportTimeApp.swift; sourceTree = "<group>"; };
+		E523B5D72762668C00D3012A /* 第48次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第48次.mp3"; sourceTree = "<group>"; };
+		E523B5D82762668C00D3012A /* 82.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 82.mp3; sourceTree = "<group>"; };
+		E523B5D92762668C00D3012A /* 96.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 96.mp3; sourceTree = "<group>"; };
+		E523B5DA2762668C00D3012A /* 69.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 69.mp3; sourceTree = "<group>"; };
+		E523B5DB2762668C00D3012A /* 41.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 41.mp3; sourceTree = "<group>"; };
+		E523B5DC2762668C00D3012A /* 55.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 55.mp3; sourceTree = "<group>"; };
+		E523B5DD2762668C00D3012A /* 7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 7.mp3; sourceTree = "<group>"; };
+		E523B5DE2762668C00D3012A /* 54.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 54.mp3; sourceTree = "<group>"; };
+		E523B5DF2762668C00D3012A /* 6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 6.mp3; sourceTree = "<group>"; };
+		E523B5E02762668C00D3012A /* 40.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 40.mp3; sourceTree = "<group>"; };
+		E523B5E12762668C00D3012A /* 68.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 68.mp3; sourceTree = "<group>"; };
+		E523B5E22762668C00D3012A /* 97.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 97.mp3; sourceTree = "<group>"; };
+		E523B5E32762668C00D3012A /* 第25次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第25次.mp3"; sourceTree = "<group>"; };
+		E523B5E42762668C00D3012A /* 83.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 83.mp3; sourceTree = "<group>"; };
+		E523B5E52762668C00D3012A /* 第72次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第72次.mp3"; sourceTree = "<group>"; };
+		E523B5E62762668C00D3012A /* 第64次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第64次.mp3"; sourceTree = "<group>"; };
+		E523B5E72762668C00D3012A /* 放松.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "放松.mp3"; sourceTree = "<group>"; };
+		E523B5E82762668C00D3012A /* 第33次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第33次.mp3"; sourceTree = "<group>"; };
+		E523B5E92762668C00D3012A /* 第44次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第44次.mp3"; sourceTree = "<group>"; };
+		E523B5EA2762668C00D3012A /* 第13次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第13次.mp3"; sourceTree = "<group>"; };
+		E523B5EB2762668C00D3012A /* 95.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 95.mp3; sourceTree = "<group>"; };
+		E523B5EC2762668C00D3012A /* 81.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 81.mp3; sourceTree = "<group>"; };
+		E523B5ED2762668C00D3012A /* 第52次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第52次.mp3"; sourceTree = "<group>"; };
+		E523B5EE2762668C00D3012A /* 4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 4.mp3; sourceTree = "<group>"; };
+		E523B5EF2762668C00D3012A /* 56.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 56.mp3; sourceTree = "<group>"; };
+		E523B5F02762668C00D3012A /* 42.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 42.mp3; sourceTree = "<group>"; };
+		E523B5F12762668C00D3012A /* 43.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 43.mp3; sourceTree = "<group>"; };
+		E523B5F22762668C00D3012A /* 5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 5.mp3; sourceTree = "<group>"; };
+		E523B5F32762668C00D3012A /* 第29次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第29次.mp3"; sourceTree = "<group>"; };
+		E523B5F42762668C00D3012A /* 57.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 57.mp3; sourceTree = "<group>"; };
+		E523B5F52762668C00D3012A /* 80.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 80.mp3; sourceTree = "<group>"; };
+		E523B5F62762668C00D3012A /* 94.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 94.mp3; sourceTree = "<group>"; };
+		E523B5F72762668C00D3012A /* 第91次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第91次.mp3"; sourceTree = "<group>"; };
+		E523B5F82762668C00D3012A /* 第68次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第68次.mp3"; sourceTree = "<group>"; };
+		E523B5F92762668C00D3012A /* 第87次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第87次.mp3"; sourceTree = "<group>"; };
+		E523B5FA2762668C00D3012A /* 第69次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第69次.mp3"; sourceTree = "<group>"; };
+		E523B5FB2762668C00D3012A /* 第86次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第86次.mp3"; sourceTree = "<group>"; };
+		E523B5FC2762668C00D3012A /* 第90次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第90次.mp3"; sourceTree = "<group>"; };
+		E523B5FD2762668C00D3012A /* 90.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 90.mp3; sourceTree = "<group>"; };
+		E523B5FE2762668C00D3012A /* 84.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 84.mp3; sourceTree = "<group>"; };
+		E523B5FF2762668C00D3012A /* 53.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 53.mp3; sourceTree = "<group>"; };
+		E523B6002762668C00D3012A /* 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1.mp3; sourceTree = "<group>"; };
+		E523B6012762668C00D3012A /* 第28次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第28次.mp3"; sourceTree = "<group>"; };
+		E523B6022762668C00D3012A /* 47.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 47.mp3; sourceTree = "<group>"; };
+		E523B6032762668C00D3012A /* 46.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 46.mp3; sourceTree = "<group>"; };
+		E523B6042762668C00D3012A /* 52.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 52.mp3; sourceTree = "<group>"; };
+		E523B6052762668C00D3012A /* 85.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 85.mp3; sourceTree = "<group>"; };
+		E523B6062762668C00D3012A /* 91.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 91.mp3; sourceTree = "<group>"; };
+		E523B6072762668C00D3012A /* 第53次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第53次.mp3"; sourceTree = "<group>"; };
+		E523B6082762668C00D3012A /* 第1次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第1次.mp3"; sourceTree = "<group>"; };
+		E523B6092762668C00D3012A /* 第12次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第12次.mp3"; sourceTree = "<group>"; };
+		E523B60A2762668C00D3012A /* 背抬腿.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "背抬腿.mp3"; sourceTree = "<group>"; };
+		E523B60B2762668C00D3012A /* 第45次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第45次.mp3"; sourceTree = "<group>"; };
+		E523B60C2762668C00D3012A /* 第32次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第32次.mp3"; sourceTree = "<group>"; };
+		E523B60D2762668C00D3012A /* 第65次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第65次.mp3"; sourceTree = "<group>"; };
+		E523B60E2762668C00D3012A /* 第73次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第73次.mp3"; sourceTree = "<group>"; };
+		E523B60F2762668C00D3012A /* 87.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 87.mp3; sourceTree = "<group>"; };
+		E523B6102762668C00D3012A /* 第24次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第24次.mp3"; sourceTree = "<group>"; };
+		E523B6112762668C00D3012A /* 93.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 93.mp3; sourceTree = "<group>"; };
+		E523B6122762668C00D3012A /* 勾脚.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "勾脚.mp3"; sourceTree = "<group>"; };
+		E523B6132762668C00D3012A /* 44.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 44.mp3; sourceTree = "<group>"; };
+		E523B6142762668C00D3012A /* 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 2.mp3; sourceTree = "<group>"; };
+		E523B6152762668C00D3012A /* 50.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 50.mp3; sourceTree = "<group>"; };
+		E523B6162762668C00D3012A /* 78.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 78.mp3; sourceTree = "<group>"; };
+		E523B6172762668C00D3012A /* 79.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 79.mp3; sourceTree = "<group>"; };
+		E523B6182762668C00D3012A /* 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 3.mp3; sourceTree = "<group>"; };
+		E523B6192762668C00D3012A /* 51.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 51.mp3; sourceTree = "<group>"; };
+		E523B61A2762668C00D3012A /* 45.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 45.mp3; sourceTree = "<group>"; };
+		E523B61B2762668C00D3012A /* 92.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 92.mp3; sourceTree = "<group>"; };
+		E523B61C2762668C00D3012A /* 86.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 86.mp3; sourceTree = "<group>"; };
+		E523B61D2762668C00D3012A /* 第49次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第49次.mp3"; sourceTree = "<group>"; };
+		E523B61E2762668C00D3012A /* 第42次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第42次.mp3"; sourceTree = "<group>"; };
+		E523B61F2762668C00D3012A /* 第15次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第15次.mp3"; sourceTree = "<group>"; };
+		E523B6202762668C00D3012A /* 第6次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第6次.mp3"; sourceTree = "<group>"; };
+		E523B6212762668C00D3012A /* 第54次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第54次.mp3"; sourceTree = "<group>"; };
+		E523B6222762668C00D3012A /* 蹦脚.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "蹦脚.mp3"; sourceTree = "<group>"; };
+		E523B6232762668C00D3012A /* 22.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 22.mp3; sourceTree = "<group>"; };
+		E523B6242762668C00D3012A /* 36.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 36.mp3; sourceTree = "<group>"; };
+		E523B6252762668C00D3012A /* 37.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 37.mp3; sourceTree = "<group>"; };
+		E523B6262762668C00D3012A /* 23.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 23.mp3; sourceTree = "<group>"; };
+		E523B6272762668C00D3012A /* 第78次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第78次.mp3"; sourceTree = "<group>"; };
+		E523B6282762668C00D3012A /* 第97次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第97次.mp3"; sourceTree = "<group>"; };
+		E523B6292762668C00D3012A /* 第81次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第81次.mp3"; sourceTree = "<group>"; };
+		E523B62A2762668C00D3012A /* 第39次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第39次.mp3"; sourceTree = "<group>"; };
+		E523B62B2762668C00D3012A /* 正抬腿.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "正抬腿.mp3"; sourceTree = "<group>"; };
+		E523B62C2762668C00D3012A /* 第19次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第19次.mp3"; sourceTree = "<group>"; };
+		E523B62D2762668C00D3012A /* 俯.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "俯.mp3"; sourceTree = "<group>"; };
+		E523B62E2762668C00D3012A /* 35.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 35.mp3; sourceTree = "<group>"; };
+		E523B62F2762668C00D3012A /* 第58次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第58次.mp3"; sourceTree = "<group>"; };
+		E523B6302762668C00D3012A /* 21.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 21.mp3; sourceTree = "<group>"; };
+		E523B6312762668C00D3012A /* 20.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 20.mp3; sourceTree = "<group>"; };
+		E523B6322762668C00D3012A /* 34.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 34.mp3; sourceTree = "<group>"; };
+		E523B6332762668C00D3012A /* 第23次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第23次.mp3"; sourceTree = "<group>"; };
+		E523B6342762668C00D3012A /* 第74次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第74次.mp3"; sourceTree = "<group>"; };
+		E523B6352762668C00D3012A /* 第62次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第62次.mp3"; sourceTree = "<group>"; };
+		E523B6362762668C00D3012A /* 第35次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第35次.mp3"; sourceTree = "<group>"; };
+		E523B6372762668C00D3012A /* 第34次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第34次.mp3"; sourceTree = "<group>"; };
+		E523B6382762668C00D3012A /* 第63次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第63次.mp3"; sourceTree = "<group>"; };
+		E523B6392762668C00D3012A /* 第75次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第75次.mp3"; sourceTree = "<group>"; };
+		E523B63A2762668C00D3012A /* 第22次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第22次.mp3"; sourceTree = "<group>"; };
+		E523B63B2762668C00D3012A /* 30.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 30.mp3; sourceTree = "<group>"; };
+		E523B63C2762668C00D3012A /* 24.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 24.mp3; sourceTree = "<group>"; };
+		E523B63D2762668C00D3012A /* 18.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 18.mp3; sourceTree = "<group>"; };
+		E523B63E2762668C00D3012A /* 19.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 19.mp3; sourceTree = "<group>"; };
+		E523B63F2762668C00D3012A /* 25.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 25.mp3; sourceTree = "<group>"; };
+		E523B6402762668C00D3012A /* 第59次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第59次.mp3"; sourceTree = "<group>"; };
+		E523B6412762668C00D3012A /* 31.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 31.mp3; sourceTree = "<group>"; };
+		E523B6422762668C00D3012A /* 第18次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第18次.mp3"; sourceTree = "<group>"; };
+		E523B6432762668C00D3012A /* 第38次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第38次.mp3"; sourceTree = "<group>"; };
+		E523B6442762668C00D3012A /* 卧.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "卧.mp3"; sourceTree = "<group>"; };
+		E523B6452762668C00D3012A /* 第80次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第80次.mp3"; sourceTree = "<group>"; };
+		E523B6462762668C00D3012A /* 第79次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第79次.mp3"; sourceTree = "<group>"; };
+		E523B6472762668C00D3012A /* 第96次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第96次.mp3"; sourceTree = "<group>"; };
+		E523B6482762668C00D3012A /* 27.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 27.mp3; sourceTree = "<group>"; };
+		E523B6492762668C00D3012A /* 33.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 33.mp3; sourceTree = "<group>"; };
+		E523B64A2762668C00D3012A /* 32.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 32.mp3; sourceTree = "<group>"; };
+		E523B64B2762668C00D3012A /* 26.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 26.mp3; sourceTree = "<group>"; };
+		E523B64C2762668C00D3012A /* 第55次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第55次.mp3"; sourceTree = "<group>"; };
+		E523B64D2762668C00D3012A /* 侧抬腿.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "侧抬腿.mp3"; sourceTree = "<group>"; };
+		E523B64E2762668C00D3012A /* 结束.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "结束.mp3"; sourceTree = "<group>"; };
+		E523B64F2762668C00D3012A /* 第7次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第7次.mp3"; sourceTree = "<group>"; };
+		E523B6502762668C00D3012A /* 第14次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第14次.mp3"; sourceTree = "<group>"; };
+		E523B6512762668C00D3012A /* 第43次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第43次.mp3"; sourceTree = "<group>"; };
+		E523B6522762668C00D3012A /* 第83次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第83次.mp3"; sourceTree = "<group>"; };
+		E523B6532762668C00D3012A /* 第95次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第95次.mp3"; sourceTree = "<group>"; };
+		E523B6542762668C00D3012A /* 17.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 17.mp3; sourceTree = "<group>"; };
+		E523B6552762668C00D3012A /* 16.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 16.mp3; sourceTree = "<group>"; };
+		E523B6562762668C00D3012A /* 第56次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第56次.mp3"; sourceTree = "<group>"; };
+		E523B6572762668C00D3012A /* 第4次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第4次.mp3"; sourceTree = "<group>"; };
+		E523B6582762668C00D3012A /* 第17次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第17次.mp3"; sourceTree = "<group>"; };
+		E523B6592762668C00D3012A /* 第40次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第40次.mp3"; sourceTree = "<group>"; };
+		E523B65A2762668C00D3012A /* 第37次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第37次.mp3"; sourceTree = "<group>"; };
+		E523B65B2762668C00D3012A /* 第60次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第60次.mp3"; sourceTree = "<group>"; };
+		E523B65C2762668C00D3012A /* 第99次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第99次.mp3"; sourceTree = "<group>"; };
+		E523B65D2762668C00D3012A /* 第76次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第76次.mp3"; sourceTree = "<group>"; };
+		E523B65E2762668C00D3012A /* 第21次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第21次.mp3"; sourceTree = "<group>"; };
+		E523B65F2762668C00D3012A /* 28.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 28.mp3; sourceTree = "<group>"; };
+		E523B6602762668C00D3012A /* 14.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 14.mp3; sourceTree = "<group>"; };
+		E523B6612762668C00D3012A /* 15.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 15.mp3; sourceTree = "<group>"; };
+		E523B6622762668C00D3012A /* 29.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 29.mp3; sourceTree = "<group>"; };
+		E523B6632762668C00D3012A /* 100.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 100.mp3; sourceTree = "<group>"; };
+		E523B6642762668C00D3012A /* 第8次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第8次.mp3"; sourceTree = "<group>"; };
+		E523B6652762668C00D3012A /* 第9次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第9次.mp3"; sourceTree = "<group>"; };
+		E523B6662762668C00D3012A /* 11.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 11.mp3; sourceTree = "<group>"; };
+		E523B6672762668C00D3012A /* 39.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 39.mp3; sourceTree = "<group>"; };
+		E523B6682762668C00D3012A /* 38.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 38.mp3; sourceTree = "<group>"; };
+		E523B6692762668C00D3012A /* 10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 10.mp3; sourceTree = "<group>"; };
+		E523B66A2762668C00D3012A /* 第20次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第20次.mp3"; sourceTree = "<group>"; };
+		E523B66B2762668C00D3012A /* 第98次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第98次.mp3"; sourceTree = "<group>"; };
+		E523B66C2762668C00D3012A /* 准备开始.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "准备开始.mp3"; sourceTree = "<group>"; };
+		E523B66D2762668C00D3012A /* 第77次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第77次.mp3"; sourceTree = "<group>"; };
+		E523B66E2762668C00D3012A /* 第61次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第61次.mp3"; sourceTree = "<group>"; };
+		E523B66F2762668C00D3012A /* 第36次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第36次.mp3"; sourceTree = "<group>"; };
+		E523B6702762668C00D3012A /* 第41次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第41次.mp3"; sourceTree = "<group>"; };
+		E523B6712762668C00D3012A /* 第100次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第100次.mp3"; sourceTree = "<group>"; };
+		E523B6722762668C00D3012A /* 第16次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第16次.mp3"; sourceTree = "<group>"; };
+		E523B6732762668C00D3012A /* 第5次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第5次.mp3"; sourceTree = "<group>"; };
+		E523B6742762668C00D3012A /* 第57次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第57次.mp3"; sourceTree = "<group>"; };
+		E523B6752762668C00D3012A /* 12.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 12.mp3; sourceTree = "<group>"; };
+		E523B6762762668C00D3012A /* 13.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 13.mp3; sourceTree = "<group>"; };
+		E523B6772762668C00D3012A /* 第94次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第94次.mp3"; sourceTree = "<group>"; };
+		E523B6782762668C00D3012A /* 第82次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第82次.mp3"; sourceTree = "<group>"; };
+		E523B6792762668C00D3012A /* 第31次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第31次.mp3"; sourceTree = "<group>"; };
+		E523B67A2762668C00D3012A /* 第89次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第89次.mp3"; sourceTree = "<group>"; };
+		E523B67B2762668C00D3012A /* 第66次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第66次.mp3"; sourceTree = "<group>"; };
+		E523B67C2762668C00D3012A /* 第70次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第70次.mp3"; sourceTree = "<group>"; };
+		E523B67D2762668C00D3012A /* 第27次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第27次.mp3"; sourceTree = "<group>"; };
+		E523B67E2762668C00D3012A /* 48.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 48.mp3; sourceTree = "<group>"; };
+		E523B67F2762668C00D3012A /* 60.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 60.mp3; sourceTree = "<group>"; };
+		E523B6802762668C00D3012A /* 74.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 74.mp3; sourceTree = "<group>"; };
+		E523B6812762668C00D3012A /* 75.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 75.mp3; sourceTree = "<group>"; };
+		E523B6822762668C00D3012A /* 61.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 61.mp3; sourceTree = "<group>"; };
+		E523B6832762668C00D3012A /* 49.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 49.mp3; sourceTree = "<group>"; };
+		E523B6842762668C00D3012A /* 第85次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第85次.mp3"; sourceTree = "<group>"; };
+		E523B6852762668C00D3012A /* 第93次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第93次.mp3"; sourceTree = "<group>"; };
+		E523B6862762668C00D3012A /* 88.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 88.mp3; sourceTree = "<group>"; };
+		E523B6872762668C00D3012A /* 77.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 77.mp3; sourceTree = "<group>"; };
+		E523B6882762668C00D3012A /* 63.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 63.mp3; sourceTree = "<group>"; };
+		E523B6892762668C00D3012A /* 62.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 62.mp3; sourceTree = "<group>"; };
+		E523B68A2762668C00D3012A /* 76.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 76.mp3; sourceTree = "<group>"; };
+		E523B68B2762668C00D3012A /* 第50次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第50次.mp3"; sourceTree = "<group>"; };
+		E523B68C2762668C00D3012A /* 89.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 89.mp3; sourceTree = "<group>"; };
+		E523B68D2762668C00D3012A /* 第2次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第2次.mp3"; sourceTree = "<group>"; };
+		E523B68E2762668C00D3012A /* 第11次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第11次.mp3"; sourceTree = "<group>"; };
+		E523B68F2762668C00D3012A /* 第46次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第46次.mp3"; sourceTree = "<group>"; };
+		E523B6902762668C00D3012A /* 第47次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第47次.mp3"; sourceTree = "<group>"; };
+		E523B6912762668C00D3012A /* 第10次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第10次.mp3"; sourceTree = "<group>"; };
+		E523B6922762668C00D3012A /* 第3次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第3次.mp3"; sourceTree = "<group>"; };
+		E523B6932762668C00D3012A /* 第51次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第51次.mp3"; sourceTree = "<group>"; };
+		E523B6942762668C00D3012A /* 99.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 99.mp3; sourceTree = "<group>"; };
+		E523B6952762668C00D3012A /* 72.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 72.mp3; sourceTree = "<group>"; };
+		E523B6962762668C00D3012A /* 66.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 66.mp3; sourceTree = "<group>"; };
+		E523B6972762668C00D3012A /* 8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 8.mp3; sourceTree = "<group>"; };
+		E523B6982762668C00D3012A /* 9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 9.mp3; sourceTree = "<group>"; };
+		E523B6992762668C00D3012A /* 67.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 67.mp3; sourceTree = "<group>"; };
+		E523B69A2762668C00D3012A /* 73.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 73.mp3; sourceTree = "<group>"; };
+		E523B69B2762668C00D3012A /* 98.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 98.mp3; sourceTree = "<group>"; };
+		E523B69C2762668C00D3012A /* 第92次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第92次.mp3"; sourceTree = "<group>"; };
+		E523B69D2762668C00D3012A /* 第84次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第84次.mp3"; sourceTree = "<group>"; };
+		E523B69E2762668C00D3012A /* 开始.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "开始.mp3"; sourceTree = "<group>"; };
+		E523B69F2762668C00D3012A /* 撑.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "撑.mp3"; sourceTree = "<group>"; };
+		E523B6A02762668C00D3012A /* 65.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 65.mp3; sourceTree = "<group>"; };
+		E523B6A12762668C00D3012A /* 71.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 71.mp3; sourceTree = "<group>"; };
+		E523B6A22762668C00D3012A /* 59.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 59.mp3; sourceTree = "<group>"; };
+		E523B6A32762668C00D3012A /* 58.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 58.mp3; sourceTree = "<group>"; };
+		E523B6A42762668C00D3012A /* 70.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 70.mp3; sourceTree = "<group>"; };
+		E523B6A52762668C00D3012A /* 64.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 64.mp3; sourceTree = "<group>"; };
+		E523B6A62762668C00D3012A /* 第26次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第26次.mp3"; sourceTree = "<group>"; };
+		E523B6A72762668C00D3012A /* 第71次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第71次.mp3"; sourceTree = "<group>"; };
+		E523B6A82762668C00D3012A /* 第88次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第88次.mp3"; sourceTree = "<group>"; };
+		E523B6A92762668C00D3012A /* 第67次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第67次.mp3"; sourceTree = "<group>"; };
+		E523B6AA2762668C00D3012A /* 第30次.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "第30次.mp3"; sourceTree = "<group>"; };
+		E523B6AC2762668C00D3012A /* BeepSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeepSession.swift; sourceTree = "<group>"; };
+		E523B6AD2762668C00D3012A /* Beep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beep.swift; sourceTree = "<group>"; };
+		E523B6AE2762668C00D3012A /* BeepGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeepGlobal.swift; sourceTree = "<group>"; };
+		E523B6AF2762668C00D3012A /* BeepLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeepLog.swift; sourceTree = "<group>"; };
+		E523B6B12762668C00D3012A /* going.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = going.xcdatamodel; sourceTree = "<group>"; };
+		E523B6B22762668C00D3012A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E523B6B42762668C00D3012A /* CoreDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		E523B6B52762668C00D3012A /* CommonUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonUtil.swift; sourceTree = "<group>"; };
+		E523B6B62762668C00D3012A /* TextPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextPlayer.swift; sourceTree = "<group>"; };
+		E523B6B82762668C00D3012A /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		E523B6B92762668C00D3012A /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		E523B6BA2762668C00D3012A /* AnyTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyTransition.swift; sourceTree = "<group>"; };
+		E523B6BB2762668C00D3012A /* Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		E523B6BC2762668C00D3012A /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E52AAF6B26074EDF004BD0EB /* Frameworks */ = {
+		E523B375276254CA00D3012A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E590A2D4260C5FDD00EC6260 /* SwiftUICharts in Frameworks */,
-				E52AAFBB26075536004BD0EB /* BFKit in Frameworks */,
-				E52AAFB5260753B2004BD0EB /* SwiftyJSON in Frameworks */,
-				E52AAFCD26075708004BD0EB /* Parchment in Frameworks */,
-				E52AAFAF26075397004BD0EB /* AFNetworking in Frameworks */,
-				E52AAFC7260756DD004BD0EB /* LLCycleScrollView in Frameworks */,
+				E523B3B2276257D100D3012A /* BFKit in Frameworks */,
+				E523B3AF276257B100D3012A /* SwiftyJSON in Frameworks */,
+				E523B3BB276261BC00D3012A /* Parchment in Frameworks */,
+				E523B3BE276261F100D3012A /* SwiftUICharts in Frameworks */,
+				E523B3AC276256EC00D3012A /* AFNetworking in Frameworks */,
+				E523B3B82762619100D3012A /* LLCycleScrollView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E52AAF8126074EE2004BD0EB /* Frameworks */ = {
+		E523B38A276254CD00D3012A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E52AAF8C26074EE2004BD0EB /* Frameworks */ = {
+		E523B394276254CD00D3012A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -132,146 +562,376 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E52AAF6526074EDF004BD0EB = {
+		E523B36F276254CA00D3012A = {
 			isa = PBXGroup;
 			children = (
-				E52AAF7026074EDF004BD0EB /* going */,
-				E52AAF8726074EE2004BD0EB /* goingTests */,
-				E52AAF9226074EE2004BD0EB /* goingUITests */,
-				E52AAF6F26074EDF004BD0EB /* Products */,
+				E523B37A276254CA00D3012A /* going */,
+				E523B390276254CD00D3012A /* goingTests */,
+				E523B39A276254CD00D3012A /* goingUITests */,
+				E523B379276254CA00D3012A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		E52AAF6F26074EDF004BD0EB /* Products */ = {
+		E523B379276254CA00D3012A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E52AAF6E26074EDF004BD0EB /* SportTimer.app */,
-				E52AAF8426074EE2004BD0EB /* goingTests.xctest */,
-				E52AAF8F26074EE2004BD0EB /* goingUITests.xctest */,
+				E523B378276254CA00D3012A /* going.app */,
+				E523B38D276254CD00D3012A /* goingTests.xctest */,
+				E523B397276254CD00D3012A /* goingUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E52AAF7026074EDF004BD0EB /* going */ = {
+		E523B37A276254CA00D3012A /* going */ = {
 			isa = PBXGroup;
 			children = (
-				E5482EBB260D74A8006C0755 /* extension */,
-				E5C7E8FF260C7698007742BA /* model */,
-				E5C7E8F6260C6E87007742BA /* service */,
-				E52AAFE626089D65004BD0EB /* library */,
-				E52AAFA4260751FB004BD0EB /* view */,
-				E52AAF7126074EDF004BD0EB /* goingApp.swift */,
-				E52AAF7326074EDF004BD0EB /* ContentView.swift */,
-				E52AAF7526074EE2004BD0EB /* Assets.xcassets */,
-				E52AAF7A26074EE2004BD0EB /* Persistence.swift */,
-				E52AAF7F26074EE2004BD0EB /* Info.plist */,
-				E52AAF7C26074EE2004BD0EB /* going.xcdatamodeld */,
-				E52AAF7726074EE2004BD0EB /* Preview Content */,
+				E523B5C62762668B00D3012A /* Assets.xcassets */,
+				E523B6B72762668C00D3012A /* extension */,
+				E523B6B02762668C00D3012A /* going.xcdatamodeld */,
+				E523B6B22762668C00D3012A /* Info.plist */,
+				E523B6B32762668C00D3012A /* library */,
+				E523B6AB2762668C00D3012A /* model */,
+				E523B5D12762668C00D3012A /* Preview Content */,
+				E523B5D32762668C00D3012A /* service */,
+				E523B5D62762668C00D3012A /* sounds */,
+				E523B5C72762668B00D3012A /* view */,
+				E523B37B276254CA00D3012A /* goingApp.swift */,
+				E523B37D276254CA00D3012A /* ContentView.swift */,
+				E523B37F276254CD00D3012A /* Assets.xcassets */,
+				E523B384276254CD00D3012A /* Persistence.swift */,
+				E523B386276254CD00D3012A /* going.xcdatamodeld */,
+				E523B381276254CD00D3012A /* Preview Content */,
 			);
 			path = going;
 			sourceTree = "<group>";
 		};
-		E52AAF7726074EE2004BD0EB /* Preview Content */ = {
+		E523B381276254CD00D3012A /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				E52AAF7826074EE2004BD0EB /* Preview Assets.xcassets */,
+				E523B382276254CD00D3012A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		E52AAF8726074EE2004BD0EB /* goingTests */ = {
+		E523B390276254CD00D3012A /* goingTests */ = {
 			isa = PBXGroup;
 			children = (
-				E52AAF8826074EE2004BD0EB /* goingTests.swift */,
-				E52AAF8A26074EE2004BD0EB /* Info.plist */,
+				E523B391276254CD00D3012A /* goingTests.swift */,
 			);
 			path = goingTests;
 			sourceTree = "<group>";
 		};
-		E52AAF9226074EE2004BD0EB /* goingUITests */ = {
+		E523B39A276254CD00D3012A /* goingUITests */ = {
 			isa = PBXGroup;
 			children = (
-				E52AAF9326074EE2004BD0EB /* goingUITests.swift */,
-				E52AAF9526074EE2004BD0EB /* Info.plist */,
+				E523B39B276254CD00D3012A /* goingUITests.swift */,
+				E523B39D276254CD00D3012A /* goingUITestsLaunchTests.swift */,
 			);
 			path = goingUITests;
 			sourceTree = "<group>";
 		};
-		E52AAFA4260751FB004BD0EB /* view */ = {
+		E523B5C72762668B00D3012A /* view */ = {
 			isa = PBXGroup;
 			children = (
-				E52AAFD22607573E004BD0EB /* component */,
-				E52AAFA526075269004BD0EB /* PlanListView.swift */,
-				E52AAFE126075F12004BD0EB /* ActionView.swift */,
-				E5C7E908260C814B007742BA /* ReportView.swift */,
-				E508C5CD26195D4700A8C47D /* HomeView.swift */,
-				E57DBFD22654CABF00F548D6 /* BootstrapView.swift */,
+				E523B5C82762668B00D3012A /* BootstrapView.swift */,
+				E523B5C92762668B00D3012A /* ActionView.swift */,
+				E523B5CA2762668B00D3012A /* HomeView.swift */,
+				E523B5CB2762668B00D3012A /* component */,
+				E523B5CF2762668B00D3012A /* ReportView.swift */,
+				E523B5D02762668B00D3012A /* PlanListView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
 		};
-		E52AAFD22607573E004BD0EB /* component */ = {
+		E523B5CB2762668B00D3012A /* component */ = {
 			isa = PBXGroup;
 			children = (
-				E52AAFD32607575D004BD0EB /* Badges.swift */,
-				E52AAFD926075795004BD0EB /* Constant.swift */,
-				E590A2CD260B6ABD00EC6260 /* BeepSheet.swift */,
+				E523B5CC2762668B00D3012A /* Constant.swift */,
+				E523B5CD2762668B00D3012A /* Badges.swift */,
+				E523B5CE2762668B00D3012A /* BeepSheet.swift */,
 			);
 			path = component;
 			sourceTree = "<group>";
 		};
-		E52AAFE626089D65004BD0EB /* library */ = {
+		E523B5D12762668C00D3012A /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				E52AAFE726089D8A004BD0EB /* CommonUtil.swift */,
-				E590A2C22608CE8B00EC6260 /* TextPlayer.swift */,
-				E590A2D8260C633F00EC6260 /* CoreDataService.swift */,
+				E523B5D22762668C00D3012A /* Preview Assets.xcassets */,
 			);
-			path = library;
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		E5482EBB260D74A8006C0755 /* extension */ = {
+		E523B5D32762668C00D3012A /* service */ = {
 			isa = PBXGroup;
 			children = (
-				E5482EBC260D74BE006C0755 /* Color.swift */,
-				E5482EC1260D756A006C0755 /* Double.swift */,
-				E5482EC6260D7589006C0755 /* Array.swift */,
-				E5482ECB260D759A006C0755 /* Date.swift */,
-				E560FE062610AE5600CF6044 /* AnyTransition.swift */,
-			);
-			path = extension;
-			sourceTree = "<group>";
-		};
-		E5C7E8F6260C6E87007742BA /* service */ = {
-			isa = PBXGroup;
-			children = (
-				E5C7E8F7260C6EA5007742BA /* ReportGenerator.swift */,
-				E5930B7D260F1B7400C3D887 /* SportTimeApp.swift */,
+				E523B5D42762668C00D3012A /* ReportGenerator.swift */,
+				E523B5D52762668C00D3012A /* SportTimeApp.swift */,
 			);
 			path = service;
 			sourceTree = "<group>";
 		};
-		E5C7E8FF260C7698007742BA /* model */ = {
+		E523B5D62762668C00D3012A /* sounds */ = {
 			isa = PBXGroup;
 			children = (
-				E5C7E900260C76AC007742BA /* BeepLog.swift */,
-				E5482EB1260CC5F2006C0755 /* BeepSession.swift */,
-				E5482EB6260CC62E006C0755 /* Beep.swift */,
-				E57A2C25261EECBA00CF3017 /* BeepGlobal.swift */,
+				E523B5D72762668C00D3012A /* 第48次.mp3 */,
+				E523B5D82762668C00D3012A /* 82.mp3 */,
+				E523B5D92762668C00D3012A /* 96.mp3 */,
+				E523B5DA2762668C00D3012A /* 69.mp3 */,
+				E523B5DB2762668C00D3012A /* 41.mp3 */,
+				E523B5DC2762668C00D3012A /* 55.mp3 */,
+				E523B5DD2762668C00D3012A /* 7.mp3 */,
+				E523B5DE2762668C00D3012A /* 54.mp3 */,
+				E523B5DF2762668C00D3012A /* 6.mp3 */,
+				E523B5E02762668C00D3012A /* 40.mp3 */,
+				E523B5E12762668C00D3012A /* 68.mp3 */,
+				E523B5E22762668C00D3012A /* 97.mp3 */,
+				E523B5E32762668C00D3012A /* 第25次.mp3 */,
+				E523B5E42762668C00D3012A /* 83.mp3 */,
+				E523B5E52762668C00D3012A /* 第72次.mp3 */,
+				E523B5E62762668C00D3012A /* 第64次.mp3 */,
+				E523B5E72762668C00D3012A /* 放松.mp3 */,
+				E523B5E82762668C00D3012A /* 第33次.mp3 */,
+				E523B5E92762668C00D3012A /* 第44次.mp3 */,
+				E523B5EA2762668C00D3012A /* 第13次.mp3 */,
+				E523B5EB2762668C00D3012A /* 95.mp3 */,
+				E523B5EC2762668C00D3012A /* 81.mp3 */,
+				E523B5ED2762668C00D3012A /* 第52次.mp3 */,
+				E523B5EE2762668C00D3012A /* 4.mp3 */,
+				E523B5EF2762668C00D3012A /* 56.mp3 */,
+				E523B5F02762668C00D3012A /* 42.mp3 */,
+				E523B5F12762668C00D3012A /* 43.mp3 */,
+				E523B5F22762668C00D3012A /* 5.mp3 */,
+				E523B5F32762668C00D3012A /* 第29次.mp3 */,
+				E523B5F42762668C00D3012A /* 57.mp3 */,
+				E523B5F52762668C00D3012A /* 80.mp3 */,
+				E523B5F62762668C00D3012A /* 94.mp3 */,
+				E523B5F72762668C00D3012A /* 第91次.mp3 */,
+				E523B5F82762668C00D3012A /* 第68次.mp3 */,
+				E523B5F92762668C00D3012A /* 第87次.mp3 */,
+				E523B5FA2762668C00D3012A /* 第69次.mp3 */,
+				E523B5FB2762668C00D3012A /* 第86次.mp3 */,
+				E523B5FC2762668C00D3012A /* 第90次.mp3 */,
+				E523B5FD2762668C00D3012A /* 90.mp3 */,
+				E523B5FE2762668C00D3012A /* 84.mp3 */,
+				E523B5FF2762668C00D3012A /* 53.mp3 */,
+				E523B6002762668C00D3012A /* 1.mp3 */,
+				E523B6012762668C00D3012A /* 第28次.mp3 */,
+				E523B6022762668C00D3012A /* 47.mp3 */,
+				E523B6032762668C00D3012A /* 46.mp3 */,
+				E523B6042762668C00D3012A /* 52.mp3 */,
+				E523B6052762668C00D3012A /* 85.mp3 */,
+				E523B6062762668C00D3012A /* 91.mp3 */,
+				E523B6072762668C00D3012A /* 第53次.mp3 */,
+				E523B6082762668C00D3012A /* 第1次.mp3 */,
+				E523B6092762668C00D3012A /* 第12次.mp3 */,
+				E523B60A2762668C00D3012A /* 背抬腿.mp3 */,
+				E523B60B2762668C00D3012A /* 第45次.mp3 */,
+				E523B60C2762668C00D3012A /* 第32次.mp3 */,
+				E523B60D2762668C00D3012A /* 第65次.mp3 */,
+				E523B60E2762668C00D3012A /* 第73次.mp3 */,
+				E523B60F2762668C00D3012A /* 87.mp3 */,
+				E523B6102762668C00D3012A /* 第24次.mp3 */,
+				E523B6112762668C00D3012A /* 93.mp3 */,
+				E523B6122762668C00D3012A /* 勾脚.mp3 */,
+				E523B6132762668C00D3012A /* 44.mp3 */,
+				E523B6142762668C00D3012A /* 2.mp3 */,
+				E523B6152762668C00D3012A /* 50.mp3 */,
+				E523B6162762668C00D3012A /* 78.mp3 */,
+				E523B6172762668C00D3012A /* 79.mp3 */,
+				E523B6182762668C00D3012A /* 3.mp3 */,
+				E523B6192762668C00D3012A /* 51.mp3 */,
+				E523B61A2762668C00D3012A /* 45.mp3 */,
+				E523B61B2762668C00D3012A /* 92.mp3 */,
+				E523B61C2762668C00D3012A /* 86.mp3 */,
+				E523B61D2762668C00D3012A /* 第49次.mp3 */,
+				E523B61E2762668C00D3012A /* 第42次.mp3 */,
+				E523B61F2762668C00D3012A /* 第15次.mp3 */,
+				E523B6202762668C00D3012A /* 第6次.mp3 */,
+				E523B6212762668C00D3012A /* 第54次.mp3 */,
+				E523B6222762668C00D3012A /* 蹦脚.mp3 */,
+				E523B6232762668C00D3012A /* 22.mp3 */,
+				E523B6242762668C00D3012A /* 36.mp3 */,
+				E523B6252762668C00D3012A /* 37.mp3 */,
+				E523B6262762668C00D3012A /* 23.mp3 */,
+				E523B6272762668C00D3012A /* 第78次.mp3 */,
+				E523B6282762668C00D3012A /* 第97次.mp3 */,
+				E523B6292762668C00D3012A /* 第81次.mp3 */,
+				E523B62A2762668C00D3012A /* 第39次.mp3 */,
+				E523B62B2762668C00D3012A /* 正抬腿.mp3 */,
+				E523B62C2762668C00D3012A /* 第19次.mp3 */,
+				E523B62D2762668C00D3012A /* 俯.mp3 */,
+				E523B62E2762668C00D3012A /* 35.mp3 */,
+				E523B62F2762668C00D3012A /* 第58次.mp3 */,
+				E523B6302762668C00D3012A /* 21.mp3 */,
+				E523B6312762668C00D3012A /* 20.mp3 */,
+				E523B6322762668C00D3012A /* 34.mp3 */,
+				E523B6332762668C00D3012A /* 第23次.mp3 */,
+				E523B6342762668C00D3012A /* 第74次.mp3 */,
+				E523B6352762668C00D3012A /* 第62次.mp3 */,
+				E523B6362762668C00D3012A /* 第35次.mp3 */,
+				E523B6372762668C00D3012A /* 第34次.mp3 */,
+				E523B6382762668C00D3012A /* 第63次.mp3 */,
+				E523B6392762668C00D3012A /* 第75次.mp3 */,
+				E523B63A2762668C00D3012A /* 第22次.mp3 */,
+				E523B63B2762668C00D3012A /* 30.mp3 */,
+				E523B63C2762668C00D3012A /* 24.mp3 */,
+				E523B63D2762668C00D3012A /* 18.mp3 */,
+				E523B63E2762668C00D3012A /* 19.mp3 */,
+				E523B63F2762668C00D3012A /* 25.mp3 */,
+				E523B6402762668C00D3012A /* 第59次.mp3 */,
+				E523B6412762668C00D3012A /* 31.mp3 */,
+				E523B6422762668C00D3012A /* 第18次.mp3 */,
+				E523B6432762668C00D3012A /* 第38次.mp3 */,
+				E523B6442762668C00D3012A /* 卧.mp3 */,
+				E523B6452762668C00D3012A /* 第80次.mp3 */,
+				E523B6462762668C00D3012A /* 第79次.mp3 */,
+				E523B6472762668C00D3012A /* 第96次.mp3 */,
+				E523B6482762668C00D3012A /* 27.mp3 */,
+				E523B6492762668C00D3012A /* 33.mp3 */,
+				E523B64A2762668C00D3012A /* 32.mp3 */,
+				E523B64B2762668C00D3012A /* 26.mp3 */,
+				E523B64C2762668C00D3012A /* 第55次.mp3 */,
+				E523B64D2762668C00D3012A /* 侧抬腿.mp3 */,
+				E523B64E2762668C00D3012A /* 结束.mp3 */,
+				E523B64F2762668C00D3012A /* 第7次.mp3 */,
+				E523B6502762668C00D3012A /* 第14次.mp3 */,
+				E523B6512762668C00D3012A /* 第43次.mp3 */,
+				E523B6522762668C00D3012A /* 第83次.mp3 */,
+				E523B6532762668C00D3012A /* 第95次.mp3 */,
+				E523B6542762668C00D3012A /* 17.mp3 */,
+				E523B6552762668C00D3012A /* 16.mp3 */,
+				E523B6562762668C00D3012A /* 第56次.mp3 */,
+				E523B6572762668C00D3012A /* 第4次.mp3 */,
+				E523B6582762668C00D3012A /* 第17次.mp3 */,
+				E523B6592762668C00D3012A /* 第40次.mp3 */,
+				E523B65A2762668C00D3012A /* 第37次.mp3 */,
+				E523B65B2762668C00D3012A /* 第60次.mp3 */,
+				E523B65C2762668C00D3012A /* 第99次.mp3 */,
+				E523B65D2762668C00D3012A /* 第76次.mp3 */,
+				E523B65E2762668C00D3012A /* 第21次.mp3 */,
+				E523B65F2762668C00D3012A /* 28.mp3 */,
+				E523B6602762668C00D3012A /* 14.mp3 */,
+				E523B6612762668C00D3012A /* 15.mp3 */,
+				E523B6622762668C00D3012A /* 29.mp3 */,
+				E523B6632762668C00D3012A /* 100.mp3 */,
+				E523B6642762668C00D3012A /* 第8次.mp3 */,
+				E523B6652762668C00D3012A /* 第9次.mp3 */,
+				E523B6662762668C00D3012A /* 11.mp3 */,
+				E523B6672762668C00D3012A /* 39.mp3 */,
+				E523B6682762668C00D3012A /* 38.mp3 */,
+				E523B6692762668C00D3012A /* 10.mp3 */,
+				E523B66A2762668C00D3012A /* 第20次.mp3 */,
+				E523B66B2762668C00D3012A /* 第98次.mp3 */,
+				E523B66C2762668C00D3012A /* 准备开始.mp3 */,
+				E523B66D2762668C00D3012A /* 第77次.mp3 */,
+				E523B66E2762668C00D3012A /* 第61次.mp3 */,
+				E523B66F2762668C00D3012A /* 第36次.mp3 */,
+				E523B6702762668C00D3012A /* 第41次.mp3 */,
+				E523B6712762668C00D3012A /* 第100次.mp3 */,
+				E523B6722762668C00D3012A /* 第16次.mp3 */,
+				E523B6732762668C00D3012A /* 第5次.mp3 */,
+				E523B6742762668C00D3012A /* 第57次.mp3 */,
+				E523B6752762668C00D3012A /* 12.mp3 */,
+				E523B6762762668C00D3012A /* 13.mp3 */,
+				E523B6772762668C00D3012A /* 第94次.mp3 */,
+				E523B6782762668C00D3012A /* 第82次.mp3 */,
+				E523B6792762668C00D3012A /* 第31次.mp3 */,
+				E523B67A2762668C00D3012A /* 第89次.mp3 */,
+				E523B67B2762668C00D3012A /* 第66次.mp3 */,
+				E523B67C2762668C00D3012A /* 第70次.mp3 */,
+				E523B67D2762668C00D3012A /* 第27次.mp3 */,
+				E523B67E2762668C00D3012A /* 48.mp3 */,
+				E523B67F2762668C00D3012A /* 60.mp3 */,
+				E523B6802762668C00D3012A /* 74.mp3 */,
+				E523B6812762668C00D3012A /* 75.mp3 */,
+				E523B6822762668C00D3012A /* 61.mp3 */,
+				E523B6832762668C00D3012A /* 49.mp3 */,
+				E523B6842762668C00D3012A /* 第85次.mp3 */,
+				E523B6852762668C00D3012A /* 第93次.mp3 */,
+				E523B6862762668C00D3012A /* 88.mp3 */,
+				E523B6872762668C00D3012A /* 77.mp3 */,
+				E523B6882762668C00D3012A /* 63.mp3 */,
+				E523B6892762668C00D3012A /* 62.mp3 */,
+				E523B68A2762668C00D3012A /* 76.mp3 */,
+				E523B68B2762668C00D3012A /* 第50次.mp3 */,
+				E523B68C2762668C00D3012A /* 89.mp3 */,
+				E523B68D2762668C00D3012A /* 第2次.mp3 */,
+				E523B68E2762668C00D3012A /* 第11次.mp3 */,
+				E523B68F2762668C00D3012A /* 第46次.mp3 */,
+				E523B6902762668C00D3012A /* 第47次.mp3 */,
+				E523B6912762668C00D3012A /* 第10次.mp3 */,
+				E523B6922762668C00D3012A /* 第3次.mp3 */,
+				E523B6932762668C00D3012A /* 第51次.mp3 */,
+				E523B6942762668C00D3012A /* 99.mp3 */,
+				E523B6952762668C00D3012A /* 72.mp3 */,
+				E523B6962762668C00D3012A /* 66.mp3 */,
+				E523B6972762668C00D3012A /* 8.mp3 */,
+				E523B6982762668C00D3012A /* 9.mp3 */,
+				E523B6992762668C00D3012A /* 67.mp3 */,
+				E523B69A2762668C00D3012A /* 73.mp3 */,
+				E523B69B2762668C00D3012A /* 98.mp3 */,
+				E523B69C2762668C00D3012A /* 第92次.mp3 */,
+				E523B69D2762668C00D3012A /* 第84次.mp3 */,
+				E523B69E2762668C00D3012A /* 开始.mp3 */,
+				E523B69F2762668C00D3012A /* 撑.mp3 */,
+				E523B6A02762668C00D3012A /* 65.mp3 */,
+				E523B6A12762668C00D3012A /* 71.mp3 */,
+				E523B6A22762668C00D3012A /* 59.mp3 */,
+				E523B6A32762668C00D3012A /* 58.mp3 */,
+				E523B6A42762668C00D3012A /* 70.mp3 */,
+				E523B6A52762668C00D3012A /* 64.mp3 */,
+				E523B6A62762668C00D3012A /* 第26次.mp3 */,
+				E523B6A72762668C00D3012A /* 第71次.mp3 */,
+				E523B6A82762668C00D3012A /* 第88次.mp3 */,
+				E523B6A92762668C00D3012A /* 第67次.mp3 */,
+				E523B6AA2762668C00D3012A /* 第30次.mp3 */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
+		E523B6AB2762668C00D3012A /* model */ = {
+			isa = PBXGroup;
+			children = (
+				E523B6AC2762668C00D3012A /* BeepSession.swift */,
+				E523B6AD2762668C00D3012A /* Beep.swift */,
+				E523B6AE2762668C00D3012A /* BeepGlobal.swift */,
+				E523B6AF2762668C00D3012A /* BeepLog.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		E523B6B32762668C00D3012A /* library */ = {
+			isa = PBXGroup;
+			children = (
+				E523B6B42762668C00D3012A /* CoreDataService.swift */,
+				E523B6B52762668C00D3012A /* CommonUtil.swift */,
+				E523B6B62762668C00D3012A /* TextPlayer.swift */,
+			);
+			path = library;
+			sourceTree = "<group>";
+		};
+		E523B6B72762668C00D3012A /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				E523B6B82762668C00D3012A /* Date.swift */,
+				E523B6B92762668C00D3012A /* Array.swift */,
+				E523B6BA2762668C00D3012A /* AnyTransition.swift */,
+				E523B6BB2762668C00D3012A /* Double.swift */,
+				E523B6BC2762668C00D3012A /* Color.swift */,
+			);
+			path = extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E52AAF6D26074EDF004BD0EB /* going */ = {
+		E523B377276254CA00D3012A /* going */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E52AAF9826074EE2004BD0EB /* Build configuration list for PBXNativeTarget "going" */;
+			buildConfigurationList = E523B3A1276254CD00D3012A /* Build configuration list for PBXNativeTarget "going" */;
 			buildPhases = (
-				E52AAF6A26074EDF004BD0EB /* Sources */,
-				E52AAF6B26074EDF004BD0EB /* Frameworks */,
-				E52AAF6C26074EDF004BD0EB /* Resources */,
+				E523B374276254CA00D3012A /* Sources */,
+				E523B375276254CA00D3012A /* Frameworks */,
+				E523B376276254CA00D3012A /* Resources */,
 			);
 			buildRules = (
 			);
@@ -279,121 +939,336 @@
 			);
 			name = going;
 			packageProductDependencies = (
-				E52AAFAE26075397004BD0EB /* AFNetworking */,
-				E52AAFB4260753B2004BD0EB /* SwiftyJSON */,
-				E52AAFBA26075536004BD0EB /* BFKit */,
-				E52AAFC6260756DD004BD0EB /* LLCycleScrollView */,
-				E52AAFCC26075708004BD0EB /* Parchment */,
-				E590A2D3260C5FDD00EC6260 /* SwiftUICharts */,
+				E523B3AB276256EC00D3012A /* AFNetworking */,
+				E523B3AE276257B100D3012A /* SwiftyJSON */,
+				E523B3B1276257D100D3012A /* BFKit */,
+				E523B3B72762619100D3012A /* LLCycleScrollView */,
+				E523B3BA276261BC00D3012A /* Parchment */,
+				E523B3BD276261F100D3012A /* SwiftUICharts */,
 			);
 			productName = going;
-			productReference = E52AAF6E26074EDF004BD0EB /* SportTimer.app */;
+			productReference = E523B378276254CA00D3012A /* going.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E52AAF8326074EE2004BD0EB /* goingTests */ = {
+		E523B38C276254CD00D3012A /* goingTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E52AAF9B26074EE2004BD0EB /* Build configuration list for PBXNativeTarget "goingTests" */;
+			buildConfigurationList = E523B3A4276254CD00D3012A /* Build configuration list for PBXNativeTarget "goingTests" */;
 			buildPhases = (
-				E52AAF8026074EE2004BD0EB /* Sources */,
-				E52AAF8126074EE2004BD0EB /* Frameworks */,
-				E52AAF8226074EE2004BD0EB /* Resources */,
+				E523B389276254CD00D3012A /* Sources */,
+				E523B38A276254CD00D3012A /* Frameworks */,
+				E523B38B276254CD00D3012A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E52AAF8626074EE2004BD0EB /* PBXTargetDependency */,
+				E523B38F276254CD00D3012A /* PBXTargetDependency */,
 			);
 			name = goingTests;
 			productName = goingTests;
-			productReference = E52AAF8426074EE2004BD0EB /* goingTests.xctest */;
+			productReference = E523B38D276254CD00D3012A /* goingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E52AAF8E26074EE2004BD0EB /* goingUITests */ = {
+		E523B396276254CD00D3012A /* goingUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E52AAF9E26074EE2004BD0EB /* Build configuration list for PBXNativeTarget "goingUITests" */;
+			buildConfigurationList = E523B3A7276254CD00D3012A /* Build configuration list for PBXNativeTarget "goingUITests" */;
 			buildPhases = (
-				E52AAF8B26074EE2004BD0EB /* Sources */,
-				E52AAF8C26074EE2004BD0EB /* Frameworks */,
-				E52AAF8D26074EE2004BD0EB /* Resources */,
+				E523B393276254CD00D3012A /* Sources */,
+				E523B394276254CD00D3012A /* Frameworks */,
+				E523B395276254CD00D3012A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E52AAF9126074EE2004BD0EB /* PBXTargetDependency */,
+				E523B399276254CD00D3012A /* PBXTargetDependency */,
 			);
 			name = goingUITests;
 			productName = goingUITests;
-			productReference = E52AAF8F26074EE2004BD0EB /* goingUITests.xctest */;
+			productReference = E523B397276254CD00D3012A /* goingUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		E52AAF6626074EDF004BD0EB /* Project object */ = {
+		E523B370276254CA00D3012A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
 				TargetAttributes = {
-					E52AAF6D26074EDF004BD0EB = {
-						CreatedOnToolsVersion = 12.4;
+					E523B377276254CA00D3012A = {
+						CreatedOnToolsVersion = 13.1;
 					};
-					E52AAF8326074EE2004BD0EB = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = E52AAF6D26074EDF004BD0EB;
+					E523B38C276254CD00D3012A = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = E523B377276254CA00D3012A;
 					};
-					E52AAF8E26074EE2004BD0EB = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = E52AAF6D26074EDF004BD0EB;
+					E523B396276254CD00D3012A = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = E523B377276254CA00D3012A;
 					};
 				};
 			};
-			buildConfigurationList = E52AAF6926074EDF004BD0EB /* Build configuration list for PBXProject "going" */;
-			compatibilityVersion = "Xcode 9.3";
+			buildConfigurationList = E523B373276254CA00D3012A /* Build configuration list for PBXProject "going" */;
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = E52AAF6526074EDF004BD0EB;
+			mainGroup = E523B36F276254CA00D3012A;
 			packageReferences = (
-				E52AAFAD26075397004BD0EB /* XCRemoteSwiftPackageReference "AFNetworking" */,
-				E52AAFB3260753B2004BD0EB /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
-				E52AAFB926075536004BD0EB /* XCRemoteSwiftPackageReference "BFKit-Swift" */,
-				E52AAFC5260756DD004BD0EB /* XCRemoteSwiftPackageReference "LLCycleScrollView" */,
-				E52AAFCB26075708004BD0EB /* XCRemoteSwiftPackageReference "Parchment" */,
-				E590A2D2260C5FDD00EC6260 /* XCRemoteSwiftPackageReference "ChartView" */,
+				E523B3AA276256EB00D3012A /* XCRemoteSwiftPackageReference "AFNetworking" */,
+				E523B3AD276257B100D3012A /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				E523B3B0276257D100D3012A /* XCRemoteSwiftPackageReference "BFKit-Swift" */,
+				E523B3B62762619100D3012A /* XCRemoteSwiftPackageReference "LLCycleScrollView" */,
+				E523B3B9276261BC00D3012A /* XCRemoteSwiftPackageReference "Parchment" */,
+				E523B3BC276261F100D3012A /* XCRemoteSwiftPackageReference "ChartView" */,
 			);
-			productRefGroup = E52AAF6F26074EDF004BD0EB /* Products */;
+			productRefGroup = E523B379276254CA00D3012A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E52AAF6D26074EDF004BD0EB /* going */,
-				E52AAF8326074EE2004BD0EB /* goingTests */,
-				E52AAF8E26074EE2004BD0EB /* goingUITests */,
+				E523B377276254CA00D3012A /* going */,
+				E523B38C276254CD00D3012A /* goingTests */,
+				E523B396276254CD00D3012A /* goingUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E52AAF6C26074EDF004BD0EB /* Resources */ = {
+		E523B376276254CA00D3012A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E52AAF7926074EE2004BD0EB /* Preview Assets.xcassets in Resources */,
-				E52AAF7626074EE2004BD0EB /* Assets.xcassets in Resources */,
+				E523B7872762668D00D3012A /* 72.mp3 in Resources */,
+				E523B7912762668D00D3012A /* 撑.mp3 in Resources */,
+				E523B7822762668D00D3012A /* 第47次.mp3 in Resources */,
+				E523B7462762668D00D3012A /* 17.mp3 in Resources */,
+				E523B7052762668D00D3012A /* 44.mp3 in Resources */,
+				E523B79B2762668D00D3012A /* 第67次.mp3 in Resources */,
+				E523B73B2762668D00D3012A /* 33.mp3 in Resources */,
+				E523B7792762668D00D3012A /* 77.mp3 in Resources */,
+				E523B6F12762668D00D3012A /* 53.mp3 in Resources */,
+				E523B76C2762668D00D3012A /* 第89次.mp3 in Resources */,
+				E523B7732762668D00D3012A /* 75.mp3 in Resources */,
+				E523B71F2762668D00D3012A /* 俯.mp3 in Resources */,
+				E523B75A2762668D00D3012A /* 38.mp3 in Resources */,
+				E523B6E22762668D00D3012A /* 42.mp3 in Resources */,
+				E523B72B2762668D00D3012A /* 第75次.mp3 in Resources */,
+				E523B77B2762668D00D3012A /* 62.mp3 in Resources */,
+				E523B7322762668D00D3012A /* 第59次.mp3 in Resources */,
+				E523B6D72762668D00D3012A /* 第72次.mp3 in Resources */,
+				E523B70B2762668D00D3012A /* 51.mp3 in Resources */,
+				E523B76A2762668D00D3012A /* 第82次.mp3 in Resources */,
+				E523B7932762668D00D3012A /* 71.mp3 in Resources */,
+				E523B7672762668D00D3012A /* 12.mp3 in Resources */,
+				E523B79C2762668D00D3012A /* 第30次.mp3 in Resources */,
+				E523B7682762668D00D3012A /* 13.mp3 in Resources */,
+				E523B71D2762668D00D3012A /* 正抬腿.mp3 in Resources */,
+				E523B73D2762668D00D3012A /* 26.mp3 in Resources */,
+				E523B7192762668D00D3012A /* 第78次.mp3 in Resources */,
+				E523B6CF2762668D00D3012A /* 7.mp3 in Resources */,
+				E523B7722762668D00D3012A /* 74.mp3 in Resources */,
+				E523B72D2762668D00D3012A /* 30.mp3 in Resources */,
+				E523B7342762668D00D3012A /* 第18次.mp3 in Resources */,
+				E523B7392762668D00D3012A /* 第96次.mp3 in Resources */,
+				E523B71A2762668D00D3012A /* 第97次.mp3 in Resources */,
+				E523B72A2762668D00D3012A /* 第63次.mp3 in Resources */,
+				E523B6CE2762668D00D3012A /* 55.mp3 in Resources */,
+				E523B7302762668D00D3012A /* 19.mp3 in Resources */,
+				E523B72E2762668D00D3012A /* 24.mp3 in Resources */,
+				E523B6D22762668D00D3012A /* 40.mp3 in Resources */,
+				E523B6FE2762668D00D3012A /* 第32次.mp3 in Resources */,
+				E523B7652762668D00D3012A /* 第5次.mp3 in Resources */,
+				E523B7212762668D00D3012A /* 第58次.mp3 in Resources */,
+				E523B7182762668D00D3012A /* 23.mp3 in Resources */,
+				E523B7582762668D00D3012A /* 11.mp3 in Resources */,
+				E523B6E72762668D00D3012A /* 80.mp3 in Resources */,
+				E523B76D2762668D00D3012A /* 第66次.mp3 in Resources */,
+				E523B6E32762668D00D3012A /* 43.mp3 in Resources */,
+				E523B6D62762668D00D3012A /* 83.mp3 in Resources */,
+				E523B7952762668D00D3012A /* 58.mp3 in Resources */,
+				E523B7892762668D00D3012A /* 8.mp3 in Resources */,
+				E523B7122762668D00D3012A /* 第6次.mp3 in Resources */,
+				E523B6D82762668D00D3012A /* 第64次.mp3 in Resources */,
+				E523B75B2762668D00D3012A /* 10.mp3 in Resources */,
+				E523B7512762668D00D3012A /* 28.mp3 in Resources */,
+				E523B77E2762668D00D3012A /* 89.mp3 in Resources */,
+				E523B7742762668D00D3012A /* 61.mp3 in Resources */,
+				E523B75F2762668D00D3012A /* 第77次.mp3 in Resources */,
+				E523B78F2762668D00D3012A /* 第84次.mp3 in Resources */,
+				E523B7712762668D00D3012A /* 60.mp3 in Resources */,
+				E523B6FB2762668D00D3012A /* 第12次.mp3 in Resources */,
+				E523B6E62762668D00D3012A /* 57.mp3 in Resources */,
+				E523B78E2762668D00D3012A /* 第92次.mp3 in Resources */,
+				E523B7702762668D00D3012A /* 48.mp3 in Resources */,
+				E523B7022762668D00D3012A /* 第24次.mp3 in Resources */,
+				E523B6EC2762668D00D3012A /* 第69次.mp3 in Resources */,
+				E523B6CB2762668D00D3012A /* 96.mp3 in Resources */,
+				E523B7412762668D00D3012A /* 第7次.mp3 in Resources */,
+				E523B7032762668D00D3012A /* 93.mp3 in Resources */,
+				E523B7452762668D00D3012A /* 第95次.mp3 in Resources */,
+				E523B71C2762668D00D3012A /* 第39次.mp3 in Resources */,
+				E523B7142762668D00D3012A /* 蹦脚.mp3 in Resources */,
+				E523B6ED2762668D00D3012A /* 第86次.mp3 in Resources */,
+				E523B72C2762668D00D3012A /* 第22次.mp3 in Resources */,
+				E523B6DC2762668D00D3012A /* 第13次.mp3 in Resources */,
+				E523B78A2762668D00D3012A /* 9.mp3 in Resources */,
+				E523B7352762668D00D3012A /* 第38次.mp3 in Resources */,
+				E523B74A2762668D00D3012A /* 第17次.mp3 in Resources */,
+				E523B7632762668D00D3012A /* 第100次.mp3 in Resources */,
+				E523B77D2762668D00D3012A /* 第50次.mp3 in Resources */,
+				E523B70D2762668D00D3012A /* 92.mp3 in Resources */,
+				E523B7842762668D00D3012A /* 第3次.mp3 in Resources */,
+				E523B7272762668D00D3012A /* 第62次.mp3 in Resources */,
+				E523B7292762668D00D3012A /* 第34次.mp3 in Resources */,
+				E523B70C2762668D00D3012A /* 45.mp3 in Resources */,
+				E523B75E2762668D00D3012A /* 准备开始.mp3 in Resources */,
+				E523B7972762668D00D3012A /* 64.mp3 in Resources */,
+				E523B7382762668D00D3012A /* 第79次.mp3 in Resources */,
+				E523B6E52762668D00D3012A /* 第29次.mp3 in Resources */,
+				E523B7492762668D00D3012A /* 第4次.mp3 in Resources */,
+				E523B6DB2762668D00D3012A /* 第44次.mp3 in Resources */,
+				E523B7902762668D00D3012A /* 开始.mp3 in Resources */,
+				E523B7812762668D00D3012A /* 第46次.mp3 in Resources */,
+				E523B75D2762668D00D3012A /* 第98次.mp3 in Resources */,
+				E523B7522762668D00D3012A /* 14.mp3 in Resources */,
+				E523B6F92762668D00D3012A /* 第53次.mp3 in Resources */,
+				E523B7082762668D00D3012A /* 78.mp3 in Resources */,
+				E523B6FD2762668D00D3012A /* 第45次.mp3 in Resources */,
+				E523B6EF2762668D00D3012A /* 90.mp3 in Resources */,
+				E523B7592762668D00D3012A /* 39.mp3 in Resources */,
+				E523B6D42762668D00D3012A /* 97.mp3 in Resources */,
+				E523B7372762668D00D3012A /* 第80次.mp3 in Resources */,
+				E523B76F2762668D00D3012A /* 第27次.mp3 in Resources */,
+				E523B6C92762668D00D3012A /* 第48次.mp3 in Resources */,
+				E523B7992762668D00D3012A /* 第71次.mp3 in Resources */,
+				E523B7602762668D00D3012A /* 第61次.mp3 in Resources */,
+				E523B7542762668D00D3012A /* 29.mp3 in Resources */,
+				E523B78D2762668D00D3012A /* 98.mp3 in Resources */,
+				E523B7862762668D00D3012A /* 99.mp3 in Resources */,
+				E523B6F22762668D00D3012A /* 1.mp3 in Resources */,
+				E523B7422762668D00D3012A /* 第14次.mp3 in Resources */,
+				E523B7002762668D00D3012A /* 第73次.mp3 in Resources */,
+				E523B7982762668D00D3012A /* 第26次.mp3 in Resources */,
+				E523B7042762668D00D3012A /* 勾脚.mp3 in Resources */,
+				E523B73E2762668D00D3012A /* 第55次.mp3 in Resources */,
+				E523B6E02762668D00D3012A /* 4.mp3 in Resources */,
+				E523B7132762668D00D3012A /* 第54次.mp3 in Resources */,
+				E523B7232762668D00D3012A /* 20.mp3 in Resources */,
+				E523B6DA2762668D00D3012A /* 第33次.mp3 in Resources */,
+				E523B76B2762668D00D3012A /* 第31次.mp3 in Resources */,
+				E523B77C2762668D00D3012A /* 76.mp3 in Resources */,
+				E523B7502762668D00D3012A /* 第21次.mp3 in Resources */,
+				E523B6D32762668D00D3012A /* 68.mp3 in Resources */,
+				E523B7062762668D00D3012A /* 2.mp3 in Resources */,
+				E523B7832762668D00D3012A /* 第10次.mp3 in Resources */,
+				E523B7402762668D00D3012A /* 结束.mp3 in Resources */,
+				E523B6EA2762668D00D3012A /* 第68次.mp3 in Resources */,
+				E523B73C2762668D00D3012A /* 32.mp3 in Resources */,
+				E523B7202762668D00D3012A /* 35.mp3 in Resources */,
+				E523B6F62762668D00D3012A /* 52.mp3 in Resources */,
+				E523B7642762668D00D3012A /* 第16次.mp3 in Resources */,
+				E523B74C2762668D00D3012A /* 第37次.mp3 in Resources */,
+				E523B7962762668D00D3012A /* 70.mp3 in Resources */,
+				E523B7172762668D00D3012A /* 37.mp3 in Resources */,
+				E523B6FC2762668D00D3012A /* 背抬腿.mp3 in Resources */,
+				E523B7092762668D00D3012A /* 79.mp3 in Resources */,
+				E523B6FA2762668D00D3012A /* 第1次.mp3 in Resources */,
+				E523B7262762668D00D3012A /* 第74次.mp3 in Resources */,
+				E523B6F82762668D00D3012A /* 91.mp3 in Resources */,
+				E523B7942762668D00D3012A /* 59.mp3 in Resources */,
+				E523B6EE2762668D00D3012A /* 第90次.mp3 in Resources */,
+				E523B7802762668D00D3012A /* 第11次.mp3 in Resources */,
+				E523B7222762668D00D3012A /* 21.mp3 in Resources */,
+				E523B7752762668D00D3012A /* 49.mp3 in Resources */,
+				E523B7762762668D00D3012A /* 第85次.mp3 in Resources */,
+				E523B74D2762668D00D3012A /* 第60次.mp3 in Resources */,
+				E523B77A2762668D00D3012A /* 63.mp3 in Resources */,
+				E523B6DE2762668D00D3012A /* 81.mp3 in Resources */,
+				E523B7922762668D00D3012A /* 65.mp3 in Resources */,
+				E523B7532762668D00D3012A /* 15.mp3 in Resources */,
+				E523B78B2762668D00D3012A /* 67.mp3 in Resources */,
+				E523B6D52762668D00D3012A /* 第25次.mp3 in Resources */,
+				E523B7012762668D00D3012A /* 87.mp3 in Resources */,
+				E523B72F2762668D00D3012A /* 18.mp3 in Resources */,
+				E523B6C62762668D00D3012A /* Preview Assets.xcassets in Resources */,
+				E523B7612762668D00D3012A /* 第36次.mp3 in Resources */,
+				E523B6E12762668D00D3012A /* 56.mp3 in Resources */,
+				E523B7852762668D00D3012A /* 第51次.mp3 in Resources */,
+				E523B73F2762668D00D3012A /* 侧抬腿.mp3 in Resources */,
+				E523B7112762668D00D3012A /* 第15次.mp3 in Resources */,
+				E523B6DD2762668D00D3012A /* 95.mp3 in Resources */,
+				E523B7692762668D00D3012A /* 第94次.mp3 in Resources */,
+				E523B76E2762668D00D3012A /* 第70次.mp3 in Resources */,
+				E523B6F42762668D00D3012A /* 47.mp3 in Resources */,
+				E523B6D02762668D00D3012A /* 54.mp3 in Resources */,
+				E523B70A2762668D00D3012A /* 3.mp3 in Resources */,
+				E523B6D92762668D00D3012A /* 放松.mp3 in Resources */,
+				E523B78C2762668D00D3012A /* 73.mp3 in Resources */,
+				E523B6CC2762668D00D3012A /* 69.mp3 in Resources */,
+				E523B6F02762668D00D3012A /* 84.mp3 in Resources */,
+				E523B7152762668D00D3012A /* 22.mp3 in Resources */,
+				E523B7562762668D00D3012A /* 第8次.mp3 in Resources */,
+				E523B7332762668D00D3012A /* 31.mp3 in Resources */,
+				E523B74F2762668D00D3012A /* 第76次.mp3 in Resources */,
+				E523B7282762668D00D3012A /* 第35次.mp3 in Resources */,
+				E523B7102762668D00D3012A /* 第42次.mp3 in Resources */,
+				E523B7472762668D00D3012A /* 16.mp3 in Resources */,
+				E523B6FF2762668D00D3012A /* 第65次.mp3 in Resources */,
+				E523B7242762668D00D3012A /* 34.mp3 in Resources */,
+				E523B6F72762668D00D3012A /* 85.mp3 in Resources */,
+				E523B7772762668D00D3012A /* 第93次.mp3 in Resources */,
+				E523B7572762668D00D3012A /* 第9次.mp3 in Resources */,
+				E523B7552762668D00D3012A /* 100.mp3 in Resources */,
+				E523B6E42762668D00D3012A /* 5.mp3 in Resources */,
+				E523B7072762668D00D3012A /* 50.mp3 in Resources */,
+				E523B7882762668D00D3012A /* 66.mp3 in Resources */,
+				E523B77F2762668D00D3012A /* 第2次.mp3 in Resources */,
+				E523B383276254CD00D3012A /* Preview Assets.xcassets in Resources */,
+				E523B7312762668D00D3012A /* 25.mp3 in Resources */,
+				E523B6F32762668D00D3012A /* 第28次.mp3 in Resources */,
+				E523B7252762668D00D3012A /* 第23次.mp3 in Resources */,
+				E523B71B2762668D00D3012A /* 第81次.mp3 in Resources */,
+				E523B6BD2762668D00D3012A /* Assets.xcassets in Resources */,
+				E523B70E2762668D00D3012A /* 86.mp3 in Resources */,
+				E523B6F52762668D00D3012A /* 46.mp3 in Resources */,
+				E523B75C2762668D00D3012A /* 第20次.mp3 in Resources */,
+				E523B7362762668D00D3012A /* 卧.mp3 in Resources */,
+				E523B7782762668D00D3012A /* 88.mp3 in Resources */,
+				E523B6EB2762668D00D3012A /* 第87次.mp3 in Resources */,
+				E523B6DF2762668D00D3012A /* 第52次.mp3 in Resources */,
+				E523B6D12762668D00D3012A /* 6.mp3 in Resources */,
+				E523B73A2762668D00D3012A /* 27.mp3 in Resources */,
+				E523B7432762668D00D3012A /* 第43次.mp3 in Resources */,
+				E523B7162762668D00D3012A /* 36.mp3 in Resources */,
+				E523B7622762668D00D3012A /* 第41次.mp3 in Resources */,
+				E523B79A2762668D00D3012A /* 第88次.mp3 in Resources */,
+				E523B6CA2762668D00D3012A /* 82.mp3 in Resources */,
+				E523B70F2762668D00D3012A /* 第49次.mp3 in Resources */,
+				E523B71E2762668D00D3012A /* 第19次.mp3 in Resources */,
+				E523B6E82762668D00D3012A /* 94.mp3 in Resources */,
+				E523B6CD2762668D00D3012A /* 41.mp3 in Resources */,
+				E523B74B2762668D00D3012A /* 第40次.mp3 in Resources */,
+				E523B74E2762668D00D3012A /* 第99次.mp3 in Resources */,
+				E523B7662762668D00D3012A /* 第57次.mp3 in Resources */,
+				E523B6E92762668D00D3012A /* 第91次.mp3 in Resources */,
+				E523B7442762668D00D3012A /* 第83次.mp3 in Resources */,
+				E523B7482762668D00D3012A /* 第56次.mp3 in Resources */,
+				E523B380276254CD00D3012A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E52AAF8226074EE2004BD0EB /* Resources */ = {
+		E523B38B276254CD00D3012A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E52AAF8D26074EE2004BD0EB /* Resources */ = {
+		E523B395276254CD00D3012A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -403,78 +1278,80 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E52AAF6A26074EDF004BD0EB /* Sources */ = {
+		E523B374276254CA00D3012A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5482EB7260CC62E006C0755 /* Beep.swift in Sources */,
-				E57DBFD32654CABF00F548D6 /* BootstrapView.swift in Sources */,
-				E560FE072610AE5600CF6044 /* AnyTransition.swift in Sources */,
-				E5482EC7260D7589006C0755 /* Array.swift in Sources */,
-				E5C7E901260C76AC007742BA /* BeepLog.swift in Sources */,
-				E5C7E8F8260C6EA5007742BA /* ReportGenerator.swift in Sources */,
-				E52AAFDA26075795004BD0EB /* Constant.swift in Sources */,
-				E52AAF7B26074EE2004BD0EB /* Persistence.swift in Sources */,
-				E52AAF7426074EDF004BD0EB /* ContentView.swift in Sources */,
-				E590A2CE260B6ABD00EC6260 /* BeepSheet.swift in Sources */,
-				E52AAFA626075269004BD0EB /* PlanListView.swift in Sources */,
-				E52AAFE226075F12004BD0EB /* ActionView.swift in Sources */,
-				E5482EC2260D756A006C0755 /* Double.swift in Sources */,
-				E5C7E909260C814B007742BA /* ReportView.swift in Sources */,
-				E590A2C32608CE8B00EC6260 /* TextPlayer.swift in Sources */,
-				E52AAFE826089D8A004BD0EB /* CommonUtil.swift in Sources */,
-				E52AAFD42607575D004BD0EB /* Badges.swift in Sources */,
-				E5930B7E260F1B7400C3D887 /* SportTimeApp.swift in Sources */,
-				E57A2C26261EECBA00CF3017 /* BeepGlobal.swift in Sources */,
-				E5482EB2260CC5F2006C0755 /* BeepSession.swift in Sources */,
-				E5482ECC260D759A006C0755 /* Date.swift in Sources */,
-				E52AAF7E26074EE2004BD0EB /* going.xcdatamodeld in Sources */,
-				E590A2D9260C633F00EC6260 /* CoreDataService.swift in Sources */,
-				E508C5CE26195D4700A8C47D /* HomeView.swift in Sources */,
-				E52AAF7226074EDF004BD0EB /* goingApp.swift in Sources */,
-				E5482EBD260D74BE006C0755 /* Color.swift in Sources */,
+				E523B7A62762668D00D3012A /* Date.swift in Sources */,
+				E523B79F2762668D00D3012A /* BeepGlobal.swift in Sources */,
+				E523B6C72762668D00D3012A /* ReportGenerator.swift in Sources */,
+				E523B79E2762668D00D3012A /* Beep.swift in Sources */,
+				E523B7A92762668D00D3012A /* Double.swift in Sources */,
+				E523B6BF2762668D00D3012A /* ActionView.swift in Sources */,
+				E523B6C02762668D00D3012A /* HomeView.swift in Sources */,
+				E523B6C82762668D00D3012A /* SportTimeApp.swift in Sources */,
+				E523B385276254CD00D3012A /* Persistence.swift in Sources */,
+				E523B6C12762668D00D3012A /* Constant.swift in Sources */,
+				E523B7A02762668D00D3012A /* BeepLog.swift in Sources */,
+				E523B6BE2762668D00D3012A /* BootstrapView.swift in Sources */,
+				E523B6C42762668D00D3012A /* ReportView.swift in Sources */,
+				E523B37E276254CA00D3012A /* ContentView.swift in Sources */,
+				E523B7A32762668D00D3012A /* CoreDataService.swift in Sources */,
+				E523B7A82762668D00D3012A /* AnyTransition.swift in Sources */,
+				E523B6C22762668D00D3012A /* Badges.swift in Sources */,
+				E523B7AA2762668D00D3012A /* Color.swift in Sources */,
+				E523B6C32762668D00D3012A /* BeepSheet.swift in Sources */,
+				E523B7A52762668D00D3012A /* TextPlayer.swift in Sources */,
+				E523B7A12762668D00D3012A /* going.xcdatamodeld in Sources */,
+				E523B388276254CD00D3012A /* going.xcdatamodeld in Sources */,
+				E523B37C276254CA00D3012A /* goingApp.swift in Sources */,
+				E523B79D2762668D00D3012A /* BeepSession.swift in Sources */,
+				E523B7A72762668D00D3012A /* Array.swift in Sources */,
+				E523B6C52762668D00D3012A /* PlanListView.swift in Sources */,
+				E523B7A42762668D00D3012A /* CommonUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E52AAF8026074EE2004BD0EB /* Sources */ = {
+		E523B389276254CD00D3012A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E52AAF8926074EE2004BD0EB /* goingTests.swift in Sources */,
+				E523B392276254CD00D3012A /* goingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E52AAF8B26074EE2004BD0EB /* Sources */ = {
+		E523B393276254CD00D3012A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E52AAF9426074EE2004BD0EB /* goingUITests.swift in Sources */,
+				E523B39C276254CD00D3012A /* goingUITests.swift in Sources */,
+				E523B39E276254CD00D3012A /* goingUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E52AAF8626074EE2004BD0EB /* PBXTargetDependency */ = {
+		E523B38F276254CD00D3012A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E52AAF6D26074EDF004BD0EB /* going */;
-			targetProxy = E52AAF8526074EE2004BD0EB /* PBXContainerItemProxy */;
+			target = E523B377276254CA00D3012A /* going */;
+			targetProxy = E523B38E276254CD00D3012A /* PBXContainerItemProxy */;
 		};
-		E52AAF9126074EE2004BD0EB /* PBXTargetDependency */ = {
+		E523B399276254CD00D3012A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E52AAF6D26074EDF004BD0EB /* going */;
-			targetProxy = E52AAF9026074EE2004BD0EB /* PBXContainerItemProxy */;
+			target = E523B377276254CA00D3012A /* going */;
+			targetProxy = E523B398276254CD00D3012A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		E52AAF9626074EE2004BD0EB /* Debug */ = {
+		E523B39F276254CD00D3012A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -501,10 +1378,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Apple Distribution: Guanghui Zhang (36QDB37QK5)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = 36QDB37QK5;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -521,7 +1396,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -531,13 +1406,13 @@
 			};
 			name = Debug;
 		};
-		E52AAF9726074EE2004BD0EB /* Release */ = {
+		E523B3A0276254CD00D3012A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -564,10 +1439,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Apple Distribution: Guanghui Zhang (36QDB37QK5)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 36QDB37QK5;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -578,10 +1451,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -589,130 +1461,154 @@
 			};
 			name = Release;
 		};
-		E52AAF9926074EE2004BD0EB /* Debug */ = {
+		E523B3A2276254CD00D3012A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"going/Preview Content\"";
+				DEVELOPMENT_TEAM = 36QDB37QK5;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = going/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.02;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.triplint.going;
-				PRODUCT_NAME = SportTimer;
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		E52AAF9A26074EE2004BD0EB /* Release */ = {
+		E523B3A3276254CD00D3012A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"going/Preview Content\"";
+				DEVELOPMENT_TEAM = 36QDB37QK5;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = going/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.02;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.triplint.going;
-				PRODUCT_NAME = SportTimer;
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		E52AAF9C26074EE2004BD0EB /* Debug */ = {
+		E523B3A5276254CD00D3012A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = goingTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 36QDB37QK5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.triplint.goingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/going.app/going";
 			};
 			name = Debug;
 		};
-		E52AAF9D26074EE2004BD0EB /* Release */ = {
+		E523B3A6276254CD00D3012A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = goingTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 36QDB37QK5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.triplint.goingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/going.app/going";
 			};
 			name = Release;
 		};
-		E52AAF9F26074EE2004BD0EB /* Debug */ = {
+		E523B3A8276254CD00D3012A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = goingUITests/Info.plist;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 36QDB37QK5;
+				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.triplint.goingUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = going;
 			};
 			name = Debug;
 		};
-		E52AAFA026074EE2004BD0EB /* Release */ = {
+		E523B3A9276254CD00D3012A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = goingUITests/Info.plist;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 36QDB37QK5;
+				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.triplint.goingUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = going;
@@ -722,38 +1618,38 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E52AAF6926074EDF004BD0EB /* Build configuration list for PBXProject "going" */ = {
+		E523B373276254CA00D3012A /* Build configuration list for PBXProject "going" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E52AAF9626074EE2004BD0EB /* Debug */,
-				E52AAF9726074EE2004BD0EB /* Release */,
+				E523B39F276254CD00D3012A /* Debug */,
+				E523B3A0276254CD00D3012A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E52AAF9826074EE2004BD0EB /* Build configuration list for PBXNativeTarget "going" */ = {
+		E523B3A1276254CD00D3012A /* Build configuration list for PBXNativeTarget "going" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E52AAF9926074EE2004BD0EB /* Debug */,
-				E52AAF9A26074EE2004BD0EB /* Release */,
+				E523B3A2276254CD00D3012A /* Debug */,
+				E523B3A3276254CD00D3012A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E52AAF9B26074EE2004BD0EB /* Build configuration list for PBXNativeTarget "goingTests" */ = {
+		E523B3A4276254CD00D3012A /* Build configuration list for PBXNativeTarget "goingTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E52AAF9C26074EE2004BD0EB /* Debug */,
-				E52AAF9D26074EE2004BD0EB /* Release */,
+				E523B3A5276254CD00D3012A /* Debug */,
+				E523B3A6276254CD00D3012A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E52AAF9E26074EE2004BD0EB /* Build configuration list for PBXNativeTarget "goingUITests" */ = {
+		E523B3A7276254CD00D3012A /* Build configuration list for PBXNativeTarget "goingUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E52AAF9F26074EE2004BD0EB /* Debug */,
-				E52AAFA026074EE2004BD0EB /* Release */,
+				E523B3A8276254CD00D3012A /* Debug */,
+				E523B3A9276254CD00D3012A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -761,15 +1657,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		E52AAFAD26075397004BD0EB /* XCRemoteSwiftPackageReference "AFNetworking" */ = {
+		E523B3AA276256EB00D3012A /* XCRemoteSwiftPackageReference "AFNetworking" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://gitee.com/wemu/AFNetworking.git";
+			repositoryURL = "https://gitee.com/mirrors/AFNetworking";
 			requirement = {
 				kind = upToNextMinorVersion;
 				minimumVersion = 4.0.1;
 			};
 		};
-		E52AAFB3260753B2004BD0EB /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+		E523B3AD276257B100D3012A /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://gitee.com/wemu/SwiftyJSON.git";
 			requirement = {
@@ -777,7 +1673,7 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		E52AAFB926075536004BD0EB /* XCRemoteSwiftPackageReference "BFKit-Swift" */ = {
+		E523B3B0276257D100D3012A /* XCRemoteSwiftPackageReference "BFKit-Swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://gitee.com/wemu/BFKit-Swift.git";
 			requirement = {
@@ -785,7 +1681,7 @@
 				minimumVersion = 6.0.1;
 			};
 		};
-		E52AAFC5260756DD004BD0EB /* XCRemoteSwiftPackageReference "LLCycleScrollView" */ = {
+		E523B3B62762619100D3012A /* XCRemoteSwiftPackageReference "LLCycleScrollView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://gitee.com/wemu/LLCycleScrollView.git";
 			requirement = {
@@ -793,15 +1689,15 @@
 				kind = branch;
 			};
 		};
-		E52AAFCB26075708004BD0EB /* XCRemoteSwiftPackageReference "Parchment" */ = {
+		E523B3B9276261BC00D3012A /* XCRemoteSwiftPackageReference "Parchment" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://gitee.com/wemu/Parchment.git";
+			repositoryURL = "https://gitee.com/wemu/Parchment";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 3.0.1;
+				minimumVersion = 3.1.0;
 			};
 		};
-		E590A2D2260C5FDD00EC6260 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+		E523B3BC276261F100D3012A /* XCRemoteSwiftPackageReference "ChartView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://gitee.com/wemu/ChartView.git";
 			requirement = {
@@ -812,50 +1708,60 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		E52AAFAE26075397004BD0EB /* AFNetworking */ = {
+		E523B3AB276256EC00D3012A /* AFNetworking */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E52AAFAD26075397004BD0EB /* XCRemoteSwiftPackageReference "AFNetworking" */;
+			package = E523B3AA276256EB00D3012A /* XCRemoteSwiftPackageReference "AFNetworking" */;
 			productName = AFNetworking;
 		};
-		E52AAFB4260753B2004BD0EB /* SwiftyJSON */ = {
+		E523B3AE276257B100D3012A /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E52AAFB3260753B2004BD0EB /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			package = E523B3AD276257B100D3012A /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
 		};
-		E52AAFBA26075536004BD0EB /* BFKit */ = {
+		E523B3B1276257D100D3012A /* BFKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E52AAFB926075536004BD0EB /* XCRemoteSwiftPackageReference "BFKit-Swift" */;
+			package = E523B3B0276257D100D3012A /* XCRemoteSwiftPackageReference "BFKit-Swift" */;
 			productName = BFKit;
 		};
-		E52AAFC6260756DD004BD0EB /* LLCycleScrollView */ = {
+		E523B3B72762619100D3012A /* LLCycleScrollView */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E52AAFC5260756DD004BD0EB /* XCRemoteSwiftPackageReference "LLCycleScrollView" */;
+			package = E523B3B62762619100D3012A /* XCRemoteSwiftPackageReference "LLCycleScrollView" */;
 			productName = LLCycleScrollView;
 		};
-		E52AAFCC26075708004BD0EB /* Parchment */ = {
+		E523B3BA276261BC00D3012A /* Parchment */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E52AAFCB26075708004BD0EB /* XCRemoteSwiftPackageReference "Parchment" */;
+			package = E523B3B9276261BC00D3012A /* XCRemoteSwiftPackageReference "Parchment" */;
 			productName = Parchment;
 		};
-		E590A2D3260C5FDD00EC6260 /* SwiftUICharts */ = {
+		E523B3BD276261F100D3012A /* SwiftUICharts */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E590A2D2260C5FDD00EC6260 /* XCRemoteSwiftPackageReference "ChartView" */;
+			package = E523B3BC276261F100D3012A /* XCRemoteSwiftPackageReference "ChartView" */;
 			productName = SwiftUICharts;
 		};
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		E52AAF7C26074EE2004BD0EB /* going.xcdatamodeld */ = {
+		E523B386276254CD00D3012A /* going.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				E52AAF7D26074EE2004BD0EB /* going.xcdatamodel */,
+				E523B387276254CD00D3012A /* going.xcdatamodel */,
 			);
-			currentVersion = E52AAF7D26074EE2004BD0EB /* going.xcdatamodel */;
+			currentVersion = E523B387276254CD00D3012A /* going.xcdatamodel */;
+			path = going.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		E523B6B02762668C00D3012A /* going.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E523B6B12762668C00D3012A /* going.xcdatamodel */,
+			);
+			currentVersion = E523B6B12762668C00D3012A /* going.xcdatamodel */;
 			path = going.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = E52AAF6626074EDF004BD0EB /* Project object */;
+	rootObject = E523B370276254CA00D3012A /* Project object */;
 }
