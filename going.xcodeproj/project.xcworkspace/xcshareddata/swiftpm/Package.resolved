@@ -30,10 +30,10 @@
       },
       {
         "package": "Kingfisher",
-        "repositoryURL": "https://github.com/onevcat/Kingfisher.git",
+        "repositoryURL": "https://gitee.com/unotseeme/Kingfisher.git",
         "state": {
           "branch": null,
-          "revision": "4433e425e5ebf0ba4b4d73e15128e78047dd2b48",
+          "revision": "81dd1ce8401137637663046c7314e7c885bcc56d",
           "version": "6.1.1"
         }
       },
@@ -42,7 +42,7 @@
         "repositoryURL": "https://gitee.com/wemu/LLCycleScrollView.git",
         "state": {
           "branch": "master",
-          "revision": "81cab5d42d2c1bb1a58dadcd4baf8774003b6202",
+          "revision": "00508320513470a2bc733c939b5854c374db6496",
           "version": null
         }
       },
@@ -60,8 +60,8 @@
         "repositoryURL": "https://gitee.com/wemu/SwiftyJSON.git",
         "state": {
           "branch": null,
-          "revision": "b3dcd7dbd0d488e1a7077cb33b00f2083e382f07",
-          "version": "5.0.1"
+          "revision": "2b6054efa051565954e1d2b9da831680026cd768",
+          "version": "5.0.0"
         }
       }
     ]
